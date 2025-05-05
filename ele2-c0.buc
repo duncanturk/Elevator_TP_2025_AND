@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+    <org.eventb.core.carrierSet name="'" org.eventb.core.identifier="DOOR"/>
+    <org.eventb.core.carrierSet name="set1" org.eventb.core.identifier="DIRECTION"/>
+    <org.eventb.core.constant name="cst1" org.eventb.core.identifier="OPEN"/>
+    <org.eventb.core.constant name="cst2" org.eventb.core.identifier="CLOSED"/>
+    <org.eventb.core.constant name="cst3" org.eventb.core.identifier="FLOOR"/>
+    <org.eventb.core.constant name="cst4" org.eventb.core.identifier="NONE"/>
+    <org.eventb.core.constant name="cst5" org.eventb.core.identifier="UP"/>
+    <org.eventb.core.constant name="cst6" org.eventb.core.identifier="DOWN"/>
+    <org.eventb.core.axiom name="axm1" org.eventb.core.comment="ENV2" org.eventb.core.label="axm1" org.eventb.core.predicate="FLOOR=0‥N_Floors"/>
+    <org.eventb.core.axiom name="axm2" org.eventb.core.label="axm2" org.eventb.core.predicate="DOOR={OPEN, CLOSED}"/>
+    <org.eventb.core.axiom name="axm3" org.eventb.core.label="axm3" org.eventb.core.predicate="OPEN≠CLOSED"/>
+    <org.eventb.core.axiom name="axm4" org.eventb.core.label="axm4" org.eventb.core.predicate="NONE∉FLOOR"/>
+    <org.eventb.core.axiom name="axm5" org.eventb.core.label="axm6" org.eventb.core.predicate="DIRECTION={UP, DOWN}"/>
+    <org.eventb.core.axiom name="axm6" org.eventb.core.label="axm7" org.eventb.core.predicate="UP≠DOWN"/>
+    <org.eventb.core.axiom name="axm7" org.eventb.core.comment="ENV2" org.eventb.core.label="axm8" org.eventb.core.predicate="N_Floors∈ℕ1 "/>
+    <org.eventb.core.axiom name="axm8" org.eventb.core.comment=" &#10;used to prove finite(orders) vrn1/VWD" org.eventb.core.label="axm9" org.eventb.core.predicate="∀x,y·x⊆ℕ∧finite(x)∧y⊆x⇒finite(y)" org.eventb.core.theorem="true"/>
+    <org.eventb.core.constant name="set2" org.eventb.core.identifier="N_Floors"/>
+</org.eventb.core.contextFile>

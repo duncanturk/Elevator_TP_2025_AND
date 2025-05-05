@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="2">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="2">
+        <org.eventb.core.poIdentifier name="DOOR" org.eventb.core.type="ℙ(DOOR)"/>
+        <org.eventb.core.poIdentifier name="DIRECTION" org.eventb.core.type="ℙ(DIRECTION)"/>
+        <org.eventb.core.poIdentifier name="FLOOR" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.poIdentifier name="UP" org.eventb.core.type="DIRECTION"/>
+        <org.eventb.core.poIdentifier name="CLOSED" org.eventb.core.type="DOOR"/>
+        <org.eventb.core.poIdentifier name="DOWN" org.eventb.core.type="DIRECTION"/>
+        <org.eventb.core.poIdentifier name="OPEN" org.eventb.core.type="DOOR"/>
+        <org.eventb.core.poIdentifier name="N_Floors" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="NONE" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poPredicate name="DIRECTIOO" org.eventb.core.predicate="FLOOR=0 ‥ N_Floors" org.eventb.core.source="/Elevator_TP_2025_AND/ele2-c0.buc|org.eventb.core.contextFile#ele2-c0|org.eventb.core.axiom#axm1"/>
+        <org.eventb.core.poPredicate name="DIRECTIOP" org.eventb.core.predicate="DOOR={OPEN,CLOSED}" org.eventb.core.source="/Elevator_TP_2025_AND/ele2-c0.buc|org.eventb.core.contextFile#ele2-c0|org.eventb.core.axiom#axm2"/>
+        <org.eventb.core.poPredicate name="DIRECTIOQ" org.eventb.core.predicate="OPEN≠CLOSED" org.eventb.core.source="/Elevator_TP_2025_AND/ele2-c0.buc|org.eventb.core.contextFile#ele2-c0|org.eventb.core.axiom#axm3"/>
+        <org.eventb.core.poPredicate name="DIRECTIOR" org.eventb.core.predicate="NONE∉FLOOR" org.eventb.core.source="/Elevator_TP_2025_AND/ele2-c0.buc|org.eventb.core.contextFile#ele2-c0|org.eventb.core.axiom#axm4"/>
+        <org.eventb.core.poPredicate name="DIRECTIOS" org.eventb.core.predicate="DIRECTION={UP,DOWN}" org.eventb.core.source="/Elevator_TP_2025_AND/ele2-c0.buc|org.eventb.core.contextFile#ele2-c0|org.eventb.core.axiom#axm5"/>
+        <org.eventb.core.poPredicate name="DIRECTIOT" org.eventb.core.predicate="UP≠DOWN" org.eventb.core.source="/Elevator_TP_2025_AND/ele2-c0.buc|org.eventb.core.contextFile#ele2-c0|org.eventb.core.axiom#axm6"/>
+        <org.eventb.core.poPredicate name="DIRECTIOU" org.eventb.core.predicate="N_Floors∈ℕ1" org.eventb.core.source="/Elevator_TP_2025_AND/ele2-c0.buc|org.eventb.core.contextFile#ele2-c0|org.eventb.core.axiom#axm7"/>
+        <org.eventb.core.poPredicate name="DIRECTIOV" org.eventb.core.predicate="∀x⦂ℙ(ℤ),y⦂ℙ(ℤ)·x⊆ℕ∧finite(x)∧y⊆x⇒finite(y)" org.eventb.core.source="/Elevator_TP_2025_AND/ele2-c0.buc|org.eventb.core.contextFile#ele2-c0|org.eventb.core.axiom#axm8"/>
+        <org.eventb.core.poIdentifier name="cut" org.eventb.core.type="ℙ(ℤ×ℙ(ℤ)×DIRECTION×ℙ(ℤ))"/>
+        <org.eventb.core.poIdentifier name="variant" org.eventb.core.type="ℙ(ℤ×BOOL×ℤ)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="axm2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="2">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele2-c1.bpo|org.eventb.core.poFile#ele2-c1|org.eventb.core.poPredicateSet#HYPele2-c1"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂BOOL,n⦂ℤ·n∈ℕ∧x∈BOOL∧x=TRUE⇒n ↦ x∈dom(variant)∧variant∈ℤ × BOOL ⇸ ℤ" org.eventb.core.source="/Elevator_TP_2025_AND/ele2-c1.buc|org.eventb.core.contextFile#ele2-c1|org.eventb.core.axiom#)"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Elevator_TP_2025_AND/ele2-c1.buc|org.eventb.core.contextFile#ele2-c1|org.eventb.core.axiom#)"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Elevator_TP_2025_AND/ele2-c1.bpo|org.eventb.core.poFile#ele2-c1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Elevator_TP_2025_AND/ele2-c1.bpo|org.eventb.core.poFile#ele2-c1|org.eventb.core.poPredicateSet#HYPele2-c1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="axm3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="2">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele2-c1.bpo|org.eventb.core.poFile#ele2-c1|org.eventb.core.poPredicateSet#HYPele2-c2"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂BOOL,n⦂ℤ·n∈ℕ∧x∈BOOL∧x=FALSE⇒n ↦ x∈dom(variant)∧variant∈ℤ × BOOL ⇸ ℤ" org.eventb.core.source="/Elevator_TP_2025_AND/ele2-c1.buc|org.eventb.core.contextFile#ele2-c1|org.eventb.core.axiom#axm1"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Elevator_TP_2025_AND/ele2-c1.buc|org.eventb.core.contextFile#ele2-c1|org.eventb.core.axiom#axm1"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Elevator_TP_2025_AND/ele2-c1.bpo|org.eventb.core.poFile#ele2-c1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Elevator_TP_2025_AND/ele2-c1.bpo|org.eventb.core.poFile#ele2-c1|org.eventb.core.poPredicateSet#HYPele2-c2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="axm_cut_up/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="2">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele2-c1.bpo|org.eventb.core.poFile#ele2-c1|org.eventb.core.poPredicateSet#HYPele2-c4"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀floor⦂ℤ,orders⦂ℙ(ℤ),direction⦂DIRECTION·floor∈FLOOR∧orders⊆FLOOR∧direction∈DIRECTION∧direction=UP⇒floor ↦ orders ↦ direction∈dom(cut)∧cut∈ℤ × ℙ(ℤ) × DIRECTION ⇸ ℙ(ℤ)" org.eventb.core.source="/Elevator_TP_2025_AND/ele2-c1.buc|org.eventb.core.contextFile#ele2-c1|org.eventb.core.axiom#axm5"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Elevator_TP_2025_AND/ele2-c1.buc|org.eventb.core.contextFile#ele2-c1|org.eventb.core.axiom#axm5"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Elevator_TP_2025_AND/ele2-c1.bpo|org.eventb.core.poFile#ele2-c1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Elevator_TP_2025_AND/ele2-c1.bpo|org.eventb.core.poFile#ele2-c1|org.eventb.core.poPredicateSet#HYPele2-c4"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="axm_cut_down/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="2">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele2-c1.bpo|org.eventb.core.poFile#ele2-c1|org.eventb.core.poPredicateSet#HYPele2-c5"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀floor⦂ℤ,orders⦂ℙ(ℤ),direction⦂DIRECTION·floor∈FLOOR∧orders⊆FLOOR∧direction∈DIRECTION∧direction=DOWN⇒floor ↦ orders ↦ direction∈dom(cut)∧cut∈ℤ × ℙ(ℤ) × DIRECTION ⇸ ℙ(ℤ)" org.eventb.core.source="/Elevator_TP_2025_AND/ele2-c1.buc|org.eventb.core.contextFile#ele2-c1|org.eventb.core.axiom#axm7"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Elevator_TP_2025_AND/ele2-c1.buc|org.eventb.core.contextFile#ele2-c1|org.eventb.core.axiom#axm7"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Elevator_TP_2025_AND/ele2-c1.bpo|org.eventb.core.poFile#ele2-c1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Elevator_TP_2025_AND/ele2-c1.bpo|org.eventb.core.poFile#ele2-c1|org.eventb.core.poPredicateSet#HYPele2-c5"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="HYPele2-c1" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele2-c1.bpo|org.eventb.core.poFile#ele2-c1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="2">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="variant∈FLOOR × BOOL ⇸ ℕ" org.eventb.core.source="/Elevator_TP_2025_AND/ele2-c1.buc|org.eventb.core.contextFile#ele2-c1|org.eventb.core.axiom#("/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="HYPele2-c2" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele2-c1.bpo|org.eventb.core.poFile#ele2-c1|org.eventb.core.poPredicateSet#HYPele2-c1" org.eventb.core.poStamp="2">
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∀x⦂BOOL,n⦂ℤ·n∈ℕ∧x∈BOOL∧x=TRUE⇒variant(n ↦ x)=N_Floors+n" org.eventb.core.source="/Elevator_TP_2025_AND/ele2-c1.buc|org.eventb.core.contextFile#ele2-c1|org.eventb.core.axiom#)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="HYPele2-c4" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele2-c1.bpo|org.eventb.core.poFile#ele2-c1|org.eventb.core.poPredicateSet#HYPele2-c2" org.eventb.core.poStamp="2">
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="∀x⦂BOOL,n⦂ℤ·n∈ℕ∧x∈BOOL∧x=FALSE⇒variant(n ↦ x)=N_Floors − n" org.eventb.core.source="/Elevator_TP_2025_AND/ele2-c1.buc|org.eventb.core.contextFile#ele2-c1|org.eventb.core.axiom#axm1"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="cut∈FLOOR × ℙ(FLOOR) × DIRECTION → ℙ(FLOOR)" org.eventb.core.source="/Elevator_TP_2025_AND/ele2-c1.buc|org.eventb.core.contextFile#ele2-c1|org.eventb.core.axiom#axm4"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="HYPele2-c5" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele2-c1.bpo|org.eventb.core.poFile#ele2-c1|org.eventb.core.poPredicateSet#HYPele2-c4" org.eventb.core.poStamp="2">
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="∀floor⦂ℤ,orders⦂ℙ(ℤ),direction⦂DIRECTION·floor∈FLOOR∧orders⊆FLOOR∧direction∈DIRECTION∧direction=UP⇒cut(floor ↦ orders ↦ direction)={x⦂ℤ·x∈orders∧x&gt;floor ∣ x}" org.eventb.core.source="/Elevator_TP_2025_AND/ele2-c1.buc|org.eventb.core.contextFile#ele2-c1|org.eventb.core.axiom#axm5"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele2-c1.bpo|org.eventb.core.poFile#ele2-c1|org.eventb.core.poPredicateSet#HYPele2-c5" org.eventb.core.poStamp="2">
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="∀floor⦂ℤ,orders⦂ℙ(ℤ),direction⦂DIRECTION·floor∈FLOOR∧orders⊆FLOOR∧direction∈DIRECTION∧direction=DOWN⇒cut(floor ↦ orders ↦ direction)={x⦂ℤ·x∈orders∧x&lt;floor ∣ x}" org.eventb.core.source="/Elevator_TP_2025_AND/ele2-c1.buc|org.eventb.core.contextFile#ele2-c1|org.eventb.core.axiom#axm7"/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

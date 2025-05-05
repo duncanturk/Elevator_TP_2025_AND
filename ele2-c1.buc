@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+    <org.eventb.core.constant name="'" org.eventb.core.identifier="variant"/>
+    <org.eventb.core.axiom name="(" org.eventb.core.label="axm1" org.eventb.core.predicate="variant∈(FLOOR×BOOL)⇸ℕ  "/>
+    <org.eventb.core.axiom name=")" org.eventb.core.label="axm2" org.eventb.core.predicate="∀x,n·n∈ℕ ∧ x∈BOOL ∧ x=TRUE⇒variant(n↦x)=N_Floors+n"/>
+    <org.eventb.core.axiom name="axm1" org.eventb.core.label="axm3" org.eventb.core.predicate="∀x,n·n∈ℕ ∧ x∈BOOL ∧ x=FALSE⇒variant(n↦x)=N_Floors−n"/>
+    <org.eventb.core.extendsContext name="axm2" org.eventb.core.target="ele2-c0"/>
+    <org.eventb.core.constant name="axm3" org.eventb.core.identifier="cut"/>
+    <org.eventb.core.axiom name="axm4" org.eventb.core.label="axm_cut" org.eventb.core.predicate="cut∈(FLOOR×ℙ(FLOOR)×DIRECTION)→ℙ(FLOOR)"/>
+    <org.eventb.core.axiom name="axm5" org.eventb.core.label="axm_cut_up" org.eventb.core.predicate="∀floor,orders,direction·floor∈FLOOR∧orders⊆FLOOR∧direction∈DIRECTION&#10;∧ direction=UP&#10;⇒cut(floor↦orders↦direction)={x∣x∈orders∧x&gt;floor}"/>
+    <org.eventb.core.axiom name="axm7" org.eventb.core.label="axm_cut_down" org.eventb.core.predicate="∀floor,orders,direction·floor∈FLOOR∧orders⊆FLOOR∧direction∈DIRECTION&#10;∧ direction=DOWN&#10;⇒cut(floor↦orders↦direction)={x∣x∈orders∧x&lt;floor}"/>
+</org.eventb.core.contextFile>
