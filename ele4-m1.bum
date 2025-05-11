@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+    <org.eventb.core.refinesMachine name="'" org.eventb.core.target="ele4-m0"/>
+    <org.eventb.core.seesContext name="element1" org.eventb.core.target="ele4-c1"/>
+    <org.eventb.core.variable name="var1" org.eventb.core.identifier="floor"/>
+    <org.eventb.core.variable name="var2" org.eventb.core.comment="EQU5 (the elevator has doors), FUN7 (controller can open doors)" org.eventb.core.identifier="door"/>
+    <org.eventb.core.variable name="var3" org.eventb.core.comment="FUN12 (button status can be seen by controller)" org.eventb.core.identifier="orders"/>
+    <org.eventb.core.variable name="var4" org.eventb.core.comment="the floor the elevator should go to. The elevator is moving as soon as /=NONE" org.eventb.core.identifier="destination"/>
+    <org.eventb.core.variable name="var5" org.eventb.core.identifier="movement"/>
+    <org.eventb.core.variable name="var6" org.eventb.core.identifier="floor_event"/>
+    <org.eventb.core.event name="element2" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="'" org.eventb.core.assignment="direction≔UP" org.eventb.core.label="act2"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="element3" org.eventb.core.comment="EQU3, EQU4,treat both types of buttons the same" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Order">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Order"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="element4" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="E_Move">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="E_Move"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="element5" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="reach_order">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="reach_order"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="element6" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="reach_not_order">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="reach_not_order"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="element7" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="E_stop_moving">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="E_stop_moving"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="element8" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Arrive">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Arrive"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="element9" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Next">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Next"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="element:" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Choose_Next_UP">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Choose_Next"/>
+        <org.eventb.core.guard name="grd1" org.eventb.core.label="grd4" org.eventb.core.predicate="direction=UP"/>
+        <org.eventb.core.guard name="grd2" org.eventb.core.label="grd5" org.eventb.core.predicate="∃x·x∈orders ∧ x&gt;floor"/>
+        <org.eventb.core.guard name="grd3" org.eventb.core.label="grd6" org.eventb.core.predicate="next_dest=min({x∣x∈orders ∧ x&gt;floor})"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="evt2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Change_Dir_DOWN">
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="door=CLOSED"/>
+        <org.eventb.core.guard name=")" org.eventb.core.comment="sanity to not overwrite existing destination" org.eventb.core.label="grd2" org.eventb.core.predicate="destination=NONE"/>
+        <org.eventb.core.action name="+" org.eventb.core.assignment="direction≔DOWN" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="grd1" org.eventb.core.label="grd4" org.eventb.core.predicate="direction=UP"/>
+        <org.eventb.core.guard name="grd2" org.eventb.core.label="grd5" org.eventb.core.predicate="¬ (∃x·x∈orders ∧ x&gt;floor)"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Choose_Next_DOWN">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Choose_Next"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd4" org.eventb.core.predicate="direction=DOWN"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd5" org.eventb.core.predicate="∃x·(x∈orders ∧ x&lt;floor)"/>
+        <org.eventb.core.guard name="grd1" org.eventb.core.label="grd6" org.eventb.core.predicate="next_dest=max({x∣x∈orders ∧ x&lt;floor})"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="evt3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Change_Dir_UP">
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="door=CLOSED"/>
+        <org.eventb.core.guard name=")" org.eventb.core.comment="sanity to not overwrite existing destination" org.eventb.core.label="grd2" org.eventb.core.predicate="destination=NONE"/>
+        <org.eventb.core.action name="+" org.eventb.core.assignment="direction≔UP" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="grd1" org.eventb.core.label="grd4" org.eventb.core.predicate="direction=DOWN"/>
+        <org.eventb.core.guard name="grd2" org.eventb.core.label="grd5" org.eventb.core.predicate="¬ (∃x·x∈orders ∧ x&lt;floor)"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="element;" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="E_Door_Opened">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="E_Door_Opened"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="element=" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="E_Door_Closed">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="E_Door_Closed"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="element&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="E_start_moving">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="E_start_moving"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name="element?" org.eventb.core.identifier="direction"/>
+    <org.eventb.core.invariant name="element@" org.eventb.core.label="inv1" org.eventb.core.predicate="direction∈DIRECTION"/>
+</org.eventb.core.machineFile>

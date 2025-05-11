@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase" version="3">
     <org.eventb.core.carrierSet name="set1" org.eventb.core.identifier="DOOR"/>
     <org.eventb.core.carrierSet name="set2" org.eventb.core.identifier="DIRECTION"/>
     <org.eventb.core.constant name="cst7" org.eventb.core.identifier="N_Floors"/>
@@ -21,10 +21,9 @@
     <org.eventb.core.axiom name="axm5" org.eventb.core.label="axm6" org.eventb.core.predicate="DIRECTION={UP, DOWN}"/>
     <org.eventb.core.axiom name="axm6" org.eventb.core.label="axm7" org.eventb.core.predicate="UP≠DOWN"/>
     <org.eventb.core.axiom name="axm7" org.eventb.core.comment="ENV2" org.eventb.core.label="axm8" org.eventb.core.predicate="N_Floors∈ℕ1 "/>
-    <org.eventb.core.axiom name="axm8" org.eventb.core.comment=" &#10;used to prove finite(orders) vrn1/VWD" org.eventb.core.label="axm9" org.eventb.core.predicate="∀x,y·x⊆ℕ∧finite(x)∧y⊆x⇒finite(y)" org.eventb.core.theorem="true"/>
     <org.eventb.core.carrierSet name="axm12" org.eventb.core.identifier="MOVEMENT"/>
     <org.eventb.core.constant name="axm13" org.eventb.core.identifier="MOVING"/>
-    <org.eventb.core.constant name="axm14" org.eventb.core.identifier="STOPPED"/>
+    <org.eventb.core.constant name="cst11" org.eventb.core.identifier="STOPPED"/>
     <org.eventb.core.axiom name="axm15" org.eventb.core.label="axm_movement_0" org.eventb.core.predicate="MOVEMENT={MOVING, STOPPED}"/>
     <org.eventb.core.axiom name="axm16" org.eventb.core.label="axm_movement_1" org.eventb.core.predicate="MOVING≠ STOPPED"/>
 </org.eventb.core.contextFile>
