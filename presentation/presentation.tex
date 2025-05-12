@@ -1,0 +1,74 @@
+\documentclass[
+	hyperref={pdfusetitle,hidelinks},
+	10pt,
+]{beamer}
+
+\usetheme{Boadilla}
+\usecolortheme{rose}
+
+\usefonttheme[onlymath]{serif}
+
+\AtBeginSection[]
+{
+	\begin{frame}{}
+		\tableofcontents[currentsection,hideothersubsections]
+	\end{frame}
+}
+
+\usepackage{./basix}
+
+\title[Elevator Exercise]{Elevator Exercise}
+\subtitle{Correctness By Construction}
+\author[CS, DH, and AJFP]{Christopher Something \and David Hospodka \and Antonio José Fernández Pinto}
+\institute[UPM]{Universidad Politécnica de Madrid}
+\date[2025-05-12]{12 May 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{Outline}
+
+\subsection{Context 0}
+
+\begin{frame}{Outline: Context 0}
+	\begin{align*}
+		Door &= \{Open, Closed, Opening, Closing\} \\
+		Direction &= \{Up, Down\} \\
+		Movement &= \{Moving, Stopped\} \\
+		% EventStatus &= \{Pending, Handled\} \\
+		N\_Floors &\in \mathbb{N}1 \\
+		Floor &= 0..N\_Floors \\
+	\end{align*}
+\end{frame}
+
+\subsection{Machine 0}
+
+\begin{frame}{Outline: Machine 0}
+\end{frame}
+
+\subsection{Context 1}
+
+\begin{frame}{Outline: Context 1}
+\end{frame}
+
+\subsection{Machine 1}
+
+\begin{frame}{Outline: Machine 1}
+\end{frame}
+
+\section{Proofs}
+
+\begin{frame}{Proofs}
+	\begin{center}
+		All proofs were automatic.
+	\end{center}
+\end{frame}
+
+\begin{frame}{}
+	\begin{center}
+		\Large Thank you for your attention!
+	\end{center}
+\end{frame}
+
+\end{document}

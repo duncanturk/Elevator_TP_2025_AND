@@ -1,0 +1,66 @@
+\RequirePackage[perpage]{footmisc}
+
+\RequirePackage{babel} % translations for spanish
+
+\renewcommand{\intextsep}{\parskip}
+\RequirePackage{float}
+
+\RequirePackage{listings} % for code snippets
+% \RequirePackage{listingsutf8}
+
+\RequirePackage{textcomp}
+% \RequirePackage{lstfiracode}
+
+\definecolor{comment}{RGB}{0,128,0} % dark green
+\definecolor{string}{RGB}{206,112,66}  % red
+\definecolor{keyword}{RGB}{0,0,255} % blue
+\definecolor{background}{RGB}{235,235,247} % blue
+\definecolor{numbers}{RGB}{125,125,125} % grey
+
+\definecolor{alertbackground}{RGB}{255,230,230}
+\definecolor{grey}{RGB}{200,200,200}
+% \definecolor{first1}{RGB}{255,230,230}
+
+\lstdefinestyle{CStyle}{
+	backgroundcolor=\color{background},
+	commentstyle=\color{comment},
+	stringstyle=\color{string},
+	keywordstyle=\color{keyword},
+	basicstyle=\ttfamily\small,
+	numbers=left,
+	xleftmargin=3.325em,
+	framexleftmargin=3.3em,
+	numberstyle=\ttfamily\color{numbers},
+	% frame=single,
+	breaklines=true,
+	breakindent=0em,
+	% prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+	showstringspaces=false,
+	upquote=true,
+	tabsize=4,
+}
+\lstset{
+	style=CStyle,
+	inputencoding=utf8/latin1,
+	% language=C,
+	escapeinside={(*}{*)},
+}
+
+\usepackage{graphicx}
+\graphicspath{{./img}}
+
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage[nodisplayskipstretch]{setspace} % For amsmath displays spacing
+
+\RequirePackage{dirtytalk}
+
+\RequirePackage[T1]{fontenc} % so FiraMono doesn't do weird things
+\RequirePackage[
+	scale = 0.80,
+	lining,
+]{FiraMono}
+
+\newcommand{\ceil}[1]{{\left\lceil #1 \right\rceil}}
+\newcommand{\floor}[1]{{\left\lfloor #1 \right\rfloor}}
+\newcommand{\abs}[1]{{\left| #1 \right|}}
