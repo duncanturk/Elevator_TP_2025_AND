@@ -17,6 +17,7 @@
     </org.eventb.core.event>
     <org.eventb.core.event name="element4" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="E_Move">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="E_Move"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="cnt(floor)≔0" org.eventb.core.label="act3"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="element5" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="reach_order">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="reach_order"/>
