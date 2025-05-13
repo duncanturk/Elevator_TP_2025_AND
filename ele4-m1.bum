@@ -13,6 +13,7 @@
     </org.eventb.core.event>
     <org.eventb.core.event name="element3" org.eventb.core.comment="EQU3, EQU4,treat both types of buttons the same" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Order">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Order"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="door=OPEN⇒order≠floor"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="element4" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="E_Move">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="E_Move"/>
@@ -29,8 +30,8 @@
     <org.eventb.core.event name="element8" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Arrive">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Arrive"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="element9" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Next">
-        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Next"/>
+    <org.eventb.core.event name="element9" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Close_Door">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Close_Door"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="element:" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Choose_Next_UP">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Choose_Next"/>
