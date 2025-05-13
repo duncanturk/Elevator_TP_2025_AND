@@ -11,12 +11,12 @@
     <org.eventb.core.invariant name="inv2" org.eventb.core.label="inv_door_open_no_dest" org.eventb.core.predicate="door=OPEN⇒destination=NONE"/>
     <org.eventb.core.invariant name="inv3" org.eventb.core.comment="&#10;FUN8 (closed doors when moving)" org.eventb.core.label="inv_door_closed_on_moving" org.eventb.core.predicate="destination≠NONE⇒door=CLOSED"/>
     <org.eventb.core.invariant name="inv4" org.eventb.core.comment="&#10;FUN15 (no movement ifno order)&#10;FUN16 (only move in the direction of a ordered floor)" org.eventb.core.label="inv_move_to_ordered" org.eventb.core.predicate="destination≠NONE⇒destination∈orders"/>
-    <org.eventb.core.invariant name="inv5" org.eventb.core.comment="FUN 11 (door open when no request)" org.eventb.core.label="inv_no_orders_door_open" org.eventb.core.predicate="orders=∅⇒door∈{OPEN, OPENING}"/>
-    <org.eventb.core.invariant name="inv6" org.eventb.core.label="inv_types" org.eventb.core.predicate="floor∈FLOOR ∧&#10;door∈DOOR ∧ &#10;orders ⊆FLOOR ∧ &#10;destination∈(FLOOR ∪ {NONE}) ∧&#10;movement ∈ MOVEMENT ∧&#10;floor_event∈EVENT_STATUS"/>
+    <org.eventb.core.invariant name="inv5" org.eventb.core.comment="FUN 11 (door open when no request)" org.eventb.core.label="inv_no_orders_door_open" org.eventb.core.predicate="orders=∅⇒desired_door=OPEN"/>
+    <org.eventb.core.invariant name="inv6" org.eventb.core.label="inv_types" org.eventb.core.predicate="floor∈FLOOR ∧&#10;door∈DOOR ∧ &#10;orders ⊆FLOOR ∧ &#10;destination∈(FLOOR ∪ {NONE}) ∧&#10;movement ∈ MOVEMENT ∧&#10;floor_event∈EVENT_STATUS ∧&#10;desired_door∈DOOR"/>
     <org.eventb.core.invariant name="inv7" org.eventb.core.comment="&#10;only move with destination" org.eventb.core.label="inv_only_move_when_destination" org.eventb.core.predicate="movement=MOVING⇒destination≠NONE"/>
     <org.eventb.core.invariant name="inv8" org.eventb.core.comment="&#10;FUN8 (closed door when moving) bind to environment" org.eventb.core.label="inv_closed_doors_when_moving" org.eventb.core.predicate="movement=MOVING⇒door=CLOSED" org.eventb.core.theorem="true"/>
     <org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
-        <org.eventb.core.action name="'" org.eventb.core.assignment="floor, door, orders, destination,movement,floor_event≔0, OPEN, ∅, NONE,STOPPED,HANDLED" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="'" org.eventb.core.assignment="floor, door, orders, destination,movement,floor_event,desired_door≔0, OPEN, ∅, NONE,STOPPED,HANDLED,OPEN" org.eventb.core.label="act1"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="evt2" org.eventb.core.comment="EQU3, EQU4,treat both types of buttons the same" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Order">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="order"/>
@@ -52,29 +52,27 @@
     <org.eventb.core.event name="evt6" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="OpenDoor">
         <org.eventb.core.action name="*" org.eventb.core.assignment="destination≔NONE" org.eventb.core.label="act1"/>
         <org.eventb.core.guard name="." org.eventb.core.label="grd1" org.eventb.core.predicate="movement=STOPPED"/>
-        <org.eventb.core.action name="-" org.eventb.core.assignment="door≔OPENING" org.eventb.core.label="act2"/>
+        <org.eventb.core.action name="-" org.eventb.core.assignment="desired_door≔OPEN" org.eventb.core.label="act2"/>
         <org.eventb.core.guard name="/" org.eventb.core.label="grd2" org.eventb.core.predicate="floor=destination"/>
         <org.eventb.core.action name="0" org.eventb.core.assignment="orders≔orders∖{floor}" org.eventb.core.label="act3"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="evt8" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="CloseDoor">
         <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="door=OPEN"/>
         <org.eventb.core.guard name="*" org.eventb.core.comment="only close door if there is a order to serve" org.eventb.core.label="grd2" org.eventb.core.predicate="orders≠∅"/>
-        <org.eventb.core.action name="+" org.eventb.core.assignment="door≔CLOSING" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="+" org.eventb.core.assignment="desired_door≔CLOSED" org.eventb.core.label="act1"/>
         <org.eventb.core.guard name=")" org.eventb.core.comment="sanity to not overwrite existing destination" org.eventb.core.label="grd3" org.eventb.core.predicate="destination=NONE" org.eventb.core.theorem="true"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="evt9" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ChooseNext">
         <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="door=CLOSED"/>
         <org.eventb.core.guard name=")" org.eventb.core.comment="sanity to not overwrite existing destination" org.eventb.core.label="grd2" org.eventb.core.predicate="destination=NONE"/>
-        <org.eventb.core.guard name="*" org.eventb.core.comment="only close door if there is a order to serve" org.eventb.core.label="grd3" org.eventb.core.predicate="next_dest∈orders"/>
-        <org.eventb.core.action name="+" org.eventb.core.assignment="destination≔next_dest" org.eventb.core.label="act1"/>
-        <org.eventb.core.parameter name="," org.eventb.core.identifier="next_dest"/>
+        <org.eventb.core.action name="+" org.eventb.core.assignment="destination:∈orders" org.eventb.core.label="act1"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="evt10" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="EnvDoorOpened">
-        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="door=OPENING"/>
+        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="desired_door=OPEN"/>
         <org.eventb.core.action name="(" org.eventb.core.assignment="door≔OPEN" org.eventb.core.label="act1"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="evt11" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="EnvDoorClosed">
-        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="door=CLOSING"/>
+        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="desired_door=CLOSED"/>
         <org.eventb.core.action name="(" org.eventb.core.assignment="door≔CLOSED" org.eventb.core.label="act1"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="evt12" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="EnvStartMoving">
@@ -84,4 +82,6 @@
         <org.eventb.core.action name="grd2" org.eventb.core.assignment="movement≔MOVING" org.eventb.core.label="act1"/>
     </org.eventb.core.event>
     <org.eventb.core.invariant name="element2" org.eventb.core.label="inv_fe_pending_moving" org.eventb.core.predicate="floor_event=PENDING⇒movement=MOVING"/>
+    <org.eventb.core.variable name="element3" org.eventb.core.identifier="desired_door"/>
+    <org.eventb.core.invariant name="element4" org.eventb.core.label="inv_orders_when_door_closed" org.eventb.core.predicate="desired_door=CLOSED⇒orders≠∅"/>
 </org.eventb.core.machineFile>
