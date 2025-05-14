@@ -16,8 +16,9 @@
 }
 
 \usepackage{./basix}
+\usepackage{tabularx}
 
-\title[Elevator Exercise]{Elevator Exercise}
+\title[Elevator Term Project]{Elevator Term Project}
 \subtitle{Correctness By Construction}
 \author[CR, DH, and AJFP]{Christopher Ro\ss{}bach \and David Hospodka \and Antonio José Fernández Pinto}
 \institute[UPM]{Universidad Politécnica de Madrid}
@@ -27,7 +28,7 @@
 
 \maketitle
 
-\section{Outline}
+\section{The Model}
 
 \subsection{Context 0}
 
@@ -42,41 +43,71 @@
 	\end{align*}
 \end{frame}
 
-\subsection{Machine 0}
+\subsection{Modeling Environment}
 
-\subsubsection{Invariants}
+\subsubsection{Communication With the Controller}
 
-\begin{frame}{Machine 0: Invariants}
+\begin{frame}{Communication Between the Controller and Environment}
+  \begin{itemize}
+    \item<+-> The controller is able to read the environment state directly
+	  \visible<+->{
+		  \begin{tabularx}{\linewidth}{|l|c|X|}
+			  \hline
+			  Variable & Value & Description \\ \hline
+			  \Variable{movement} & \Constant{MOVING}   & The elevator is (physically) moving\\ \cline{2-3}
+					& \Constant{STOPPED}   & The elevator is (physically) not moving\\ \hline
+			  \Variable{door}  & \Constant{OPEN} & The elevator door is (physically) open\\ \cline{2-3}
+				& \Constant{CLOSED} & The elevator door is (physically) closed\\ \hline
+			  \Variable{floor}  & \Constant{1..N\_Levels} & The floor the elevator is (physically) on\\ \hline
+		  \end{tabularx}
+		}
+	\item[]<2->
+    \item<+-> The controller can communicate with the environment by giving commands
+	\visible<+->{
+        \begin{tabularx}{\linewidth}{|l|c|X|}
+            \hline
+            Variable & Value & Description \\ \hline
+            \Variable{destination} & $\in$\Constant{1..N\_Levels} & The elevator shall move to floor\\ \cline{2-3}
+            & \Constant{NONE}   & The elevator shall not move\\ \hline
+            \Variable{desired\_door}  & \Constant{OPEN} & The elevator shall open the door\\ \cline{2-3}
+            & \Constant{CLOSED} & The elevator shall close the door\\ \hline
+        \end{tabularx}
+	}
+	\item[]<+->\Req{FUN 6}{The elevator can receive a signal to move to any level and will stop automatically when it is reached [\ldots].}
+	\item[]<+->\Req{FUN 7}{The elevator has doors that can be closed or opened from a controller.}
+	\item[]<2->
+	\item<+-> Stopping?
+  \end{itemize}
 \end{frame}
-
-\subsubsection{Events}
-
-\begin{frame}{Machine 0: Events}
+\subsection{Elevator Movement}
+\begin{frame}{Elevator Movement}
+	\begin{itemize}
+		\item<+-> Physical movement modeled through \Event{EnvMove}
+			\begin{itemize}
+				\item<+-> Moving one step at a time \Guard{(new\_floor-floor) $\in\{-1,1\}$}
+			\end{itemize}
+		\item<+-> Handling of movement events by \Event{ReachOrder} or \Event{ReachNotOrder}
+		\item<+-> Ensuring handling of every movement event through \Variable{floor\_event} $\in$ \Constant{\{PENDING, HANDLED\}} flag
+		\item<+-> TODO graphic of movement \Event{$test\in$}
+	\end{itemize}
 \end{frame}
-
-\subsection{Context 1}
-
-\begin{frame}{Context 1}
+\subsection{Door Management}
+\begin{frame}{Door Management}
+	\begin{itemize}
+		\item Necessary to ensure no movement with open doors
+		\item[] \Req{FUN 8}{The elevator doors should be closed when the elevator is moving.}
+		\item[] \Inv{inv\_door\_closed\_when\_moving}{movement=MOVING$\implies$door=CLOSED}
+		\item[] Helper:
+		\item[] \Inv{inv\_door\_closed\_when\_destination}{destination$\neq$NONE$\implies$door=CLOSED}
+		\item[] \Inv{inv\_no\_dest\_when\_opening\_door}{desired\_door=OPEN$\implies$destination=NONE}
+		\item \Req{FUN 11}{The doors should be open if there are no requests to serve.}
+		\item[] \Inv{inv\_no\_orders\_door\_open}{orders=$\emptyset\implies$(door=OPEN\,$\lor$\,desired\_door=OPEN)}
+		\item[] Helper:
+		\item[] \Inv{inv\_orders\_when\_closing\_door}{desired\_door=CLOSED$\implies$orders$\neq\emptyset$}
+	\end{itemize}
 \end{frame}
-
-\subsection{Machine 1}
-
-\subsubsection{Invariants}
-
-\begin{frame}{Machine 1: Invariants}
-\end{frame}
-
-\subsubsection{Events}
-
-\begin{frame}{Machine 1: Events}
-\end{frame}
-
-\section{Proofs}
-
-\begin{frame}{Proofs}
-	\begin{center}
-		All proofs were automatic.
-	\end{center}
+\subsection{Refinement: Deterministic Serving Order}
+\begin{frame}{Refinement: Deterministic Serving Order}
 \end{frame}
 
 \begin{frame}{}

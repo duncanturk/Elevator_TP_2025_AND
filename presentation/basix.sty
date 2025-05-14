@@ -1,4 +1,6 @@
 \RequirePackage[perpage]{footmisc}
+\Requirepackage{xcolor}
+\Requirepackage{tabularx}
 
 \RequirePackage{babel} % translations for spanish
 
@@ -60,7 +62,29 @@
 	scale = 0.80,
 	lining,
 ]{FiraMono}
+\RequirePackage{color}
+\RequirePackage{wasysym}
 
 \newcommand{\ceil}[1]{{\left\lceil #1 \right\rceil}}
 \newcommand{\floor}[1]{{\left\lfloor #1 \right\rfloor}}
 \newcommand{\abs}[1]{{\left| #1 \right|}}
+
+\definecolor{mygreen}{HTML}{2F8E34}
+\definecolor{myblue}{HTML}{1A1A83}
+
+\renewcommand{\Constant}[1]{\texttt{\MakeUppercase{#1}}}
+\renewcommand{\Variable}[1]{\texttt{#1}}
+\renewcommand{\Requirement}[1]{\textcolor{red}{\texttt{\MakeUppercase{#1}}}}
+\renewcommand{\Event}[1]{\textcolor{mygreen}{\texttt{\textbf{#1}}}}
+\renewcommand{\Invariant}[1]{\textcolor{mygreen}{\texttt{#1}}}
+\renewcommand{\InvariantName}[1]{\textcolor{myblue}{\texttt{#1}}}
+\renewcommand{\Guard}[1]{\textcolor{mygreen}{\texttt{#1}}}
+\renewcommand{\Action}[1]{\textcolor{mygreen}{\texttt{#1}}}
+
+\renewcommand{\Req}[2]{
+	\begin{tabularx}{\linewidth}{|l|X|}\hline
+	\Requirement{#1} & #2\\\hline
+	\end{tabularx}
+}
+\renewcommand{\Inv}[2]{\InvariantName{#1:}\Invariant{#2}}
+
