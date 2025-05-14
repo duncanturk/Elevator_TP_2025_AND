@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="29">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="22">
+        <org.eventb.core.poIdentifier name="substract_one" org.eventb.core.type="ℙ(ℙ(ℤ×ℤ)×ℙ(ℤ×ℤ))"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="axm2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="29">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele4-c1-termination.bpo|org.eventb.core.poFile#ele4-c1-termination|org.eventb.core.poPredicateSet#HYP'"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀func⦂ℙ(ℤ×ℤ)·func∈dom(substract_one)⇒substract_one∈ℙ(ℤ × ℤ) ⇸ ℙ(ℤ × ℤ)∧(dom(substract_one(func))=dom(func)⇒(∀o⦂ℤ·o∈dom(func)⇒func∈ℤ ⇸ ℤ∧(func(o)≠1⇒o∈dom(substract_one(func))∧substract_one(func)∈ℤ ⇸ ℤ)))" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-c1-termination.buc|org.eventb.core.contextFile#ele4-c1-termination|org.eventb.core.axiom#)"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-c1-termination.buc|org.eventb.core.contextFile#ele4-c1-termination|org.eventb.core.axiom#)"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Elevator_TP_2025_AND/ele4-c1-termination.bpo|org.eventb.core.poFile#ele4-c1-termination|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Elevator_TP_2025_AND/ele4-c1-termination.bpo|org.eventb.core.poFile#ele4-c1-termination|org.eventb.core.poPredicateSet#HYP'"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="HYP'" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele4-c1-termination.bpo|org.eventb.core.poFile#ele4-c1-termination|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="substract_one∈(ℕ ⇸ ℕ1) → (ℕ ⇸ ℕ1)" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-c1-termination.buc|org.eventb.core.contextFile#ele4-c1-termination|org.eventb.core.axiom#("/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele4-c1-termination.bpo|org.eventb.core.poFile#ele4-c1-termination|org.eventb.core.poPredicateSet#HYP'" org.eventb.core.poStamp="29">
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∀func⦂ℙ(ℤ×ℤ)·func∈dom(substract_one)⇒dom(substract_one(func))=dom(func)∧(∀o⦂ℤ·o∈dom(func)⇒(func(o)≠1⇒substract_one(func)(o)=func(o) − 1)∧(func(o)=1⇒o∉dom(substract_one(func))))" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-c1-termination.buc|org.eventb.core.contextFile#ele4-c1-termination|org.eventb.core.axiom#)"/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

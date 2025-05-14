@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+    <org.eventb.core.refinesMachine name="'" org.eventb.core.target="ele4-m1"/>
+    <org.eventb.core.seesContext name="element1" org.eventb.core.target="ele4-c1"/>
+    <org.eventb.core.variable name="var1" org.eventb.core.identifier="floor"/>
+    <org.eventb.core.variable name="var2" org.eventb.core.comment="EQU5 (the elevator has doors), FUN7 (controller can open doors)" org.eventb.core.identifier="door"/>
+    <org.eventb.core.variable name="var3" org.eventb.core.comment="FUN12 (button status can be seen by controller)" org.eventb.core.identifier="orders"/>
+    <org.eventb.core.variable name="var4" org.eventb.core.comment="the floor the elevator should go to. The elevator is moving as soon as /=NONE" org.eventb.core.identifier="destination"/>
+    <org.eventb.core.variable name="var5" org.eventb.core.identifier="movement"/>
+    <org.eventb.core.variable name="var6" org.eventb.core.identifier="floor_event"/>
+    <org.eventb.core.variable name="elementA" org.eventb.core.identifier="desired_door"/>
+    <org.eventb.core.variable name="element?" org.eventb.core.identifier="direction"/>
+    <org.eventb.core.event name="elementB" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="'" org.eventb.core.assignment="remaining_steps≔∅" org.eventb.core.label="act3"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="elementC" org.eventb.core.comment="EQU3, EQU4,treat both types of buttons the same" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Order">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Order"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="remaining_steps(order)≔2∗N_Levels" org.eventb.core.comment="// Redo" org.eventb.core.label="act2"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="elementD" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="EnvMove">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="EnvMove"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="remaining_steps≔substract_one(remaining_steps)" org.eventb.core.comment="// Redo substract one" org.eventb.core.label="act3"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="elementE" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ReachOrder">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="ReachOrder"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="elementF" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ReachNotOrder">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="ReachNotOrder"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="elementG" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="EnvStopMoving">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="EnvStopMoving"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="elementH" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="OpenDoor">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="OpenDoor"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="elementI" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="CloseDoor">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="CloseDoor"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="elementJ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ChooseNextUp">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="ChooseNextUp"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="elementK" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ChangeDirectionDown">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="ChangeDirectionDown"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="elementL" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ChooseNextDown">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="ChooseNextDown"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="elementM" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ChangeDirectionUp">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="ChangeDirectionUp"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="elementN" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="EnvDoorOpened">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="EnvDoorOpened"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="elementO" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="EnvDoorClosed">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="EnvDoorClosed"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="elementP" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="EnvStartMoving">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="EnvStartMoving"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name="elementQ" org.eventb.core.identifier="remaining_steps"/>
+    <org.eventb.core.invariant name="elementR" org.eventb.core.label="inv_remaining_steps_type" org.eventb.core.predicate="remaining_steps∈orders→ℕ1"/>
+    <org.eventb.core.invariant name="elementS" org.eventb.core.label="inv_remaining_steps_bounded" org.eventb.core.predicate="∀o·o∈orders⇒remaining_steps(o)≤2∗N_Levels"/>
+    <org.eventb.core.seesContext name="elementT" org.eventb.core.target="ele4-c1-termination"/>
+    <org.eventb.core.invariant name="elementU" org.eventb.core.label="inv_remaining_steps_moving" org.eventb.core.predicate="movement=MOVING⇒(∀s·s∈ran(remaining_steps)⇒s&gt;0)"/>
+</org.eventb.core.machineFile>

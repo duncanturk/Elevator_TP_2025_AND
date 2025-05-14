@@ -83,6 +83,6 @@
     <org.eventb.core.invariant name="element2" org.eventb.core.label="inv_fe_pending_moving" org.eventb.core.predicate="floor_event=PENDING⇒movement=MOVING"/>
     <org.eventb.core.invariant name="inv3" org.eventb.core.label="inv_no_dest_when_opening_door" org.eventb.core.predicate="desired_door=OPEN⇒destination=NONE"/>
     <org.eventb.core.invariant name="inv9" org.eventb.core.comment="&#10;FUN8 (closed doors when moving)" org.eventb.core.label="inv_door_closed_when_destination" org.eventb.core.predicate="destination≠NONE⇒door=CLOSED"/>
-    <org.eventb.core.invariant name="inv8" org.eventb.core.comment="&#10;FUN8 (closed door when moving) bind to environment" org.eventb.core.label="inv_door_closed_when_moving" org.eventb.core.predicate="movement=MOVING⇒door=CLOSED" org.eventb.core.theorem="true"/>
+    <org.eventb.core.invariant name="inv8" org.eventb.core.comment="&#10;FUN8 (closed door when moving) bind to environment" org.eventb.core.label="inv_door_closed_when_moving" org.eventb.core.predicate="movement=MOVING⇒door=CLOSED∧desired_door=CLOSED" org.eventb.core.theorem="true"/>
     <org.eventb.core.variable name="element3" org.eventb.core.identifier="desired_door"/>
 </org.eventb.core.machineFile>
