@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="58">
+<org.eventb.core.poFile org.eventb.core.poStamp="59">
     <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="28">
         <org.eventb.core.poIdentifier name="MOVEMENT" org.eventb.core.type="ℙ(MOVEMENT)"/>
         <org.eventb.core.poIdentifier name="DOOR" org.eventb.core.type="ℙ(DOOR)"/>
@@ -124,15 +124,7 @@
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="orders≠(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m0.bum|org.eventb.core.machineFile#ele4-m0|org.eventb.core.event#evt8|org.eventb.core.guard#*"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="destination=NONE" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m0.bum|org.eventb.core.machineFile#ele4-m0|org.eventb.core.event#evt8|org.eventb.core.guard#)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="ChooseNextUp/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="58">
-        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele4-m1.bpo|org.eventb.core.poFile#ele4-m1|org.eventb.core.poPredicateSet#EVTALLHYPdesired_doo{"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="door=CLOSED∧desired_door=CLOSED" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m0.bum|org.eventb.core.machineFile#ele4-m0|org.eventb.core.event#evt9|org.eventb.core.guard#("/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m0.bum|org.eventb.core.machineFile#ele4-m0|org.eventb.core.event#evt9"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m0.bum|org.eventb.core.machineFile#ele4-m0|org.eventb.core.event#evt9|org.eventb.core.guard#("/>
-        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m1.bum|org.eventb.core.machineFile#ele4-m1|org.eventb.core.event#element:"/>
-        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Elevator_TP_2025_AND/ele4-m1.bpo|org.eventb.core.poFile#ele4-m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Elevator_TP_2025_AND/ele4-m1.bpo|org.eventb.core.poFile#ele4-m1|org.eventb.core.poSequent#ChooseNextUp\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
-    </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="ChooseNextUp/grd3/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="57">
+    <org.eventb.core.poSequent name="ChooseNextUp/grd3/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="59">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele4-m1.bpo|org.eventb.core.poFile#ele4-m1|org.eventb.core.poPredicateSet#EVTALLHYPdesired_doo{"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="orders≠(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m0.bum|org.eventb.core.machineFile#ele4-m0|org.eventb.core.event#evt9|org.eventb.core.guard#,"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m0.bum|org.eventb.core.machineFile#ele4-m0|org.eventb.core.event#evt9"/>
@@ -140,7 +132,7 @@
         <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m1.bum|org.eventb.core.machineFile#ele4-m1|org.eventb.core.event#element:"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Elevator_TP_2025_AND/ele4-m1.bpo|org.eventb.core.poFile#ele4-m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Elevator_TP_2025_AND/ele4-m1.bpo|org.eventb.core.poFile#ele4-m1|org.eventb.core.poSequent#ChooseNextUp\/grd3\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="ChooseNextUp/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="57">
+    <org.eventb.core.poSequent name="ChooseNextUp/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="59">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele4-m1.bpo|org.eventb.core.poFile#ele4-m1|org.eventb.core.poPredicateSet#EVTALLHYPdesired_doo{">
             <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="destination'∈orders" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m0.bum|org.eventb.core.machineFile#ele4-m0|org.eventb.core.event#evt9|org.eventb.core.action#+"/>
         </org.eventb.core.poPredicateSet>
@@ -148,7 +140,7 @@
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m1.bum|org.eventb.core.machineFile#ele4-m1|org.eventb.core.event#element:|org.eventb.core.action#+"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Elevator_TP_2025_AND/ele4-m1.bpo|org.eventb.core.poFile#ele4-m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Elevator_TP_2025_AND/ele4-m1.bpo|org.eventb.core.poFile#ele4-m1|org.eventb.core.poPredicateSet#EVTALLHYPdesired_doo{"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="ChooseNextUp/act1/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="57">
+    <org.eventb.core.poSequent name="ChooseNextUp/act1/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="59">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele4-m1.bpo|org.eventb.core.poFile#ele4-m1|org.eventb.core.poPredicateSet#EVTALLHYPdesired_doo{"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="min({x⦂ℤ·x∈orders∧x&gt;floor ∣ x})∈orders" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m0.bum|org.eventb.core.machineFile#ele4-m0|org.eventb.core.event#evt9|org.eventb.core.action#+"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m0.bum|org.eventb.core.machineFile#ele4-m0|org.eventb.core.event#evt9"/>
@@ -159,8 +151,8 @@
     <org.eventb.core.poPredicateSet name="EVTIDENTdesired_doo{" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele4-m1.bpo|org.eventb.core.poFile#ele4-m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="57">
         <org.eventb.core.poIdentifier name="destination'" org.eventb.core.type="ℤ"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPdesired_doo{" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele4-m1.bpo|org.eventb.core.poFile#ele4-m1|org.eventb.core.poPredicateSet#EVTIDENTdesired_doo{" org.eventb.core.poStamp="57">
-        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="door=CLOSED" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m1.bum|org.eventb.core.machineFile#ele4-m1|org.eventb.core.event#element:|org.eventb.core.guard#("/>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPdesired_doo{" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele4-m1.bpo|org.eventb.core.poFile#ele4-m1|org.eventb.core.poPredicateSet#EVTIDENTdesired_doo{" org.eventb.core.poStamp="59">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="door=CLOSED∧desired_door=CLOSED" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m1.bum|org.eventb.core.machineFile#ele4-m1|org.eventb.core.event#element:|org.eventb.core.guard#("/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="destination=NONE" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m1.bum|org.eventb.core.machineFile#ele4-m1|org.eventb.core.event#element:|org.eventb.core.guard#)"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="direction=UP" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m1.bum|org.eventb.core.machineFile#ele4-m1|org.eventb.core.event#element:|org.eventb.core.guard#grd1"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="∃x⦂ℤ·x∈orders∧x&gt;floor" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m1.bum|org.eventb.core.machineFile#ele4-m1|org.eventb.core.event#element:|org.eventb.core.guard#grd2"/>
@@ -174,15 +166,7 @@
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="direction=UP" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m1.bum|org.eventb.core.machineFile#ele4-m1|org.eventb.core.event#evt2|org.eventb.core.guard#grd1"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="¬(∃x⦂ℤ·x∈orders∧x&gt;floor)" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m1.bum|org.eventb.core.machineFile#ele4-m1|org.eventb.core.event#evt2|org.eventb.core.guard#grd2"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="ChooseNextDown/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="58">
-        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele4-m1.bpo|org.eventb.core.poFile#ele4-m1|org.eventb.core.poPredicateSet#EVTALLHYPdesired_doo}"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="door=CLOSED∧desired_door=CLOSED" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m0.bum|org.eventb.core.machineFile#ele4-m0|org.eventb.core.event#evt9|org.eventb.core.guard#("/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m0.bum|org.eventb.core.machineFile#ele4-m0|org.eventb.core.event#evt9"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m0.bum|org.eventb.core.machineFile#ele4-m0|org.eventb.core.event#evt9|org.eventb.core.guard#("/>
-        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m1.bum|org.eventb.core.machineFile#ele4-m1|org.eventb.core.event#evt1"/>
-        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Elevator_TP_2025_AND/ele4-m1.bpo|org.eventb.core.poFile#ele4-m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Elevator_TP_2025_AND/ele4-m1.bpo|org.eventb.core.poFile#ele4-m1|org.eventb.core.poSequent#ChooseNextDown\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
-    </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="ChooseNextDown/grd3/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="57">
+    <org.eventb.core.poSequent name="ChooseNextDown/grd3/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="59">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele4-m1.bpo|org.eventb.core.poFile#ele4-m1|org.eventb.core.poPredicateSet#EVTALLHYPdesired_doo}"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="orders≠(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m0.bum|org.eventb.core.machineFile#ele4-m0|org.eventb.core.event#evt9|org.eventb.core.guard#,"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m0.bum|org.eventb.core.machineFile#ele4-m0|org.eventb.core.event#evt9"/>
@@ -190,7 +174,7 @@
         <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m1.bum|org.eventb.core.machineFile#ele4-m1|org.eventb.core.event#evt1"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Elevator_TP_2025_AND/ele4-m1.bpo|org.eventb.core.poFile#ele4-m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Elevator_TP_2025_AND/ele4-m1.bpo|org.eventb.core.poFile#ele4-m1|org.eventb.core.poSequent#ChooseNextDown\/grd3\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="ChooseNextDown/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="57">
+    <org.eventb.core.poSequent name="ChooseNextDown/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="59">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele4-m1.bpo|org.eventb.core.poFile#ele4-m1|org.eventb.core.poPredicateSet#EVTALLHYPdesired_doo}">
             <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="destination'∈orders" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m0.bum|org.eventb.core.machineFile#ele4-m0|org.eventb.core.event#evt9|org.eventb.core.action#+"/>
         </org.eventb.core.poPredicateSet>
@@ -198,7 +182,7 @@
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m1.bum|org.eventb.core.machineFile#ele4-m1|org.eventb.core.event#evt1|org.eventb.core.action#+"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Elevator_TP_2025_AND/ele4-m1.bpo|org.eventb.core.poFile#ele4-m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Elevator_TP_2025_AND/ele4-m1.bpo|org.eventb.core.poFile#ele4-m1|org.eventb.core.poPredicateSet#EVTALLHYPdesired_doo}"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="ChooseNextDown/act1/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="57">
+    <org.eventb.core.poSequent name="ChooseNextDown/act1/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="59">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele4-m1.bpo|org.eventb.core.poFile#ele4-m1|org.eventb.core.poPredicateSet#EVTALLHYPdesired_doo}"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="max({x⦂ℤ·x∈orders∧x&lt;floor ∣ x})∈orders" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m0.bum|org.eventb.core.machineFile#ele4-m0|org.eventb.core.event#evt9|org.eventb.core.action#+"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m0.bum|org.eventb.core.machineFile#ele4-m0|org.eventb.core.event#evt9"/>
@@ -209,8 +193,8 @@
     <org.eventb.core.poPredicateSet name="EVTIDENTdesired_doo}" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele4-m1.bpo|org.eventb.core.poFile#ele4-m1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="57">
         <org.eventb.core.poIdentifier name="destination'" org.eventb.core.type="ℤ"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPdesired_doo}" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele4-m1.bpo|org.eventb.core.poFile#ele4-m1|org.eventb.core.poPredicateSet#EVTIDENTdesired_doo}" org.eventb.core.poStamp="57">
-        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="door=CLOSED" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m1.bum|org.eventb.core.machineFile#ele4-m1|org.eventb.core.event#evt1|org.eventb.core.guard#internal1"/>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPdesired_doo}" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele4-m1.bpo|org.eventb.core.poFile#ele4-m1|org.eventb.core.poPredicateSet#EVTIDENTdesired_doo}" org.eventb.core.poStamp="59">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="door=CLOSED∧desired_door=CLOSED" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m1.bum|org.eventb.core.machineFile#ele4-m1|org.eventb.core.event#evt1|org.eventb.core.guard#internal1"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="destination=NONE" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m1.bum|org.eventb.core.machineFile#ele4-m1|org.eventb.core.event#evt1|org.eventb.core.guard#internal2"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="direction=DOWN" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m1.bum|org.eventb.core.machineFile#ele4-m1|org.eventb.core.event#evt1|org.eventb.core.guard#("/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="∃x⦂ℤ·x∈orders∧x&lt;floor" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m1.bum|org.eventb.core.machineFile#ele4-m1|org.eventb.core.event#evt1|org.eventb.core.guard#)"/>
