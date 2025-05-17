@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
     <org.eventb.core.refinesMachine name="'" org.eventb.core.target="ele4-m0"/>
-    <org.eventb.core.seesContext name="element1" org.eventb.core.target="ele4-c1"/>
     <org.eventb.core.variable name="var1" org.eventb.core.identifier="floor"/>
     <org.eventb.core.variable name="var2" org.eventb.core.comment="EQU5 (the elevator has doors), FUN7 (controller can open doors)" org.eventb.core.identifier="door"/>
     <org.eventb.core.variable name="var3" org.eventb.core.comment="FUN12 (button status can be seen by controller)" org.eventb.core.identifier="orders"/>
@@ -17,7 +16,7 @@
     </org.eventb.core.event>
     <org.eventb.core.event name="element4" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="EnvMove">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="EnvMove"/>
-        <org.eventb.core.guard name="(" org.eventb.core.label="grd6" org.eventb.core.predicate="direction=UP⇔new_floor−floor=1"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd6" org.eventb.core.predicate="(direction=UP⇒new_floor−floor=1) ∧ (direction=DOWN⇒new_floor−floor=−1)"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="element5" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ReachOrder">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="ReachOrder"/>
@@ -76,4 +75,5 @@
     <org.eventb.core.variable name="elementA" org.eventb.core.identifier="desired_door"/>
     <org.eventb.core.variable name="element?" org.eventb.core.identifier="direction"/>
     <org.eventb.core.invariant name="element@" org.eventb.core.label="inv_direction_type" org.eventb.core.predicate="direction∈DIRECTION"/>
+    <org.eventb.core.seesContext name="elementB" org.eventb.core.target="ele4-c0"/>
 </org.eventb.core.machineFile>

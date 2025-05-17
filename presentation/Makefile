@@ -5,7 +5,6 @@ presentation: presentation.tex
 		-synctex=1 \
 		-interaction=nonstopmode \
 		-pdf \
-		-xelatex \
 		-outdir=${BIN} \
 		$<
 
