@@ -7,12 +7,12 @@
     <org.eventb.core.variable name="var4" org.eventb.core.comment="The floor the elevator should go to. The elevator is expected to move as soon as /=NONE" org.eventb.core.identifier="destination"/>
     <org.eventb.core.variable name="var5" org.eventb.core.identifier="movement"/>
     <org.eventb.core.variable name="var6" org.eventb.core.identifier="floor_event"/>
-    <org.eventb.core.invariant name="inv2" org.eventb.core.label="inv_door_open_no_dest" org.eventb.core.predicate="door=OPEN⇒destination=NONE"/>
-    <org.eventb.core.invariant name="inv4" org.eventb.core.comment="&#10;FUN15 (no movement ifno order)&#10;FUN16 (only move in the direction of a ordered floor)" org.eventb.core.label="inv_move_to_ordered" org.eventb.core.predicate="destination≠NONE⇒destination∈orders"/>
-    <org.eventb.core.invariant name="inv5" org.eventb.core.comment="FUN 11 (door open when no request)" org.eventb.core.label="inv_no_orders_door_open" org.eventb.core.predicate="orders=∅⇒(door=OPEN ∨ desired_door=OPEN)"/>
-    <org.eventb.core.invariant name="inv10" org.eventb.core.comment="FUN 11 (door open when no request)" org.eventb.core.label="inv_orders_when_closing_door" org.eventb.core.predicate="desired_door=CLOSED⇒orders≠∅"/>
-    <org.eventb.core.invariant name="inv6" org.eventb.core.label="inv_types" org.eventb.core.predicate="floor∈FLOOR ∧&#10;door∈DOOR ∧ &#10;orders ⊆FLOOR ∧ &#10;destination∈(FLOOR ∪ {NONE}) ∧&#10;movement ∈ MOVEMENT ∧&#10;floor_event∈EVENT_STATUS ∧&#10;desired_door∈DOOR"/>
+    <org.eventb.core.invariant name="inv4" org.eventb.core.comment="&#10;FUN 16 (only move in the direction of orders)" org.eventb.core.label="inv_move_to_ordered" org.eventb.core.predicate="destination≠NONE⇒destination∈orders"/>
     <org.eventb.core.invariant name="inv7" org.eventb.core.comment="&#10;only move with destination" org.eventb.core.label="inv_only_move_when_destination" org.eventb.core.predicate="movement=MOVING⇒destination≠NONE"/>
+    <org.eventb.core.invariant name="inv11" org.eventb.core.comment="&#10;FUN 15 only move when there are orders" org.eventb.core.label="inv_only_move_with_orders" org.eventb.core.predicate="movement=MOVING⇒orders≠∅" org.eventb.core.theorem="true"/>
+    <org.eventb.core.invariant name="inv10" org.eventb.core.comment="FUN 11 (door open when no request)" org.eventb.core.label="inv_orders_when_closing_door" org.eventb.core.predicate="desired_door=CLOSED⇒orders≠∅"/>
+    <org.eventb.core.invariant name="inv5" org.eventb.core.comment="FUN 11 (door open when no request)" org.eventb.core.label="inv_no_orders_door_open" org.eventb.core.predicate="orders=∅⇒(door=OPEN ∨ desired_door=OPEN)" org.eventb.core.theorem="true"/>
+    <org.eventb.core.invariant name="inv6" org.eventb.core.label="inv_types" org.eventb.core.predicate="floor∈FLOOR ∧&#10;door∈DOOR ∧ &#10;orders ⊆FLOOR ∧ &#10;destination∈(FLOOR ∪ {NONE}) ∧&#10;movement ∈ MOVEMENT ∧&#10;floor_event∈EVENT_STATUS ∧&#10;desired_door∈DOOR"/>
     <org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
         <org.eventb.core.action name="'" org.eventb.core.assignment="floor, door, orders, destination,movement,floor_event,desired_door≔0, OPEN, ∅, NONE,STOPPED,HANDLED,OPEN" org.eventb.core.label="act1"/>
     </org.eventb.core.event>
