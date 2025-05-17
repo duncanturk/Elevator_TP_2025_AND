@@ -75,5 +75,5 @@
     </org.eventb.core.event>
     <org.eventb.core.variable name="elementA" org.eventb.core.identifier="desired_door"/>
     <org.eventb.core.variable name="element?" org.eventb.core.identifier="direction"/>
-    <org.eventb.core.invariant name="element@" org.eventb.core.label="inv1" org.eventb.core.predicate="direction∈DIRECTION"/>
+    <org.eventb.core.invariant name="element@" org.eventb.core.label="inv_direction_type" org.eventb.core.predicate="direction∈DIRECTION"/>
 </org.eventb.core.machineFile>
