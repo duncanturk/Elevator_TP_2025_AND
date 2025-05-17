@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-    <org.eventb.core.psStatus name="inv_remaining_steps_bounded/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="INITIALISATION/inv_remaining_steps_type/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="41" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="INITIALISATION/inv_remaining_steps_bounded/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="41" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="INITIALISATION/inv_remaining_steps_moving/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="41" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="Order/inv_remaining_steps_type/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="Order/inv_remaining_steps_bounded/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="Order/inv_remaining_steps_moving/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
-    <org.eventb.core.psStatus name="EnvMove/inv_remaining_steps_type/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="EnvMove/inv_remaining_steps_bounded/INV" org.eventb.core.confidence="-99" org.eventb.core.poStamp="46" org.eventb.core.psManual="true"/>
-    <org.eventb.core.psStatus name="EnvMove/inv_remaining_steps_moving/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="EnvMove/act3/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="EnvStopMoving/inv_remaining_steps_moving/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="OpenDoor/inv_remaining_steps_type/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="OpenDoor/inv_remaining_steps_bounded/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="EnvStartMoving/inv_remaining_steps_moving/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="inv_remaining_steps_bounded/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="61" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="inv_if_no_zeros_then_nat1/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="61" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="inv1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="61" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv_remaining_steps_type/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="61" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv_remaining_steps_bounded/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="61" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv_remaining_steps_moving/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="61" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="61" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="Order/inv_remaining_steps_type/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="61" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="Order/inv_remaining_steps_bounded/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="61" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="Order/inv_remaining_steps_moving/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="61" org.eventb.core.psManual="true"/>
+    <org.eventb.core.psStatus name="Order/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="61" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
+    <org.eventb.core.psStatus name="EnvMove/inv_remaining_steps_type/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="61" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="EnvMove/inv_remaining_steps_bounded/INV" org.eventb.core.confidence="-99" org.eventb.core.poStamp="61" org.eventb.core.psManual="true"/>
+    <org.eventb.core.psStatus name="EnvMove/inv_remaining_steps_moving/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="61" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="EnvMove/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="61" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="EnvMove/act3/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="61" org.eventb.core.psManual="true"/>
+    <org.eventb.core.psStatus name="ReachOrder/inv_remaining_steps_moving/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="61" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="EnvStopMoving/inv_remaining_steps_moving/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="61" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="OpenDoor/inv_remaining_steps_type/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="61" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="OpenDoor/inv_remaining_steps_bounded/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="61" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="OpenDoor/inv_remaining_steps_moving/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="61" org.eventb.core.psManual="true"/>
+    <org.eventb.core.psStatus name="OpenDoor/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="61" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="ChooseNextUp/inv_remaining_steps_moving/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="61" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="ChangeDirectionDown/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="61" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="ChooseNextDown/inv_remaining_steps_moving/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="61" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="ChangeDirectionUp/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="61" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="EnvStartMoving/inv_remaining_steps_moving/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="61" org.eventb.core.psManual="true"/>
 </org.eventb.core.psFile>

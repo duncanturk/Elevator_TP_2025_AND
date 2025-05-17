@@ -32,6 +32,7 @@
     </org.eventb.core.event>
     <org.eventb.core.event name="elementH" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="OpenDoor">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="OpenDoor"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="remaining_steps≔{floor}⩤remaining_steps" org.eventb.core.label="act4"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="elementI" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="CloseDoor">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="CloseDoor"/>
@@ -58,8 +59,10 @@
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="EnvStartMoving"/>
     </org.eventb.core.event>
     <org.eventb.core.variable name="elementQ" org.eventb.core.identifier="remaining_steps"/>
-    <org.eventb.core.invariant name="elementR" org.eventb.core.label="inv_remaining_steps_type" org.eventb.core.predicate="remaining_steps∈orders→ℕ1"/>
+    <org.eventb.core.invariant name="elementR" org.eventb.core.label="inv_remaining_steps_type" org.eventb.core.predicate="remaining_steps∈orders→ℕ"/>
     <org.eventb.core.invariant name="elementS" org.eventb.core.label="inv_remaining_steps_bounded" org.eventb.core.predicate="∀o·o∈orders⇒remaining_steps(o)≤2∗N_Levels"/>
     <org.eventb.core.seesContext name="elementT" org.eventb.core.target="ele4-c1-termination"/>
-    <org.eventb.core.invariant name="elementU" org.eventb.core.label="inv_remaining_steps_moving" org.eventb.core.predicate="movement=MOVING⇒(∀s·s∈ran(remaining_steps)⇒s&gt;0)"/>
+    <org.eventb.core.invariant name="elementU" org.eventb.core.label="inv_remaining_steps_moving" org.eventb.core.predicate="(movement=MOVING ∨ destination=NONE)⇒(&#10;&#9;∀s·s∈ran(remaining_steps)⇒s&gt;0&#10;)"/>
+    <org.eventb.core.invariant name="elementV" org.eventb.core.comment="This makes some proofs shorter/faster" org.eventb.core.label="inv_if_no_zeros_then_nat1" org.eventb.core.predicate="(∀s·s∈ran(remaining_steps)⇒s&gt;0)⇒ran(remaining_steps)⊆ℕ1" org.eventb.core.theorem="true"/>
+    <org.eventb.core.invariant name="elementW" org.eventb.core.label="inv1" org.eventb.core.predicate="∀f·f∈orders ∧ f &gt; floor ∧ direction=UP ⇒ floor = f − remaining_steps(f)"/>
 </org.eventb.core.machineFile>

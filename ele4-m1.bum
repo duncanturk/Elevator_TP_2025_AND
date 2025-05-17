@@ -17,6 +17,7 @@
     </org.eventb.core.event>
     <org.eventb.core.event name="element4" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="EnvMove">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="EnvMove"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd6" org.eventb.core.predicate="direction=UP⇔new_floor−floor=1"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="element5" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ReachOrder">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="ReachOrder"/>
