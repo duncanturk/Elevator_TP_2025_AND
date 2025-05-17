@@ -1,6 +1,6 @@
 \RequirePackage[perpage]{footmisc}
-\Requirepackage{xcolor}
-\Requirepackage{tabularx}
+\RequirePackage{xcolor}
+\RequirePackage{tabularx}
 
 \RequirePackage{babel} % translations for spanish
 
@@ -72,19 +72,19 @@
 \definecolor{mygreen}{HTML}{2F8E34}
 \definecolor{myblue}{HTML}{1A1A83}
 
-\renewcommand{\Constant}[1]{\texttt{\MakeUppercase{#1}}}
-\renewcommand{\Variable}[1]{\texttt{#1}}
-\renewcommand{\Requirement}[1]{\textcolor{red}{\texttt{\MakeUppercase{#1}}}}
-\renewcommand{\Event}[1]{\textcolor{mygreen}{\texttt{\textbf{#1}}}}
-\renewcommand{\Invariant}[1]{\textcolor{mygreen}{\texttt{#1}}}
-\renewcommand{\InvariantName}[1]{\textcolor{myblue}{\texttt{#1}}}
-\renewcommand{\Guard}[1]{\textcolor{mygreen}{\texttt{#1}}}
-\renewcommand{\Action}[1]{\textcolor{mygreen}{\texttt{#1}}}
+\newcommand{\Constant}[1]{\texttt{\MakeUppercase{#1}}}
+\newcommand{\Variable}[1]{\texttt{#1}}
+\newcommand{\Requirement}[1]{\textcolor{red}{\texttt{\MakeUppercase{#1}}}}
+\newcommand{\Event}[1]{\textcolor{mygreen}{\texttt{\textbf{#1}}}}
+\newcommand{\Invariant}[1]{\textcolor{mygreen}{\texttt{#1}}}
+\newcommand{\InvariantName}[1]{\textcolor{myblue}{\texttt{#1}}}
+\newcommand{\Guard}[1]{\textcolor{mygreen}{\texttt{#1}}}
+\newcommand{\Action}[1]{\textcolor{mygreen}{\texttt{#1}}}
 
-\renewcommand{\Req}[2]{
+\newcommand{\Req}[2]{
 	\begin{tabularx}{\linewidth}{|l|X|}\hline
 	\Requirement{#1} & #2\\\hline
 	\end{tabularx}
 }
-\renewcommand{\Inv}[2]{\InvariantName{#1:}\Invariant{#2}}
+\newcommand{\Inv}[2]{\InvariantName{#1:}\Invariant{#2}}
 
