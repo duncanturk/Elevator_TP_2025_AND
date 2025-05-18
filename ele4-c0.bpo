@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="2">
+<org.eventb.core.poFile org.eventb.core.poStamp="3">
     <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="MOVEMENT" org.eventb.core.type="ℙ(MOVEMENT)"/>
         <org.eventb.core.poIdentifier name="DOOR" org.eventb.core.type="ℙ(DOOR)"/>
@@ -17,9 +17,9 @@
         <org.eventb.core.poIdentifier name="PENDING" org.eventb.core.type="EVENT_STATUS"/>
         <org.eventb.core.poIdentifier name="STOPPED" org.eventb.core.type="MOVEMENT"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele4-c0.bpo|org.eventb.core.poFile#ele4-c0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="2">
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele4-c0.bpo|org.eventb.core.poFile#ele4-c0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="FLOOR=0 ‥ N_Levels" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-c0.buc|org.eventb.core.contextFile#ele4-c0|org.eventb.core.axiom#axm1"/>
-        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="N_Levels∈ℕ1" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-c0.buc|org.eventb.core.contextFile#ele4-c0|org.eventb.core.axiom#axm10"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="N_Levels∈ℕ1∧N_Levels=5" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-c0.buc|org.eventb.core.contextFile#ele4-c0|org.eventb.core.axiom#axm10"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="NONE∉FLOOR" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-c0.buc|org.eventb.core.contextFile#ele4-c0|org.eventb.core.axiom#axm7"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="finite(DOOR)" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-c0.buc|org.eventb.core.contextFile#ele4-c0|org.eventb.core.axiom#cst15"/>
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="DOOR={OPEN,CLOSED}" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-c0.buc|org.eventb.core.contextFile#ele4-c0|org.eventb.core.axiom#axm2"/>

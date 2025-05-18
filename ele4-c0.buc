@@ -16,7 +16,7 @@
     <org.eventb.core.constant name="cst12" org.eventb.core.identifier="PENDING"/>
     <org.eventb.core.constant name="cst13" org.eventb.core.identifier="HANDLED"/>
     <org.eventb.core.axiom name="axm1" org.eventb.core.comment="ENV2" org.eventb.core.label="axm_floors_0" org.eventb.core.predicate="FLOOR=0‥N_Levels"/>
-    <org.eventb.core.axiom name="axm10" org.eventb.core.comment="ENV2" org.eventb.core.label="axm_floors_1" org.eventb.core.predicate="N_Levels∈ℕ1 "/>
+    <org.eventb.core.axiom name="axm10" org.eventb.core.comment="ENV2" org.eventb.core.label="axm_floors_1" org.eventb.core.predicate="N_Levels∈ℕ1 ∧ N_Levels=5 "/>
     <org.eventb.core.axiom name="axm7" org.eventb.core.comment="to express that there is no destination to go to" org.eventb.core.label="axm_floors_2" org.eventb.core.predicate="NONE∉FLOOR"/>
     <org.eventb.core.axiom name="cst15" org.eventb.core.label="axm2" org.eventb.core.predicate="finite(DOOR)"/>
     <org.eventb.core.axiom name="axm2" org.eventb.core.label="axm2_0" org.eventb.core.predicate="DOOR={OPEN, CLOSED}"/>

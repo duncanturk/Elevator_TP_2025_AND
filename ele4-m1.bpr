@@ -1830,79 +1830,84 @@
                 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p22" org.eventb.core.prHyps="p19" org.eventb.core.prInfHyps="p23"/>
                 <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p24" org.eventb.core.prHyps="p3" org.eventb.core.prInfHyps="p25"/>
                 <org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p26" org.eventb.core.prHyps="p19" org.eventb.core.prInfHyps="p27"/>
+                <org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p28" org.eventb.core.prHyps="p19,p15,p2" org.eventb.core.prInfHyps="p29"/>
                 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
-                    <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p51">
-                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p21" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p28"/>
-                        <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p20" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p29"/>
-                        <org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p9" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p30"/>
-                        <org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p31"/>
-                        <org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p32"/>
-                        <org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p33" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p34"/>
-                        <org.eventb.core.prHypAction name="REWRITE6" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p35"/>
-                        <org.eventb.core.prHypAction name="REWRITE7" org.eventb.core.prHidden="p36" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p37"/>
-                        <org.eventb.core.prHypAction name="REWRITE8" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p38"/>
-                        <org.eventb.core.prHypAction name="REWRITE9" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p39,p40,p41,p42,p43,p44,p45"/>
-                        <org.eventb.core.prHypAction name="REWRITE10" org.eventb.core.prHidden="p46" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p47"/>
-                        <org.eventb.core.prHypAction name="REWRITE11" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p48,p49"/>
-                        <org.eventb.core.prHypAction name="HIDE12" org.eventb.core.prHyps="p23"/>
-                        <org.eventb.core.prHypAction name="HIDE13" org.eventb.core.prHyps="p25"/>
-                        <org.eventb.core.prHypAction name="REWRITE14" org.eventb.core.prHidden="p27" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p50"/>
+                    <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p56">
+                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p30,p31"/>
+                        <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p21" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p32"/>
+                        <org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p20" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p33"/>
+                        <org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p9" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p34"/>
+                        <org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p35"/>
+                        <org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p11" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p36"/>
+                        <org.eventb.core.prHypAction name="REWRITE6" org.eventb.core.prHidden="p37" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p38"/>
+                        <org.eventb.core.prHypAction name="REWRITE7" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p39"/>
+                        <org.eventb.core.prHypAction name="REWRITE8" org.eventb.core.prHidden="p40" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p41"/>
+                        <org.eventb.core.prHypAction name="REWRITE9" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p42"/>
+                        <org.eventb.core.prHypAction name="REWRITE10" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p43,p44,p45,p46,p47,p48,p49"/>
+                        <org.eventb.core.prHypAction name="REWRITE11" org.eventb.core.prHidden="p50" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p51"/>
+                        <org.eventb.core.prHypAction name="REWRITE12" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p52,p53"/>
+                        <org.eventb.core.prHypAction name="HIDE13" org.eventb.core.prHyps="p23"/>
+                        <org.eventb.core.prHypAction name="HIDE14" org.eventb.core.prHyps="p25"/>
+                        <org.eventb.core.prHypAction name="REWRITE15" org.eventb.core.prHidden="p27" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p54"/>
+                        <org.eventb.core.prHypAction name="REWRITE16" org.eventb.core.prHidden="p29" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p55"/>
                         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
                             <org.eventb.core.prAnte name="'">
-                                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p34" org.eventb.core.prHyps="p19" org.eventb.core.prInfHyps="p52"/>
-                                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p35" org.eventb.core.prHyps="p19" org.eventb.core.prInfHyps="p53"/>
-                                <org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p38" org.eventb.core.prHyps="p49" org.eventb.core.prInfHyps="p54"/>
-                                <org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p47" org.eventb.core.prHyps="p19,p48" org.eventb.core.prInfHyps="p55"/>
-                                <org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p50" org.eventb.core.prHyps="p48,p49,p19" org.eventb.core.prInfHyps="p56"/>
+                                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p38" org.eventb.core.prHyps="p19" org.eventb.core.prInfHyps="p57"/>
+                                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p39" org.eventb.core.prHyps="p19" org.eventb.core.prInfHyps="p58"/>
+                                <org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p42" org.eventb.core.prHyps="p53" org.eventb.core.prInfHyps="p59"/>
+                                <org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p51" org.eventb.core.prHyps="p19,p52" org.eventb.core.prInfHyps="p60"/>
+                                <org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p54" org.eventb.core.prHyps="p52,p53,p19" org.eventb.core.prInfHyps="p61"/>
+                                <org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p55" org.eventb.core.prHyps="p53,p52" org.eventb.core.prInfHyps="p62"/>
                                 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
                                     <org.eventb.core.prAnte name="'">
-                                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p52"/>
-                                        <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p53" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p57"/>
-                                        <org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p54" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p58"/>
-                                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p55"/>
-                                        <org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p56" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p59"/>
+                                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p57"/>
+                                        <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p58" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p63"/>
+                                        <org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p59" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p64"/>
+                                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p60"/>
+                                        <org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p61" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p65"/>
+                                        <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p62"/>
                                         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
                                             <org.eventb.core.prAnte name="'">
-                                                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p60" org.eventb.core.prHyps="p58" org.eventb.core.prInfHyps="p61"/>
-                                                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p18" org.eventb.core.prHyps="p57" org.eventb.core.prInfHyps="p62"/>
-                                                <org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p37" org.eventb.core.prHyps="p57,p58" org.eventb.core.prInfHyps="p63"/>
-                                                <org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p59" org.eventb.core.prHyps="p58,p57" org.eventb.core.prInfHyps="p64"/>
+                                                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p66" org.eventb.core.prHyps="p64" org.eventb.core.prInfHyps="p67"/>
+                                                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p18" org.eventb.core.prHyps="p63" org.eventb.core.prInfHyps="p68"/>
+                                                <org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p41" org.eventb.core.prHyps="p63,p64" org.eventb.core.prInfHyps="p69"/>
+                                                <org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p65" org.eventb.core.prHyps="p64,p63" org.eventb.core.prInfHyps="p70"/>
                                                 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
                                                     <org.eventb.core.prAnte name="'">
-                                                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p61"/>
-                                                        <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p62" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p65"/>
-                                                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p63"/>
-                                                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p64"/>
-                                                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="remove ¬ in goal" org.eventb.core.prGoal="p51" org.eventb.core.prHyps="">
-                                                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p66">
-                                                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="remove ¬ in goal" org.eventb.core.prGoal="p66" org.eventb.core.prHyps="">
+                                                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p67"/>
+                                                        <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p68" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p71"/>
+                                                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p69"/>
+                                                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p70"/>
+                                                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="remove ¬ in goal" org.eventb.core.prGoal="p56" org.eventb.core.prHyps="">
+                                                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p72">
+                                                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="remove ¬ in goal" org.eventb.core.prGoal="p72" org.eventb.core.prHyps="">
                                                                     <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p2">
                                                                         <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p2" org.eventb.core.prHyps="p2"/>
                                                                     </org.eventb.core.prAnte>
                                                                     <org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
                                                                 </org.eventb.core.prRule>
                                                             </org.eventb.core.prAnte>
-                                                            <org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p67">
+                                                            <org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p73">
                                                                 <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
                                                                     <org.eventb.core.prAnte name="'">
-                                                                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p68"/>
-                                                                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p40"/>
-                                                                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p43"/>
-                                                                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p44"/>
-                                                                        <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p45"/>
+                                                                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p74"/>
+                                                                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p44"/>
+                                                                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p47"/>
+                                                                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p48"/>
+                                                                        <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p49"/>
                                                                         <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with destination=NONE" org.eventb.core.prHyps="p19">
                                                                             <org.eventb.core.prAnte name="'">
                                                                                 <org.eventb.core.prHypAction name="DESELECT0" org.eventb.core.prHyps="p19"/>
-                                                                                <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with direction=UP" org.eventb.core.prHyps="p16">
+                                                                                <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with direction=UP" org.eventb.core.prHyps="p15">
                                                                                     <org.eventb.core.prAnte name="'">
-                                                                                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p16"/>
-                                                                                        <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with door=CLOSED" org.eventb.core.prHyps="p48">
+                                                                                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p15"/>
+                                                                                        <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with door=CLOSED" org.eventb.core.prHyps="p52">
                                                                                             <org.eventb.core.prAnte name="'">
-                                                                                                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p48"/>
-                                                                                                <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with desired_door=CLOSED" org.eventb.core.prHyps="p49">
+                                                                                                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p52"/>
+                                                                                                <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with desired_door=CLOSED" org.eventb.core.prHyps="p53">
                                                                                                     <org.eventb.core.prAnte name="'">
-                                                                                                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p49"/>
-                                                                                                        <org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p67" org.eventb.core.prHyps="p8,p10,p11,p7,p17,p14,p1,p19,p2,p15,p28,p29,p30,p31,p32,p39,p41,p42,p57,p58,p65">
+                                                                                                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p53"/>
+                                                                                                        <org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p73" org.eventb.core.prHyps="p8,p10,p7,p17,p14,p1,p19,p2,p13,p30,p31,p32,p33,p34,p35,p36,p43,p45,p46,p63,p64,p71">
                                                                                                             <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
                                                                                                         </org.eventb.core.prRule>
                                                                                                     </org.eventb.core.prAnte>
@@ -1950,82 +1955,88 @@
         <org.eventb.core.prIdent name="floor_event" org.eventb.core.type="EVENT_STATUS"/>
         <org.eventb.core.prIdent name="movement" org.eventb.core.type="MOVEMENT"/>
         <org.eventb.core.prIdent name="orders" org.eventb.core.type="ℙ(ℤ)"/>
-        <org.eventb.core.prPred name="p51" org.eventb.core.predicate="¬(∀x⦂ℤ·¬(x∈orders∧x&gt;floor))∧(∃b⦂ℤ·∀x⦂ℤ·x∈orders∧x&gt;floor⇒b≤x)"/>
-        <org.eventb.core.prPred name="p54" org.eventb.core.predicate="⊤⇒¬orders=(∅ ⦂ ℙ(ℤ))"/>
-        <org.eventb.core.prPred name="p47" org.eventb.core.predicate="¬destination=NONE⇒door=CLOSED"/>
-        <org.eventb.core.prPred name="p49" org.eventb.core.predicate="desired_door=CLOSED"/>
-        <org.eventb.core.prPred name="p63" org.eventb.core.predicate="⊥⇒¬⊥"/>
-        <org.eventb.core.prPred name="p43" org.eventb.core.predicate="movement∈MOVEMENT"/>
-        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="N_Levels∈ℕ1"/>
-        <org.eventb.core.prPred name="p53" org.eventb.core.predicate="movement=MOVING⇒¬⊤"/>
-        <org.eventb.core.prPred name="p48" org.eventb.core.predicate="door=CLOSED"/>
-        <org.eventb.core.prPred name="p58" org.eventb.core.predicate="¬orders=(∅ ⦂ ℙ(ℤ))"/>
-        <org.eventb.core.prPred name="p67" org.eventb.core.predicate="∃b⦂ℤ·∀x⦂ℤ·x∈orders∧x&gt;floor⇒b≤x"/>
-        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="destination'∈orders"/>
-        <org.eventb.core.prPred name="p29" org.eventb.core.predicate="¬OPEN=CLOSED"/>
+        <org.eventb.core.prPred name="p28" org.eventb.core.predicate="desired_door=CLOSED∧door=CLOSED∧destination=NONE∧orders≠(∅ ⦂ ℙ(ℤ))⇒(desired_door=CLOSED∧door=CLOSED∧direction=UP∧(∃x⦂ℤ·x∈orders∧x&gt;floor))∨(door=CLOSED∧destination=NONE∧direction=UP∧¬(∃x⦂ℤ·x∈orders∧x&gt;floor))∨(desired_door=CLOSED∧door=CLOSED∧direction=DOWN∧(∃x⦂ℤ·x∈orders∧x&lt;floor))∨(door=CLOSED∧destination=NONE∧direction=DOWN∧¬(∃x⦂ℤ·x∈orders∧x&lt;floor))"/>
+        <org.eventb.core.prPred name="p56" org.eventb.core.predicate="¬(∀x⦂ℤ·¬(x∈orders∧x&gt;floor))∧(∃b⦂ℤ·∀x⦂ℤ·x∈orders∧x&gt;floor⇒b≤x)"/>
+        <org.eventb.core.prPred name="p59" org.eventb.core.predicate="⊤⇒¬orders=(∅ ⦂ ℙ(ℤ))"/>
+        <org.eventb.core.prPred name="p51" org.eventb.core.predicate="¬destination=NONE⇒door=CLOSED"/>
+        <org.eventb.core.prPred name="p53" org.eventb.core.predicate="desired_door=CLOSED"/>
+        <org.eventb.core.prPred name="p69" org.eventb.core.predicate="⊥⇒¬⊥"/>
+        <org.eventb.core.prPred name="p47" org.eventb.core.predicate="movement∈MOVEMENT"/>
+        <org.eventb.core.prPred name="p30" org.eventb.core.predicate="N_Levels∈ℕ1"/>
+        <org.eventb.core.prPred name="p58" org.eventb.core.predicate="movement=MOVING⇒¬⊤"/>
+        <org.eventb.core.prPred name="p55" org.eventb.core.predicate="desired_door=CLOSED∧door=CLOSED∧¬orders=(∅ ⦂ ℙ(ℤ))⇒(desired_door=CLOSED∧door=CLOSED)∨(desired_door=CLOSED∧door=CLOSED∧direction=DOWN∧(∃x⦂ℤ·x∈orders∧x&lt;floor))∨(door=CLOSED∧direction=DOWN∧¬(∃x⦂ℤ·x∈orders∧x&lt;floor))"/>
+        <org.eventb.core.prPred name="p52" org.eventb.core.predicate="door=CLOSED"/>
+        <org.eventb.core.prPred name="p64" org.eventb.core.predicate="¬orders=(∅ ⦂ ℙ(ℤ))"/>
+        <org.eventb.core.prPred name="p73" org.eventb.core.predicate="∃b⦂ℤ·∀x⦂ℤ·x∈orders∧x&gt;floor⇒b≤x"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="destination'∈orders"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="N_Levels∈ℕ1∧N_Levels=5"/>
+        <org.eventb.core.prPred name="p33" org.eventb.core.predicate="¬OPEN=CLOSED"/>
         <org.eventb.core.prPred name="p19" org.eventb.core.predicate="destination=NONE"/>
         <org.eventb.core.prPred name="p21" org.eventb.core.predicate="NONE∉FLOOR"/>
         <org.eventb.core.prPred name="p1" org.eventb.core.predicate="EVENT_STATUS={PENDING,HANDLED}"/>
-        <org.eventb.core.prPred name="p52" org.eventb.core.predicate="¬⊤⇒destination∈orders"/>
-        <org.eventb.core.prPred name="p34" org.eventb.core.predicate="¬destination=NONE⇒destination∈orders"/>
-        <org.eventb.core.prPred name="p44" org.eventb.core.predicate="floor_event∈EVENT_STATUS"/>
-        <org.eventb.core.prPred name="p28" org.eventb.core.predicate="¬NONE∈FLOOR"/>
-        <org.eventb.core.prPred name="p39" org.eventb.core.predicate="floor∈FLOOR"/>
-        <org.eventb.core.prPred name="p68" org.eventb.core.predicate="direction∈DIRECTION"/>
+        <org.eventb.core.prPred name="p57" org.eventb.core.predicate="¬⊤⇒destination∈orders"/>
+        <org.eventb.core.prPred name="p38" org.eventb.core.predicate="¬destination=NONE⇒destination∈orders"/>
+        <org.eventb.core.prPred name="p48" org.eventb.core.predicate="floor_event∈EVENT_STATUS"/>
+        <org.eventb.core.prPred name="p32" org.eventb.core.predicate="¬NONE∈FLOOR"/>
+        <org.eventb.core.prPred name="p43" org.eventb.core.predicate="floor∈FLOOR"/>
+        <org.eventb.core.prPred name="p74" org.eventb.core.predicate="direction∈DIRECTION"/>
         <org.eventb.core.prPred name="p7" org.eventb.core.predicate="DOOR={OPEN,CLOSED}"/>
-        <org.eventb.core.prPred name="p55" org.eventb.core.predicate="¬⊤⇒⊤"/>
+        <org.eventb.core.prPred name="p60" org.eventb.core.predicate="¬⊤⇒⊤"/>
         <org.eventb.core.prPred name="p8" org.eventb.core.predicate="FLOOR=0 ‥ N_Levels"/>
         <org.eventb.core.prPred name="p9" org.eventb.core.predicate="UP≠DOWN"/>
-        <org.eventb.core.prPred name="p40" org.eventb.core.predicate="door∈DOOR"/>
-        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="PENDING≠HANDLED"/>
-        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="movement=MOVING⇒destination≠NONE"/>
-        <org.eventb.core.prPred name="p36" org.eventb.core.predicate="movement=MOVING⇒orders≠(∅ ⦂ ℙ(ℤ))"/>
+        <org.eventb.core.prPred name="p44" org.eventb.core.predicate="door∈DOOR"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="PENDING≠HANDLED"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="movement=MOVING⇒destination≠NONE"/>
+        <org.eventb.core.prPred name="p40" org.eventb.core.predicate="movement=MOVING⇒orders≠(∅ ⦂ ℙ(ℤ))"/>
         <org.eventb.core.prPred name="p14" org.eventb.core.predicate="MOVEMENT={MOVING,STOPPED}"/>
-        <org.eventb.core.prPred name="p45" org.eventb.core.predicate="desired_door∈DOOR"/>
-        <org.eventb.core.prPred name="p65" org.eventb.core.predicate="¬floor_event=PENDING"/>
+        <org.eventb.core.prPred name="p49" org.eventb.core.predicate="desired_door∈DOOR"/>
+        <org.eventb.core.prPred name="p71" org.eventb.core.predicate="¬floor_event=PENDING"/>
         <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∃x⦂ℤ·x∈orders∧x&gt;floor"/>
-        <org.eventb.core.prPred name="p50" org.eventb.core.predicate="¬orders=(∅ ⦂ ℙ(ℤ))⇒(floor_event=HANDLED∧movement=MOVING∧¬floor=destination)∨(floor∈orders∧floor_event=PENDING)∨(¬floor∈orders∧floor_event=PENDING)∨(floor_event=HANDLED∧movement=MOVING∧floor=destination)∨(movement=STOPPED∧floor=destination)∨(door=OPEN∧¬orders=(∅ ⦂ ℙ(ℤ)))∨(door=CLOSED∧desired_door=CLOSED∧¬orders=(∅ ⦂ ℙ(ℤ)))∨(desired_door=OPEN∧door=CLOSED)∨(desired_door=CLOSED∧door=OPEN)∨(¬destination=floor∧¬destination=NONE∧movement=STOPPED)"/>
+        <org.eventb.core.prPred name="p54" org.eventb.core.predicate="¬orders=(∅ ⦂ ℙ(ℤ))⇒(floor_event=HANDLED∧movement=MOVING∧¬floor=destination)∨(floor∈orders∧floor_event=PENDING)∨(¬floor∈orders∧floor_event=PENDING)∨(floor_event=HANDLED∧movement=MOVING∧floor=destination)∨(movement=STOPPED∧floor=destination)∨(door=OPEN∧¬orders=(∅ ⦂ ℙ(ℤ)))∨(door=CLOSED∧desired_door=CLOSED∧¬orders=(∅ ⦂ ℙ(ℤ)))∨(desired_door=OPEN∧door=CLOSED)∨(desired_door=CLOSED∧door=OPEN)∨(¬destination=floor∧¬destination=NONE∧movement=STOPPED)"/>
         <org.eventb.core.prPred name="p3" org.eventb.core.predicate="door=CLOSED∧desired_door=CLOSED"/>
         <org.eventb.core.prPred name="p4" org.eventb.core.predicate="floor∈FLOOR∧door∈DOOR∧orders⊆FLOOR∧destination∈FLOOR∪{NONE}∧movement∈MOVEMENT∧floor_event∈EVENT_STATUS∧desired_door∈DOOR"/>
         <org.eventb.core.prPred name="p24" org.eventb.core.predicate="movement=MOVING⇒door=CLOSED∧desired_door=CLOSED"/>
-        <org.eventb.core.prPred name="p38" org.eventb.core.predicate="desired_door=CLOSED⇒¬orders=(∅ ⦂ ℙ(ℤ))"/>
+        <org.eventb.core.prPred name="p42" org.eventb.core.predicate="desired_door=CLOSED⇒¬orders=(∅ ⦂ ℙ(ℤ))"/>
         <org.eventb.core.prPred name="p6" org.eventb.core.predicate="desired_door=CLOSED⇒orders≠(∅ ⦂ ℙ(ℤ))"/>
-        <org.eventb.core.prPred name="p66" org.eventb.core.predicate="∃x⦂ℤ·¬¬(x∈orders∧x&gt;floor)"/>
+        <org.eventb.core.prPred name="p72" org.eventb.core.predicate="∃x⦂ℤ·¬¬(x∈orders∧x&gt;floor)"/>
         <org.eventb.core.prPred name="p27" org.eventb.core.predicate="orders≠(∅ ⦂ ℙ(ℤ))⇒(floor_event=HANDLED∧movement=MOVING∧floor≠destination)∨(floor∈orders∧floor_event=PENDING)∨(floor∉orders∧floor_event=PENDING)∨(floor_event=HANDLED∧movement=MOVING∧floor=destination)∨(movement=STOPPED∧floor=destination)∨(door=OPEN∧orders≠(∅ ⦂ ℙ(ℤ))∧⊤)∨(door=CLOSED∧desired_door=CLOSED∧⊤∧orders≠(∅ ⦂ ℙ(ℤ)))∨(desired_door=OPEN∧door=CLOSED)∨(desired_door=CLOSED∧door=OPEN)∨(destination≠floor∧destination≠NONE∧movement=STOPPED)"/>
-        <org.eventb.core.prPred name="p57" org.eventb.core.predicate="¬movement=MOVING"/>
+        <org.eventb.core.prPred name="p63" org.eventb.core.predicate="¬movement=MOVING"/>
         <org.eventb.core.prPred name="p22" org.eventb.core.predicate="desired_door=OPEN⇒destination=NONE"/>
-        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="finite(DOOR)"/>
-        <org.eventb.core.prPred name="p42" org.eventb.core.predicate="destination∈FLOOR∪{NONE}"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="finite(DOOR)"/>
+        <org.eventb.core.prPred name="p46" org.eventb.core.predicate="destination∈FLOOR∪{NONE}"/>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="{x⦂ℤ·x∈orders∧x&gt;floor ∣ x}≠(∅ ⦂ ℙ(ℤ))∧(∃b⦂ℤ·∀x⦂ℤ·x∈{x⦂ℤ·x∈orders∧x&gt;floor ∣ x}⇒b≤x)"/>
-        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="direction=UP"/>
-        <org.eventb.core.prPred name="p62" org.eventb.core.predicate="floor_event=PENDING⇒⊥"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="direction=UP"/>
+        <org.eventb.core.prPred name="p68" org.eventb.core.predicate="floor_event=PENDING⇒⊥"/>
         <org.eventb.core.prPred name="p18" org.eventb.core.predicate="floor_event=PENDING⇒movement=MOVING"/>
         <org.eventb.core.prPred name="p20" org.eventb.core.predicate="OPEN≠CLOSED"/>
-        <org.eventb.core.prPred name="p61" org.eventb.core.predicate="⊥⇒door=OPEN∨desired_door=OPEN"/>
-        <org.eventb.core.prPred name="p32" org.eventb.core.predicate="¬PENDING=HANDLED"/>
-        <org.eventb.core.prPred name="p33" org.eventb.core.predicate="destination≠NONE⇒destination∈orders"/>
-        <org.eventb.core.prPred name="p30" org.eventb.core.predicate="¬UP=DOWN"/>
+        <org.eventb.core.prPred name="p67" org.eventb.core.predicate="⊥⇒door=OPEN∨desired_door=OPEN"/>
+        <org.eventb.core.prPred name="p36" org.eventb.core.predicate="¬PENDING=HANDLED"/>
+        <org.eventb.core.prPred name="p37" org.eventb.core.predicate="destination≠NONE⇒destination∈orders"/>
+        <org.eventb.core.prPred name="p34" org.eventb.core.predicate="¬UP=DOWN"/>
         <org.eventb.core.prPred name="p5" org.eventb.core.predicate="MOVING≠STOPPED"/>
-        <org.eventb.core.prPred name="p41" org.eventb.core.predicate="orders⊆FLOOR"/>
-        <org.eventb.core.prPred name="p37" org.eventb.core.predicate="movement=MOVING⇒¬orders=(∅ ⦂ ℙ(ℤ))"/>
+        <org.eventb.core.prPred name="p45" org.eventb.core.predicate="orders⊆FLOOR"/>
+        <org.eventb.core.prPred name="p29" org.eventb.core.predicate="desired_door=CLOSED∧door=CLOSED∧⊤∧orders≠(∅ ⦂ ℙ(ℤ))⇒(desired_door=CLOSED∧door=CLOSED∧⊤∧⊤)∨(door=CLOSED∧⊤∧⊤∧¬⊤)∨(desired_door=CLOSED∧door=CLOSED∧direction=DOWN∧(∃x⦂ℤ·x∈orders∧x&lt;floor))∨(door=CLOSED∧⊤∧direction=DOWN∧¬(∃x⦂ℤ·x∈orders∧x&lt;floor))"/>
+        <org.eventb.core.prPred name="p41" org.eventb.core.predicate="movement=MOVING⇒¬orders=(∅ ⦂ ℙ(ℤ))"/>
         <org.eventb.core.prPred name="p23" org.eventb.core.predicate="desired_door=OPEN⇒⊤"/>
-        <org.eventb.core.prPred name="p56" org.eventb.core.predicate="¬orders=(∅ ⦂ ℙ(ℤ))⇒(floor_event=HANDLED∧movement=MOVING∧¬floor=destination)∨(floor∈orders∧floor_event=PENDING)∨(¬floor∈orders∧floor_event=PENDING)∨(floor_event=HANDLED∧movement=MOVING∧floor=destination)∨(movement=STOPPED∧floor=destination)∨(door=OPEN∧¬orders=(∅ ⦂ ℙ(ℤ)))∨(⊤∧⊤∧¬orders=(∅ ⦂ ℙ(ℤ)))∨(desired_door=OPEN∧⊤)∨(⊤∧door=OPEN)∨(¬destination=floor∧¬⊤∧movement=STOPPED)"/>
-        <org.eventb.core.prPred name="p59" org.eventb.core.predicate="¬orders=(∅ ⦂ ℙ(ℤ))⇒(floor_event=HANDLED∧movement=MOVING∧¬floor=destination)∨(floor∈orders∧floor_event=PENDING)∨(¬floor∈orders∧floor_event=PENDING)∨(floor_event=HANDLED∧movement=MOVING∧floor=destination)∨(movement=STOPPED∧floor=destination)∨(door=OPEN∧¬orders=(∅ ⦂ ℙ(ℤ)))∨¬orders=(∅ ⦂ ℙ(ℤ))∨desired_door=OPEN∨door=OPEN"/>
-        <org.eventb.core.prPred name="p64" org.eventb.core.predicate="¬⊥⇒(floor_event=HANDLED∧⊥∧¬floor=destination)∨(floor∈orders∧floor_event=PENDING)∨(¬floor∈orders∧floor_event=PENDING)∨(floor_event=HANDLED∧⊥∧floor=destination)∨(movement=STOPPED∧floor=destination)∨(door=OPEN∧¬⊥)∨¬⊥∨desired_door=OPEN∨door=OPEN"/>
-        <org.eventb.core.prPred name="p31" org.eventb.core.predicate="¬MOVING=STOPPED"/>
-        <org.eventb.core.prPred name="p35" org.eventb.core.predicate="movement=MOVING⇒¬destination=NONE"/>
+        <org.eventb.core.prPred name="p31" org.eventb.core.predicate="N_Levels=5"/>
+        <org.eventb.core.prPred name="p61" org.eventb.core.predicate="¬orders=(∅ ⦂ ℙ(ℤ))⇒(floor_event=HANDLED∧movement=MOVING∧¬floor=destination)∨(floor∈orders∧floor_event=PENDING)∨(¬floor∈orders∧floor_event=PENDING)∨(floor_event=HANDLED∧movement=MOVING∧floor=destination)∨(movement=STOPPED∧floor=destination)∨(door=OPEN∧¬orders=(∅ ⦂ ℙ(ℤ)))∨(⊤∧⊤∧¬orders=(∅ ⦂ ℙ(ℤ)))∨(desired_door=OPEN∧⊤)∨(⊤∧door=OPEN)∨(¬destination=floor∧¬⊤∧movement=STOPPED)"/>
+        <org.eventb.core.prPred name="p65" org.eventb.core.predicate="¬orders=(∅ ⦂ ℙ(ℤ))⇒(floor_event=HANDLED∧movement=MOVING∧¬floor=destination)∨(floor∈orders∧floor_event=PENDING)∨(¬floor∈orders∧floor_event=PENDING)∨(floor_event=HANDLED∧movement=MOVING∧floor=destination)∨(movement=STOPPED∧floor=destination)∨(door=OPEN∧¬orders=(∅ ⦂ ℙ(ℤ)))∨¬orders=(∅ ⦂ ℙ(ℤ))∨desired_door=OPEN∨door=OPEN"/>
+        <org.eventb.core.prPred name="p70" org.eventb.core.predicate="¬⊥⇒(floor_event=HANDLED∧⊥∧¬floor=destination)∨(floor∈orders∧floor_event=PENDING)∨(¬floor∈orders∧floor_event=PENDING)∨(floor_event=HANDLED∧⊥∧floor=destination)∨(movement=STOPPED∧floor=destination)∨(door=OPEN∧¬⊥)∨¬⊥∨desired_door=OPEN∨door=OPEN"/>
+        <org.eventb.core.prPred name="p35" org.eventb.core.predicate="¬MOVING=STOPPED"/>
+        <org.eventb.core.prPred name="p39" org.eventb.core.predicate="movement=MOVING⇒¬destination=NONE"/>
         <org.eventb.core.prPred name="p26" org.eventb.core.predicate="orders≠(∅ ⦂ ℙ(ℤ))⇒(floor_event=HANDLED∧movement=MOVING∧floor≠destination)∨(floor∈orders∧floor_event=PENDING)∨(floor∉orders∧floor_event=PENDING)∨(floor_event=HANDLED∧movement=MOVING∧floor=destination)∨(movement=STOPPED∧floor=destination)∨(door=OPEN∧orders≠(∅ ⦂ ℙ(ℤ))∧destination=NONE)∨(door=CLOSED∧desired_door=CLOSED∧destination=NONE∧orders≠(∅ ⦂ ℙ(ℤ)))∨(desired_door=OPEN∧door=CLOSED)∨(desired_door=CLOSED∧door=OPEN)∨(destination≠floor∧destination≠NONE∧movement=STOPPED)"/>
         <org.eventb.core.prPred name="p17" org.eventb.core.predicate="DIRECTION={UP,DOWN}"/>
         <org.eventb.core.prPred name="p25" org.eventb.core.predicate="movement=MOVING⇒⊤"/>
-        <org.eventb.core.prPred name="p60" org.eventb.core.predicate="orders=(∅ ⦂ ℙ(ℤ))⇒door=OPEN∨desired_door=OPEN"/>
-        <org.eventb.core.prPred name="p46" org.eventb.core.predicate="destination≠NONE⇒door=CLOSED"/>
-        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+        <org.eventb.core.prPred name="p66" org.eventb.core.predicate="orders=(∅ ⦂ ℙ(ℤ))⇒door=OPEN∨desired_door=OPEN"/>
+        <org.eventb.core.prPred name="p50" org.eventb.core.predicate="destination≠NONE⇒door=CLOSED"/>
+        <org.eventb.core.prPred name="p62" org.eventb.core.predicate="⊤∧⊤∧¬orders=(∅ ⦂ ℙ(ℤ))⇒(⊤∧⊤)∨(⊤∧⊤∧direction=DOWN∧(∃x⦂ℤ·x∈orders∧x&lt;floor))∨(⊤∧direction=DOWN∧¬(∃x⦂ℤ·x∈orders∧x&lt;floor))"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
         <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.eqL2:1"/>
         <org.eventb.core.prReas name="r6" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
+        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
         <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.rn"/>
-        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="ChooseNextUp/act1/SIM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6" org.eventb.core.prSets="DIRECTION,DOOR,MOVEMENT">
         <org.eventb.core.lang name="L"/>
