@@ -16,6 +16,7 @@
 % 	\end{frame}
 % }
 
+\usepackage{adjustbox}
 \usepackage{./basix}
 
 \title[Elevator Term Project]{Elevator Term Project}
@@ -32,15 +33,7 @@
 	\tableofcontents
 \end{frame}
 
-\section{Model Overview}
-
-\begin{frame}{Model Overview: Diagram}
-	\begin{figure}
-		\centering
-		\includegraphics[width=\linewidth]{model1.png}
-		\caption{Basic diagram of the model}
-	\end{figure}
-\end{frame}
+\section{Machine 0}
 
 \subsection{Modelling Environment}
 
@@ -89,10 +82,20 @@
             & \Constant{CLOSED} & The elevator shall close the door\\ \hline
         \end{tabularx}
 	}
-	\item[]<2->
+	\item[]<.->
 	\item<+-> Stopping?
   \end{itemize}
 \end{frame}
+
+\subsection{Model Overview: Diagram}
+\begin{frame}{Diagram}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\textwidth]{model1.png}
+		\caption{Basic diagram of the model}
+	\end{figure}
+\end{frame}
+
 \subsection{Elevator Movement}
 \begin{frame}{Elevator Movement}
 	\begin{itemize}
@@ -112,7 +115,7 @@
 		\item<+-> \Req{FUN 16}{The elevator should not move in a direction where there are no pending requests to attend.}
 		\item[]<+-> \Inv{inv\_move\_to\_ordered}{destination$\neq$NONE$\implies$destination$\in$orders}
 		\item<+-> \Req{FUN 15}{The elevator should not move if there are no requests waiting to be served.}
-		\item[]<+-> \Inv{inv\_only\_move\_with\_orderes}{movement=MOVING$\implies$orders$\neq\emptyset$}
+		\item[]<+-> \Inv{inv\_only\_move\_with\_orders}{movement=MOVING$\implies$orders$\neq\emptyset$}
 		\item[]<.-> This follows directly from \Requirement{FUN 16} and the helper: \Inv{inv\_only\_move\_when\_destination}{movement=MOVING$\implies$destination$\neq$NONE}
 	\end{itemize}
 \end{frame}
@@ -123,12 +126,12 @@
 		\item[]<+-> \begin{tabularx}{\linewidth}{|l|c|X|}
 					\hline
 					\Variable{door} & \Variable{desired\_door} & Meaning \\ \hline
-					\Constant{OPEN} & \Constant{OPEN} & Door is open and stays open \\ \hline
-					\Constant{OPEN} & \Constant{CLOSED} & The door is closing or may be closed by the environment asap \\ \hline
-					\Constant{CLOSED} & \Constant{OPEN} & The door is opening or may be opened by the environment asap \\ \hline
+					\Constant{OPEN} & \Constant{OPEN} & The door is open and stays open \\ \hline
+					\Constant{OPEN} & \Constant{CLOSED} & The door is closing \\ \hline
+					\Constant{CLOSED} & \Constant{OPEN} & The door is opening \\ \hline
 					\Constant{CLOSED} & \Constant{CLOSED} & The door is closed and stays closed \\ \hline
 				\end{tabularx}
-		\item \Req{FUN 8}{The elevator doors should be closed when the elevator is moving.}
+		\item<+-> \Req{FUN 8}{The elevator doors should be closed when the elevator is moving.}
 		\item[]<+-> \Inv{inv\_door\_closed\_when\_moving}{\\movement=MOVING$\implies$door=CLOSED$\land$desired\_door=CLOSED}
 		\item[]<+-> Helper:
 		\item[]<.-> \Inv{inv\_door\_closed\_when\_destination}{destination$\neq$NONE$\implies$door=CLOSED}
@@ -139,7 +142,8 @@
 		\item[]<.-> \Inv{inv\_orders\_when\_closing\_door}{desired\_door=CLOSED$\implies$orders$\neq\emptyset$}
 	\end{itemize}
 \end{frame}
-\subsection{Refinement: Deterministic Serving Order}
+\section{Refinement: Machine 1}
+\subsection{The Reason}
 \begin{frame}{Refinement: Deterministic Serving Order}
 	\begin{itemize}
 		\item<+-> So far: \Event{ChooseNext} selects \Action{destination:$\in$orders} randomly
@@ -157,14 +161,16 @@
 		\end{tabularx}
 	\end{itemize}
 \end{frame}
+\subsection{Model Overview}
 
 \begin{frame}{Refinement: Diagram}
-	\begin{figure}
-		\centering
-		\includegraphics[width=\linewidth]{model2.png}
-		\caption{Basic diagram of the refined model}
-	\end{figure}
+    \begin{figure}
+        \centering
+        \includegraphics[width=\linewidth]{model2.png}
+        \caption{Basic diagram of the refined model}
+    \end{figure}
 \end{frame}
+\subsection{The Algorithm}
 
 \section{Live Demo}
 
