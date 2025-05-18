@@ -33,13 +33,14 @@
 	\tableofcontents
 \end{frame}
 
-\section{Machine 0}
+\section{Base Model: Machine 0}
 
-\subsection{Modelling Environment}
+\subsection{Model Overview} % David
+\subsection{Modelling Environment} % Christopher
 
-\subsubsection{Communication With the Controller}
+\subsubsection{Reading from the Environment}
 
-\begin{frame}{Communication Between the Controller and Environment}
+\begin{frame}{Reading from the Environment}
   \begin{itemize}
     \item<+-> The controller is able to read the environment state directly
 	  \visible<+->{
@@ -67,7 +68,8 @@
 	\end{itemize}
   \end{frame}
 
-\begin{frame}{Communication Between the Controller and Environment}
+\subsubsection{Controlling the Environment}
+\begin{frame}{Controlling the Environment}
 	\begin{itemize}
     \item<+-> The controller can communicate with the environment by giving commands
 	\item[]<+->\Req{FUN 6}{The elevator can receive a signal to move to any level and will stop automatically when it is reached [\ldots].}
@@ -87,7 +89,7 @@
   \end{itemize}
 \end{frame}
 
-\subsection{Model Overview: Diagram}
+\subsection{Detailed Model Diagram} % David
 \begin{frame}{Diagram}
 	\begin{figure}
 		\centering
@@ -96,7 +98,7 @@
 	\end{figure}
 \end{frame}
 
-\subsection{Elevator Movement}
+\subsection{Elevator Movement} %Christopher
 \begin{frame}{Elevator Movement}
 	\begin{itemize}
 		\item<+-> Physical movement modeled through \Event{EnvMove}
@@ -110,6 +112,7 @@
 		\item<+-> TODO graphic of movement \Event{$test\in$}
 	\end{itemize}
 \end{frame}
+
 \begin{frame}{Elevator Movement}
 	\begin{itemize}
 		\item<+-> \Req{FUN 16}{The elevator should not move in a direction where there are no pending requests to attend.}
@@ -119,7 +122,8 @@
 		\item[]<.-> This follows directly from \Requirement{FUN 16} and the helper: \Inv{inv\_only\_move\_when\_destination}{movement=MOVING$\implies$destination$\neq$NONE}
 	\end{itemize}
 \end{frame}
-\subsection{Door Management}
+\subsection{Door Management} %Christopher
+
 \begin{frame}{Door Management}
 	\begin{itemize}
 		\item<+-> Necessary to ensure movement restrictions according to door status
@@ -142,8 +146,8 @@
 		\item[]<.-> \Inv{inv\_orders\_when\_closing\_door}{desired\_door=CLOSED$\implies$orders$\neq\emptyset$}
 	\end{itemize}
 \end{frame}
-\section{Refinement: Machine 1}
-\subsection{The Reason}
+\section{Refinement: Machine 1}%David
+\subsection{The Reason}%David
 \begin{frame}{Refinement: Deterministic Serving Order}
 	\begin{itemize}
 		\item<+-> So far: \Event{ChooseNext} selects \Action{destination:$\in$orders} randomly
@@ -161,18 +165,24 @@
 		\end{tabularx}
 	\end{itemize}
 \end{frame}
-\subsection{Model Overview}
+
+\subsection{The Algorithm (TODO get from task description)}%David
+
+\subsection{Model Diagram} %David
 
 \begin{frame}{Refinement: Diagram}
-    \begin{figure}
-        \centering
-        \includegraphics[width=\linewidth]{model2.png}
-        \caption{Basic diagram of the refined model}
-    \end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{model2.png}
+		\caption{Basic diagram of the refined model}
+	\end{figure}
 \end{frame}
-\subsection{The Algorithm}
 
-\section{Live Demo}
+\subsection{Why that works (TODO good section name)} % Antonio
+
+\subsection{Deadlock freedom (TODO with adjustments to just adding guards)} % Antonio
+
+\section{Live Demo} % Christopher
 
 \subsection{TODO}
 
