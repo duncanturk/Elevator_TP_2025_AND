@@ -51,7 +51,7 @@
 					& \Constant{STOPPED}   & The elevator is (physically) not moving\\ \hline
 			  \Variable{door}  & \Constant{OPEN} & The elevator door is (physically) open$^\dag$\\ \cline{2-3}
 				& \Constant{CLOSED} & The elevator door is (physically) closed$^\dag$\\ \hline
-			  \Variable{floor}  & \Constant{1..N\_Levels} & The floor the elevator is (physically) on$^\ddag$\\ \hline
+			  \Variable{floor}  & \Constant{0..N\_Levels} & The floor the elevator is (physically) on$^\ddag$\\ \hline
 			  \multicolumn{3}{l}{$^\dag$ the value changes as soon as the door is fully open/closed}\\
 			  \multicolumn{3}{l}{$^\ddag$ the next possible floor to stop}\\
 		  \end{tabularx}
@@ -80,7 +80,7 @@
         \begin{tabularx}{\linewidth}{|l|c|X|}
             \hline
             Variable & Value & Description \\ \hline
-            \Variable{destination} & $\in$\Constant{1..N\_Levels} & The elevator shall move to floor\\ \cline{2-3}
+            \Variable{destination} & $\in$\Constant{0..N\_Levels} & The elevator shall move to floor\\ \cline{2-3}
             & \Constant{NONE}   & The elevator shall not move\\ \hline
             \Variable{desired\_door}  & \Constant{OPEN} & The elevator shall open the door\\ \cline{2-3}
             & \Constant{CLOSED} & The elevator shall close the door\\ \hline
