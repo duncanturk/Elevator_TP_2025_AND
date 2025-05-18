@@ -1,7 +1,7 @@
 \documentclass[
 	hyperref={pdfusetitle,hidelinks},
 	10pt,
-    %handout,
+    handout,
 ]{beamer}
 
 \usetheme{Boadilla}
@@ -22,7 +22,7 @@
 \subtitle{Correctness By Construction}
 \author[CR, DH, and AJFP]{Christopher Ro\ss{}bach \and David Hospodka \and Antonio José Fernández Pinto}
 \institute[UPM]{Universidad Politécnica de Madrid}
-\date[2025-05-12]{12 May 2025}
+\date[2025-05-21]{21 May 2025}
 
 \begin{document}
 
@@ -30,18 +30,7 @@
 
 \section{The Model}
 
-% \subsection{Context 0}
-
-% \begin{frame}{Context 0}
-% 	\begin{align*}
-% 		Door &= \{Open, Closed, Opening, Closing\} \\
-% 		Direction &= \{Up, Down\} \\
-% 		Movement &= \{Moving, Stopped\} \\
-% 		% EventStatus &= \{Pending, Handled\} \\
-% 		N\_Floors &\in \mathbb{N}1 \\
-% 		Floor &= 0..N\_Floors \\
-% 	\end{align*}
-% \end{frame}
+\subsection{Model Overview}
 
 \begin{frame}{Diagram}
 	\begin{figure}
@@ -109,6 +98,7 @@
 			\begin{itemize}
 				\item<+-> Moving one step at a time \Guard{(new\_floor-floor) $\in\{-1,1\}$}
 				\item<+-> In the direction of the destination \Guard{new\_floor$\in$floor..destination}
+				\item<+-> So the \Variable{next\_floor} is one above \Variable{floor} if \Variable{destination} is above \Variable{floor} and one below otherwise
 			\end{itemize}
 		\item<+-> Handling of movement events by \Event{ReachOrder} or \Event{ReachNotOrder}
 		\item<+-> Ensuring the handling of every movement event through \Variable{floor\_event} $\in$ \Constant{\{PENDING, HANDLED\}} flag
@@ -166,6 +156,13 @@
 	\end{itemize}
 \end{frame}
 
+\section{Live Demo}
+\subsection{TODO}
+\begin{frame}{}
+	\begin{center}
+		\Large Live Demo!
+	\end{center}
+\end{frame}
 \begin{frame}{}
 	\begin{center}
 		\Large Thank you for your attention!
