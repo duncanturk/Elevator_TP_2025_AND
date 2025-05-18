@@ -76,4 +76,5 @@
     <org.eventb.core.variable name="element?" org.eventb.core.identifier="direction"/>
     <org.eventb.core.invariant name="element@" org.eventb.core.label="inv_direction_type" org.eventb.core.predicate="direction∈DIRECTION"/>
     <org.eventb.core.seesContext name="elementB" org.eventb.core.target="ele4-c0"/>
+    <org.eventb.core.invariant name="elementC" org.eventb.core.label="inv_can_choose_next" org.eventb.core.predicate="(desired_door=CLOSED ∧ door=CLOSED ∧ destination=NONE ∧ orders≠∅)⇒(&#10;&#9;(desired_door=CLOSED ∧ door=CLOSED ∧ direction=UP ∧ ∃x·x∈orders ∧ x&gt;floor) ∨&#10;&#9;(door=CLOSED ∧ destination=NONE ∧ direction=UP ∧ ¬ (∃x·x∈orders ∧ x&gt;floor)) ∨&#10;&#9;(desired_door=CLOSED ∧ door=CLOSED ∧ direction=DOWN ∧ ∃x·x∈orders ∧ x&lt;floor) ∨&#10;&#9;(door=CLOSED ∧ destination=NONE ∧ direction=DOWN ∧ ¬ (∃x·x∈orders ∧ x&lt;floor))&#10;)"/>
 </org.eventb.core.machineFile>
