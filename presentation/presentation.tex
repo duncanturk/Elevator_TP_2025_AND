@@ -9,12 +9,12 @@
 
 \usefonttheme[onlymath]{serif}
 
-\AtBeginSection[]
-{
-	\begin{frame}{}
-		\tableofcontents[currentsection,hideothersubsections]
-	\end{frame}
-}
+% \AtBeginSection[]
+% {
+% 	\begin{frame}{}
+% 		\tableofcontents[currentsection,hideothersubsections]
+% 	\end{frame}
+% }
 
 \usepackage{./basix}
 
@@ -28,9 +28,11 @@
 
 \maketitle
 
-\section{The Model}
+\begin{frame}{}
+	\tableofcontents
+\end{frame}
 
-\subsection{Model Overview}
+\section{Model Overview}
 
 \begin{frame}{Diagram}
 	\begin{figure}
@@ -157,12 +159,15 @@
 \end{frame}
 
 \section{Live Demo}
+
 \subsection{TODO}
+
 \begin{frame}{}
 	\begin{center}
 		\Large Live Demo!
 	\end{center}
 \end{frame}
+
 \begin{frame}{}
 	\begin{center}
 		\Large Thank you for your attention!
