@@ -76,5 +76,6 @@
     <org.eventb.core.invariant name="elementW" org.eventb.core.label="inv2" org.eventb.core.predicate="state=2 ⇒ (&#10;&#9;(door=CLOSED ∧ destination=NONE ∧ direction=DOWN ∧ ¬ (∃x·x∈orders ∧ x&lt;floor)) ∨&#10;&#9;(door=CLOSED ∧ destination=NONE ∧ direction=UP ∧ ¬ (∃x·x∈orders ∧ x&gt;floor)) ∨&#10;&#9;(door=CLOSED ∧ destination=NONE ∧ direction=UP ∧ ∃x·x∈orders ∧ x&gt;floor) ∨&#10;&#9;(door=CLOSED ∧ destination=NONE ∧ direction=DOWN ∧ ∃x·x∈orders ∧ x&lt;floor)&#10;)"/>
     <org.eventb.core.invariant name="elementY" org.eventb.core.label="inv2·1" org.eventb.core.predicate="state=2 ⇒ (door=CLOSED ∧ destination=NONE)"/>
     <org.eventb.core.invariant name="elementZ" org.eventb.core.label="inv3" org.eventb.core.predicate="state=3 ⇒ (door=CLOSED ∧ destination=NONE ∧ direction=UP ∧ ¬ (∃x·x∈orders ∧ x&gt;floor))"/>
-    <org.eventb.core.invariant name="element[" org.eventb.core.label="inv3·1" org.eventb.core.predicate="state∈2‥3 ⇒ (∃x·x∈orders∖{floor})"/>
+    <org.eventb.core.invariant name="element[" org.eventb.core.label="inv3·1" org.eventb.core.predicate="state∈2‥5 ⇒ (∃x·x∈orders∖{floor})"/>
+    <org.eventb.core.invariant name="element\" org.eventb.core.label="inv3·2" org.eventb.core.predicate="door=CLOSED ∧ destination=NONE ∧ orders≠∅ ⇒ (∃x·x∈orders∖{floor})"/>
 </org.eventb.core.machineFile>

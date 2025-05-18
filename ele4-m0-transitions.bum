@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+    <org.eventb.core.refinesMachine name="'" org.eventb.core.target="ele4-m0"/>
+    <org.eventb.core.seesContext name="element1" org.eventb.core.target="ele4-c0"/>
+    <org.eventb.core.variable name="var1" org.eventb.core.comment="The current floor the elevator is at" org.eventb.core.identifier="floor"/>
+    <org.eventb.core.variable name="var2" org.eventb.core.comment="EQU5 (the elevator has doors), FUN7 (controller can open doors)" org.eventb.core.identifier="door"/>
+    <org.eventb.core.variable name="var3" org.eventb.core.comment="FUN12 (button status can be seen by controller)" org.eventb.core.identifier="orders"/>
+    <org.eventb.core.variable name="var4" org.eventb.core.comment="The floor the elevator should go to. The elevator is expected to move as soon as /=NONE" org.eventb.core.identifier="destination"/>
+    <org.eventb.core.variable name="var5" org.eventb.core.identifier="movement"/>
+    <org.eventb.core.variable name="var6" org.eventb.core.identifier="floor_event"/>
+    <org.eventb.core.variable name="element3" org.eventb.core.identifier="desired_door"/>
+    <org.eventb.core.event name="element4" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="'" org.eventb.core.assignment="state≔0" org.eventb.core.label="act2"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="element5" org.eventb.core.comment="EQU3, EQU4,treat both types of buttons the same" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Order">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Order"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="element6" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="EnvMove">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="EnvMove"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="state≔5" org.eventb.core.label="act3"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="element7" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ReachOrder">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="ReachOrder"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="state≔6" org.eventb.core.label="act3"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="element8" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ReachNotOrder">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="ReachNotOrder"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="state≔4" org.eventb.core.label="act2"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="element9" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="EnvStopMoving">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="EnvStopMoving"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="state≔7" org.eventb.core.label="act2"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="element:" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="OpenDoor">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="OpenDoor"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="state≔8" org.eventb.core.label="act4"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="element;" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="CloseDoor">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="CloseDoor"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="state≔1" org.eventb.core.label="act2"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="element=" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ChooseNext">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="ChooseNext"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="state≔3" org.eventb.core.label="act2"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="element&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="EnvDoorOpened">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="EnvDoorOpened"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="state≔0" org.eventb.core.label="act2"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="element?" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="EnvDoorClosed">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="EnvDoorClosed"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="state≔2" org.eventb.core.label="act2"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="element@" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="EnvStartMoving">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="EnvStartMoving"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="state≔4" org.eventb.core.label="act2"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name="elementA" org.eventb.core.identifier="state"/>
+    <org.eventb.core.invariant name="elementB" org.eventb.core.label="inv_state_type" org.eventb.core.predicate="state∈ℕ"/>
+    <org.eventb.core.invariant name="elementC" org.eventb.core.label="inv0" org.eventb.core.predicate="state=0 ∧ orders≠∅ ⇔ (door=OPEN ∧ desired_door=OPEN ∧ orders≠∅ ∧ destination=NONE)"/>
+    <org.eventb.core.invariant name="elementM" org.eventb.core.label="inv0·1" org.eventb.core.predicate="state=0 ⇔ (door=OPEN ∧ desired_door=OPEN ∧ destination=NONE)"/>
+    <org.eventb.core.invariant name="elementE" org.eventb.core.label="inv1" org.eventb.core.predicate="state=1 ⇔ (desired_door=CLOSED ∧ door=OPEN)"/>
+    <org.eventb.core.invariant name="elementF" org.eventb.core.label="inv2" org.eventb.core.predicate="state=2 ⇔ (door=CLOSED ∧ desired_door=CLOSED ∧ destination=NONE ∧ orders≠∅)"/>
+    <org.eventb.core.invariant name="elementG" org.eventb.core.label="inv3" org.eventb.core.predicate="state=3 ⇔ (destination≠floor ∧ destination≠NONE ∧ movement=STOPPED)"/>
+    <org.eventb.core.invariant name="elementH" org.eventb.core.label="inv4" org.eventb.core.predicate="state=4 ⇔ (floor_event=HANDLED ∧ movement=MOVING ∧ (∃new_floor·new_floor∈FLOOR ∧ (destination&gt;floor ⇒ new_floor=floor+1) ∧ (destination&lt;floor ⇒ new_floor=floor−1)) ∧ destination≠floor)"/>
+    <org.eventb.core.invariant name="elementI" org.eventb.core.label="inv5" org.eventb.core.predicate="state=5 ⇔ (&#10;&#9;(floor∉orders ∧ floor_event=PENDING) ∨&#10;&#9;(floor∈orders ∧ floor_event=PENDING)&#10;)"/>
+    <org.eventb.core.invariant name="elementJ" org.eventb.core.label="inv6" org.eventb.core.predicate="state=6 ⇒ (floor_event=HANDLED ∧ movement=MOVING ∧ floor=destination)"/>
+    <org.eventb.core.invariant name="elementO" org.eventb.core.label="inv7" org.eventb.core.predicate="state=7 ⇔ (movement=STOPPED ∧ floor=destination)"/>
+    <org.eventb.core.invariant name="elementP" org.eventb.core.label="inv8" org.eventb.core.predicate="state=8 ⇔ (desired_door=OPEN ∧ door=CLOSED)"/>
+</org.eventb.core.machineFile>
