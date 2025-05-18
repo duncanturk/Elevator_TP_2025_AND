@@ -1,21 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-    <org.eventb.core.psStatus name="INITIALISATION/inv_can_choose_next/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="Order/inv_can_choose_next/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="EnvMove/inv_can_choose_next/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="ReachOrder/inv_can_choose_next/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="OpenDoor/inv_can_choose_next/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="CloseDoor/inv_can_choose_next/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="ChooseNextUp/inv_can_choose_next/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="ChooseNextUp/grd3/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="21" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="ChooseNextUp/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="21" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="ChooseNextUp/act1/SIM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="21" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="ChangeDirectionDown/inv_can_choose_next/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="ChooseNextDown/inv_can_choose_next/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="ChooseNextDown/grd3/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="21" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="ChooseNextDown/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="21" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="ChooseNextDown/act1/SIM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="21" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="ChangeDirectionUp/inv_can_choose_next/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="EnvDoorOpened/inv_can_choose_next/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="EnvDoorClosed/inv_can_choose_next/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="true"/>
+    <org.eventb.core.psStatus name="inv_can_choose_next/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="23" org.eventb.core.psManual="true"/>
+    <org.eventb.core.psStatus name="ChooseNextUp/grd3/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="23" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="ChooseNextUp/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="23" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="ChooseNextUp/act1/SIM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="23" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="ChooseNextDown/grd3/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="23" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="ChooseNextDown/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="23" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="ChooseNextDown/act1/SIM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="23" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>
