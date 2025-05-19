@@ -41,7 +41,7 @@
         <org.eventb.core.guard name="grd2" org.eventb.core.label="grd5" org.eventb.core.predicate="∃x·x∈orders ∧ x&gt;floor"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="evt2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ChangeDirectionDown">
-        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="door=CLOSED"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="desired_door=CLOSED ∧ door=CLOSED"/>
         <org.eventb.core.guard name=")" org.eventb.core.comment="sanity to not overwrite existing destination" org.eventb.core.label="grd2" org.eventb.core.predicate="destination=NONE"/>
         <org.eventb.core.action name="+" org.eventb.core.assignment="direction≔DOWN" org.eventb.core.label="act1"/>
         <org.eventb.core.guard name="grd1" org.eventb.core.label="grd4" org.eventb.core.predicate="direction=UP"/>
@@ -56,7 +56,7 @@
         <org.eventb.core.guard name=")" org.eventb.core.label="grd5" org.eventb.core.predicate="∃x·x∈orders ∧ x&lt;floor"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="evt3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ChangeDirectionUp">
-        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="door=CLOSED"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="desired_door=CLOSED ∧ door=CLOSED"/>
         <org.eventb.core.guard name=")" org.eventb.core.comment="sanity to not overwrite existing destination" org.eventb.core.label="grd2" org.eventb.core.predicate="destination=NONE"/>
         <org.eventb.core.action name="+" org.eventb.core.assignment="direction≔UP" org.eventb.core.label="act1"/>
         <org.eventb.core.guard name="grd1" org.eventb.core.label="grd4" org.eventb.core.predicate="direction=DOWN"/>
@@ -75,5 +75,5 @@
     <org.eventb.core.variable name="element?" org.eventb.core.identifier="direction"/>
     <org.eventb.core.invariant name="element@" org.eventb.core.label="inv_direction_type" org.eventb.core.predicate="direction∈DIRECTION"/>
     <org.eventb.core.seesContext name="elementB" org.eventb.core.target="ele4-c0"/>
-    <org.eventb.core.invariant name="elementC" org.eventb.core.label="inv_can_choose_next" org.eventb.core.predicate="(desired_door=CLOSED ∧ door=CLOSED ∧ destination=NONE ∧ orders≠∅)⇒(&#10;&#9;(desired_door=CLOSED ∧ door=CLOSED ∧ direction=UP ∧ ∃x·x∈orders ∧ x&gt;floor) ∨&#10;&#9;(door=CLOSED ∧ destination=NONE ∧ direction=UP ∧ ¬ (∃x·x∈orders ∧ x&gt;floor)) ∨&#10;&#9;(desired_door=CLOSED ∧ door=CLOSED ∧ direction=DOWN ∧ ∃x·x∈orders ∧ x&lt;floor) ∨&#10;&#9;(door=CLOSED ∧ destination=NONE ∧ direction=DOWN ∧ ¬ (∃x·x∈orders ∧ x&lt;floor))&#10;)" org.eventb.core.theorem="true"/>
+    <org.eventb.core.invariant name="elementC" org.eventb.core.label="inv_can_choose_next" org.eventb.core.predicate="(desired_door=CLOSED ∧ door=CLOSED ∧ destination=NONE ∧ orders≠∅)⇒(&#10;&#9;(desired_door=CLOSED ∧ door=CLOSED ∧ direction=UP ∧ ∃x·x∈orders ∧ x&gt;floor) ∨&#10;&#9;(desired_door=CLOSED ∧ door=CLOSED ∧ destination=NONE ∧ direction=UP ∧ ¬ (∃x·x∈orders ∧ x&gt;floor)) ∨&#10;&#9;(desired_door=CLOSED ∧ door=CLOSED ∧ direction=DOWN ∧ ∃x·x∈orders ∧ x&lt;floor) ∨&#10;&#9;(desired_door=CLOSED ∧ door=CLOSED ∧ destination=NONE ∧ direction=DOWN ∧ ¬ (∃x·x∈orders ∧ x&lt;floor))&#10;)" org.eventb.core.theorem="true"/>
 </org.eventb.core.machineFile>
