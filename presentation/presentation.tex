@@ -37,12 +37,12 @@
 
 \subsection{Model Overview} % David
 \begin{frame}{Basic model diagram}
-  	\begin{figure}
+	\begin{figure}
 		\centering
-		\includegraphics[width=\textwidth]{presentation/img/basic.png}
+		\includegraphics[width=\textwidth]{basic.png}
 		\caption{Simple diagram of the model}
 	\end{figure}
-  \end{frame}
+\end{frame}
 \subsection{Modelling Environment} % Christopher
 
 \subsubsection{Reading from the Environment}
@@ -150,7 +150,7 @@
 		\item[]<.-> \Inv{inv\_door\_closed\_when\_destination}{destination$\neq$NONE$\implies$door=CLOSED}
 		\item[]<.-> \Inv{inv\_no\_dest\_when\_opening\_door}{desired\_door=OPEN$\implies$destination=NONE}
 		\item<+-> \Req{FUN 11}{The doors should be open if there are no requests to serve.}
-		\item[]<+-> \InvThm{inv\_no\_orders\_door\_open}{orders=$\emptyset$$\implies$door=OPEN\,$\lor$\,desired\_door=OPEN}
+		\item[]<+-> \InvThm{inv\_no\_orders\_door\_open}{orders=$\emptyset\implies$door=OPEN\,$\lor$\,desired\_door=OPEN}
 		\item[]<+-> Helper:
 		\item[]<.-> \Inv{inv\_orders\_when\_closing\_door}{desired\_door=CLOSED$\implies$orders$\neq\emptyset$}
 	\end{itemize}
@@ -193,16 +193,16 @@
 \begin{frame}{Realization in Rodin}
 	\begin{itemize}
 		\item<+-> Add a refinement to isolate everything cleanly
-		\item<+-> Define a variable \Variable{waiting\_since} that tracks the waiting time for each order: \Inv{waiting\_type}{waiting\_since$\in$FLOOR$\to$$\mathbb{N}$}
+		\item<+-> Define a variable \Variable{waiting\_since} that tracks the waiting time for each order: \Inv{waiting\_type}{waiting\_since$\in$FLOOR$\to\mathbb{N}$}
 		\item<+-> Assume an upper limit on the waiting time using an invariant
-			\Inv{waiting\_limit}{$\forall x \cdot x \in $FLOOR$\implies$waiting\_since$(x)$$<$N\_Levels$\ast$2}
+			\Inv{waiting\_limit}{$\forall x \cdot x \in $FLOOR$\implies$waiting\_since$(x)<$N\_Levels$\ast$2}
 		\item<+-> In \Event{OpenDoor} add the Action
 		\\\Act{act\_inc\_and\_reset}{waiting\_since:=
 			\\\hfill((waiting\_since;add\_one)$\eventBOverride$\{floor$\mapsto$0\})$\eventBOverride$((FLOOR$\setminus$orders)$\times$\{0\})}
 		\item<+-> Where \Constant{add\_one} is defined as a constant in the context with the axioms \\
 		\begin{itemize}
 			\item \Invariant{add\_one=$\mathbb{N}\to\mathbb{N}_1$}
-			\item \Invariant{$\forall$n$\cdot$n$\in$$\mathbb{N}$$\implies$add\_one(n)=n+1}
+			\item \Invariant{$\forall$n$\cdot$n$\in\mathbb{N}\implies$add\_one(n)=n+1}
 		 \end{itemize}
 		\item<+->We were not able to proof this invariant in Rodin
 		\item<+->We did ProB model checking to search for invariant violations
@@ -251,9 +251,9 @@
 			\item Add a function \Variable{physical\_door\_state$\in$(DOOR$\times$DOOR)$\to$\{OPEN, OPENING, CLOSED, CLOSING\}}, that interprets \Variable{door} and \Variable{desired\_door}
 			\begin{itemize}
 				\item Usage would change for example the invariant \InvariantName{inv\_no\_orders\_door\_open} which was
-				\Invariant{orders=$\emptyset$$\implies$door=OPEN\,$\lor$\,desired\_door=OPEN}
+				\Invariant{orders=$\emptyset\implies$door=OPEN\,$\lor$\,desired\_door=OPEN}
 				\\to
-				\Invariant{orders=$\emptyset$$\implies$(pysical\_door\_state(door, desired\_door)$\in$\{OPEN, OPENING\})}
+				\Invariant{orders=$\emptyset\implies$(pysical\_door\_state(door, desired\_door)$\in$\{OPEN, OPENING\})}
 				\item This can improve readability
 				\item But in increases proof complexity
 			\end{itemize}
