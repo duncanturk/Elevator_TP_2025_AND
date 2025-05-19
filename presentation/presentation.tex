@@ -207,7 +207,7 @@
 		\item<+->We were not able to proof this invariant in Rodin
 		\item<+->We did ProB model checking to search for invariant violations
 		\begin{itemize}
-			\item<+-> Check with different numbers of floors \Constant{N_Leves$\in$\{1,2,3,4,5\}}
+			\item<+-> Check with different numbers of floors \Constant{N\_Levels$\in$\{1,2,3,4,5\}}
 			\item<+-> No invariant violations found
 			\item<+-> Workaround for ProB \Constant{add\_one}:\Invariant{add\_one:=\{0$\mapsto$1, 1$\mapsto$2, 2$\mapsto$3, ...\}}
 		\end{itemize}
@@ -230,6 +230,42 @@
 	\begin{center}
 		\Large Thank you for your attention!
 	\end{center}
+\end{frame}
+
+\section{Appendix}
+\subsection{Possible Improvements} % Christopher
+\begin{frame}{Door Modeling} % Christopher
+	\begin{itemize}
+		\item The modeling of the physical door state is not completely "clean"
+		\begin{itemize}
+			\item E.g. the \Constant{door} can be \Constant{CLOSED} while the door is currently opening
+		\end{itemize}
+		\item Two options to fix this came to our minds but were rejected:
+		\begin{enumerate}
+			\item Add additional physical states \Constant{OPENING} and \Constant{CLOSING}
+			\begin{itemize}
+				\item New environment events \Event{EnvStartOpening} and \Event{StartClosing} would be needed to adapt the physical state when \Guard{door$\neq$desired\_door}
+				\item This adds complexity to the model
+				\item It contradicts the idea, that \Variable{desired\_door=OPEN} instantly triggers the opening
+			\end{itemize}
+			\item Add a function \Variable{physical\_door\_state$\in$(DOOR$\times$DOOR)$\to$\{OPEN, OPENING, CLOSED, CLOSING\}}, that interprets \Variable{door} and \Variable{desired\_door}
+			\begin{itemize}
+				\item Usage would change for example the invariant \InvariantName{inv\_no\_orders\_door\_open} which was
+				\Invariant{orders=$\emptyset$$\implies$door=OPEN\,$\lor$\,desired\_door=OPEN}
+				\\to
+				\Invariant{orders=$\emptyset$$\implies$(pysical\_door\_state(door, desired\_door)$\in$\{OPEN, OPENING\})}
+				\item This can improve readability
+				\item But in increases proof complexity
+			\end{itemize}
+			\item Use a single variable for \Variable{door} which is one of \Constant{OPEN, OPENING, CLOSED, CLOSING}
+			\begin{itemize}
+				\item Setting \Action{door:=CLOSING} by the controller would make the door start closing
+				\item The environment would set this variable upon finishing to \Action{door:=CLOSED}
+				\item This contradicts the idea, that the variables are only changed by the either environment or the controller
+				\item This exception may be acceptable since \Variable{orders} behaves in a similar way
+			\end{itemize}
+		\end{enumerate}
+	\end{itemize}
 \end{frame}
 
 \end{document}
