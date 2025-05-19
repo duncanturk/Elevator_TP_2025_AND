@@ -12,6 +12,7 @@
 
 \RequirePackage{textcomp}
 % \RequirePackage{lstfiracode}
+\RequirePackage{tikz}
 
 \definecolor{comment}{RGB}{0,128,0} % dark green
 \definecolor{string}{RGB}{206,112,66}  % red
@@ -80,6 +81,7 @@
 \newcommand{\InvariantName}[1]{\textcolor{myblue}{\texttt{#1}}}
 \newcommand{\Guard}[1]{\textcolor{mygreen}{\texttt{#1}}}
 \newcommand{\Action}[1]{\textcolor{mygreen}{\texttt{#1}}}
+\newcommand{\ActionName}[1]{\textcolor{myblue}{\texttt{#1}}}
 
 \newcommand{\Req}[2]{
 	\begin{tabularx}{\linewidth}{|l|X|}\hline
@@ -87,5 +89,12 @@
 	\end{tabularx}
 }
 \newcommand{\Inv}[2]{\InvariantName{#1:}\Invariant{#2}}
+\newcommand{\Act}[2]{\ActionName{#1:}\Action{#2}}
 \newcommand{\InvThm}[2]{\InvariantName{#1}\textcolor{gray}{$^\texttt{THM}$:}\Invariant{#2}}
 
+\newcommand{\eventBOverride}{
+	\tikz[baseline=-0.6ex]{
+		\draw[thin] (0,0) -- (0.25,0.12) -- (0.25,-0.12) -- cycle;
+		\draw[thin] (0.15,0.0) -- (0.35,0.0);
+	}
+}

@@ -189,6 +189,31 @@
 
 \subsection{Why that works (TODO good section name)} % Antonio
 
+\subsection{Realization in Rodin} % Christopher
+\begin{frame}{Realization in Rodin}
+	\begin{itemize}
+		\item<+-> Add a refinement to isolate everything cleanly
+		\item<+-> Define a variable \Variable{waiting\_since} that tracks the waiting time for each order: \Inv{waiting\_type}{waiting\_since$\in$FLOOR$\to$$\mathbb{N}$}
+		\item<+-> Assume an upper limit on the waiting time using an invariant
+			\Inv{waiting\_limit}{$\forall x \cdot x \in $FLOOR$\implies$waiting\_since$(x)$$<$N\_Levels$\ast$2}
+		\item<+-> In \Event{OpenDoor} add the Action
+		\\\Act{act\_inc\_and\_reset}{waiting\_since:=
+			\\\hfill((waiting\_since;add\_one)$\eventBOverride$\{floor$\mapsto$0\})$\eventBOverride$((FLOOR$\setminus$orders)$\times$\{0\})}
+		\item<+-> Where \Constant{add\_one} is defined as a constant in the context with the axioms \\
+		\begin{itemize}
+			\item \Invariant{add\_one=$\mathbb{N}\to\mathbb{N}_1$}
+			\item \Invariant{$\forall$n$\cdot$n$\in$$\mathbb{N}$$\implies$add\_one(n)=n+1}
+		 \end{itemize}
+		\item<+->We were not able to proof this invariant in Rodin
+		\item<+->We did ProB model checking to search for invariant violations
+		\begin{itemize}
+			\item<+-> Check with different numbers of floors \Constant{N_Leves$\in$\{1,2,3,4,5\}}
+			\item<+-> No invariant violations found
+			\item<+-> Workaround for ProB \Constant{add\_one}:\Invariant{add\_one:=\{0$\mapsto$1, 1$\mapsto$2, 2$\mapsto$3, ...\}}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
 \subsection{Deadlock freedom (TODO with adjustments to just adding guards)} % Antonio
 
 \section{Live Demo} % Christopher
