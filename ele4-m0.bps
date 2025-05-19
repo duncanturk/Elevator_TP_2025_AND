@@ -11,9 +11,9 @@
     <org.eventb.core.psStatus name="INITIALISATION/inv_fe_pending_moving/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="INITIALISATION/inv_no_dest_when_opening_door/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="INITIALISATION/inv_door_closed_when_destination/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="Order/inv_move_to_ordered/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="33" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="Order/inv_orders_when_closing_door/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="33" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="Order/inv_types/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="33" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="Order/inv_move_to_ordered/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="35" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="Order/inv_orders_when_closing_door/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="35" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="Order/inv_types/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="35" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="EnvMove/inv_types/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="34" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="EnvMove/inv_fe_pending_moving/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="34" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="ReachOrder/inv_move_to_ordered/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="28" org.eventb.core.psManual="false"/>

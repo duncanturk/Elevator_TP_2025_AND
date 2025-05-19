@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="82">
+<org.eventb.core.poFile org.eventb.core.poStamp="83">
     <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="MOVEMENT" org.eventb.core.type="ℙ(MOVEMENT)"/>
         <org.eventb.core.poIdentifier name="DOOR" org.eventb.core.type="ℙ(DOOR)"/>
@@ -160,7 +160,7 @@
         <org.eventb.core.poIdentifier name="state'" org.eventb.core.type="ℤ"/>
     </org.eventb.core.poPredicateSet>
     <org.eventb.core.poPredicateSet name="EVTALLHYPdesired_doos" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele4-m0-transitions.bpo|org.eventb.core.poFile#ele4-m0-transitions|org.eventb.core.poPredicateSet#EVTIDENTdesired_doos" org.eventb.core.poStamp="1"/>
-    <org.eventb.core.poSequent name="Order/inv0/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="82">
+    <org.eventb.core.poSequent name="Order/inv0/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="83">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele4-m0-transitions.bpo|org.eventb.core.poFile#ele4-m0-transitions|org.eventb.core.poPredicateSet#EVTALLHYPdesired_doot"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="state=0∧orders∪{order}≠(∅ ⦂ ℙ(ℤ))⇔door=OPEN∧desired_door=OPEN∧orders∪{order}≠(∅ ⦂ ℙ(ℤ))∧destination=NONE" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m0-transitions.bum|org.eventb.core.machineFile#ele4-m0-transitions|org.eventb.core.invariant#elementC"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m0.bum|org.eventb.core.machineFile#ele4-m0|org.eventb.core.event#evt2"/>
@@ -169,7 +169,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Elevator_TP_2025_AND/ele4-m0-transitions.bpo|org.eventb.core.poFile#ele4-m0-transitions|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Elevator_TP_2025_AND/ele4-m0-transitions.bpo|org.eventb.core.poFile#ele4-m0-transitions|org.eventb.core.poSequent#Order\/inv0\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Elevator_TP_2025_AND/ele4-m0-transitions.bpo|org.eventb.core.poFile#ele4-m0-transitions|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="Order/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="82">
+    <org.eventb.core.poSequent name="Order/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="83">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele4-m0-transitions.bpo|org.eventb.core.poFile#ele4-m0-transitions|org.eventb.core.poPredicateSet#EVTALLHYPdesired_doot"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="state=2⇔door=CLOSED∧desired_door=CLOSED∧destination=NONE∧orders∪{order}≠(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m0-transitions.bum|org.eventb.core.machineFile#ele4-m0-transitions|org.eventb.core.invariant#elementF"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m0.bum|org.eventb.core.machineFile#ele4-m0|org.eventb.core.event#evt2"/>
@@ -178,7 +178,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Elevator_TP_2025_AND/ele4-m0-transitions.bpo|org.eventb.core.poFile#ele4-m0-transitions|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Elevator_TP_2025_AND/ele4-m0-transitions.bpo|org.eventb.core.poFile#ele4-m0-transitions|org.eventb.core.poSequent#Order\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Elevator_TP_2025_AND/ele4-m0-transitions.bpo|org.eventb.core.poFile#ele4-m0-transitions|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="Order/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="82">
+    <org.eventb.core.poSequent name="Order/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="83">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele4-m0-transitions.bpo|org.eventb.core.poFile#ele4-m0-transitions|org.eventb.core.poPredicateSet#EVTALLHYPdesired_doot"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="state=5⇔(floor∉orders∪{order}∧floor_event=PENDING)∨(floor∈orders∪{order}∧floor_event=PENDING)" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m0-transitions.bum|org.eventb.core.machineFile#ele4-m0-transitions|org.eventb.core.invariant#elementI"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m0.bum|org.eventb.core.machineFile#ele4-m0|org.eventb.core.event#evt2"/>
@@ -191,9 +191,9 @@
         <org.eventb.core.poIdentifier name="order" org.eventb.core.type="ℤ"/>
         <org.eventb.core.poIdentifier name="orders'" org.eventb.core.type="ℙ(ℤ)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPdesired_doot" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele4-m0-transitions.bpo|org.eventb.core.poFile#ele4-m0-transitions|org.eventb.core.poPredicateSet#EVTIDENTdesired_doot" org.eventb.core.poStamp="82">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPdesired_doot" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele4-m0-transitions.bpo|org.eventb.core.poFile#ele4-m0-transitions|org.eventb.core.poPredicateSet#EVTIDENTdesired_doot" org.eventb.core.poStamp="83">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="order∈FLOOR ∖ orders" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m0.bum|org.eventb.core.machineFile#ele4-m0|org.eventb.core.event#evt2|org.eventb.core.guard#("/>
-        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="door=OPEN⇒order≠floor" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m0.bum|org.eventb.core.machineFile#ele4-m0|org.eventb.core.event#evt2|org.eventb.core.guard#*"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="desired_door=OPEN⇒order≠floor" org.eventb.core.source="/Elevator_TP_2025_AND/ele4-m0.bum|org.eventb.core.machineFile#ele4-m0|org.eventb.core.event#evt2|org.eventb.core.guard#*"/>
     </org.eventb.core.poPredicateSet>
     <org.eventb.core.poSequent name="EnvMove/inv_state_type/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="82">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Elevator_TP_2025_AND/ele4-m0-transitions.bpo|org.eventb.core.poFile#ele4-m0-transitions|org.eventb.core.poPredicateSet#EVTALLHYPdesired_doou"/>

@@ -11,9 +11,9 @@
     <org.eventb.core.psStatus name="INITIALISATION/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="74" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="INITIALISATION/inv7_or_3_with_destination_reached/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="81" org.eventb.core.psManual="true"/>
     <org.eventb.core.psStatus name="INITIALISATION/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="Order/inv0/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="82" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="Order/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="82" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="Order/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="82" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="Order/inv0/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="83" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="Order/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="83" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="Order/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="83" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="EnvMove/inv_state_type/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="82" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="EnvMove/inv0/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="82" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="EnvMove/inv0·1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="82" org.eventb.core.psManual="false"/>

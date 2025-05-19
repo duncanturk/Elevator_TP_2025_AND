@@ -87,4 +87,5 @@
     <org.eventb.core.invariant name="element^" org.eventb.core.label="inv7" org.eventb.core.predicate="state=7 ⇔ (floor_event=HANDLED ∧ movement=MOVING ∧ floor=destination)"/>
     <org.eventb.core.invariant name="element_" org.eventb.core.label="inv8" org.eventb.core.predicate="state=8 ⇔ (movement=STOPPED ∧ floor=destination)"/>
     <org.eventb.core.invariant name="element`" org.eventb.core.label="inv9" org.eventb.core.predicate="state=9 ⇔ (desired_door=OPEN ∧ door=CLOSED)"/>
+    <org.eventb.core.invariant name="elementg" org.eventb.core.label="inv_door" org.eventb.core.predicate="state∈0‥1 ⇔ door=CLOSED"/>
 </org.eventb.core.machineFile>

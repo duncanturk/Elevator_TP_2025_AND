@@ -19353,8 +19353,8 @@
                 <org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p20" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p42"/>
                 <org.eventb.core.prHypAction name="REWRITE6" org.eventb.core.prHidden="p32" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p43"/>
                 <org.eventb.core.prHypAction name="REWRITE7" org.eventb.core.prHidden="p31" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p44"/>
-                <org.eventb.core.prHypAction name="REWRITE8" org.eventb.core.prHidden="p7" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p45"/>
-                <org.eventb.core.prHypAction name="REWRITE9" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p46,p47,p48,p49,p50,p51,p52"/>
+                <org.eventb.core.prHypAction name="REWRITE8" org.eventb.core.prHidden="p8" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p45"/>
+                <org.eventb.core.prHypAction name="REWRITE9" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p46,p47,p48,p49,p50,p51,p52"/>
                 <org.eventb.core.prHypAction name="REWRITE10" org.eventb.core.prHidden="p36" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p53"/>
                 <org.eventb.core.prHypAction name="REWRITE11" org.eventb.core.prHidden="p14" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p54"/>
                 <org.eventb.core.prHypAction name="REWRITE12" org.eventb.core.prHidden="p21" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p55"/>
@@ -19362,14 +19362,14 @@
                 <org.eventb.core.prHypAction name="REWRITE14" org.eventb.core.prHidden="p27" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p57"/>
                 <org.eventb.core.prHypAction name="REWRITE15" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p58"/>
                 <org.eventb.core.prHypAction name="REWRITE16" org.eventb.core.prHidden="p29" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p59"/>
-                <org.eventb.core.prHypAction name="REWRITE17" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p60"/>
+                <org.eventb.core.prHypAction name="REWRITE17" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p60"/>
                 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
                     <org.eventb.core.prAnte name="'">
                         <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p47"/>
                         <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p50"/>
                         <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p51"/>
                         <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p52"/>
-                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p61" org.eventb.core.prHyps="p24,p9,p11,p23,p34,p33,p17,p35,p13,p10,p6,p25,p3,p26,p1,p18,p8,p4,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p48,p49,p53,p54,p55,p56,p57,p58,p59,p60">
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p61" org.eventb.core.prHyps="p24,p10,p12,p23,p34,p33,p17,p35,p13,p11,p7,p25,p4,p26,p1,p18,p9,p5,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p48,p49,p53,p54,p55,p56,p57,p58,p59,p60">
                             <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
                         </org.eventb.core.prRule>
                     </org.eventb.core.prAnte>
@@ -19399,14 +19399,14 @@
         <org.eventb.core.prPred name="p57" org.eventb.core.predicate="state=3∧¬destination=floor⇔¬destination=floor∧¬destination=NONE∧movement=STOPPED"/>
         <org.eventb.core.prPred name="p1" org.eventb.core.predicate="state=6⇒floor_event=HANDLED∧movement=MOVING∧floor=destination"/>
         <org.eventb.core.prPred name="p2" org.eventb.core.predicate="state=4⇔floor_event=HANDLED∧movement=MOVING∧(∃new_floor⦂ℤ·new_floor∈FLOOR∧(destination&gt;floor⇒new_floor=floor+1)∧(destination&lt;floor⇒new_floor=floor − 1))∧destination≠floor"/>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="order∈FLOOR ∖ orders"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="desired_door=OPEN⇒order≠floor"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="order∈FLOOR ∖ orders"/>
         <org.eventb.core.prPred name="p61" org.eventb.core.predicate="state=2⇔door=CLOSED∧desired_door=CLOSED∧destination=NONE"/>
         <org.eventb.core.prPred name="p58" org.eventb.core.predicate="state=4⇔floor_event=HANDLED∧movement=MOVING∧(∃new_floor⦂ℤ·new_floor∈FLOOR∧(destination&gt;floor⇒new_floor=floor+1)∧(destination&lt;floor⇒new_floor=floor − 1))∧¬destination=floor"/>
         <org.eventb.core.prPred name="p53" org.eventb.core.predicate="¬destination=NONE⇒door=CLOSED"/>
-        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="state=8⇔desired_door=OPEN∧door=CLOSED"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="state=8⇔desired_door=OPEN∧door=CLOSED"/>
         <org.eventb.core.prPred name="p50" org.eventb.core.predicate="movement∈MOVEMENT"/>
-        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="N_Levels∈ℕ1"/>
-        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="door=OPEN⇒order≠floor"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="N_Levels∈ℕ1"/>
         <org.eventb.core.prPred name="p14" org.eventb.core.predicate="orders≠(∅ ⦂ ℙ(ℤ))⇒(floor_event=HANDLED∧movement=MOVING∧(∃new_floor⦂ℤ·new_floor∈FLOOR∧(destination&gt;floor⇒new_floor=floor+1)∧(destination&lt;floor⇒new_floor=floor − 1)))∨(floor∈orders∧floor_event=PENDING)∨(floor∉orders∧floor_event=PENDING)∨(floor_event=HANDLED∧movement=MOVING∧floor=destination)∨(movement=STOPPED∧floor=destination)∨(door=OPEN∧desired_door=OPEN∧orders≠(∅ ⦂ ℙ(ℤ))∧destination=NONE)∨(door=CLOSED∧desired_door=CLOSED∧destination=NONE∧orders≠(∅ ⦂ ℙ(ℤ)))∨(desired_door=OPEN∧door=CLOSED)∨(desired_door=CLOSED∧door=OPEN)∨(destination≠floor∧destination≠NONE∧movement=STOPPED)"/>
         <org.eventb.core.prPred name="p38" org.eventb.core.predicate="¬OPEN=CLOSED"/>
         <org.eventb.core.prPred name="p16" org.eventb.core.predicate="NONE∉FLOOR"/>
@@ -19427,17 +19427,17 @@
         <org.eventb.core.prPred name="p31" org.eventb.core.predicate="movement=MOVING⇒orders≠(∅ ⦂ ℙ(ℤ))"/>
         <org.eventb.core.prPred name="p32" org.eventb.core.predicate="movement=MOVING⇒destination≠NONE"/>
         <org.eventb.core.prPred name="p33" org.eventb.core.predicate="MOVEMENT={MOVING,STOPPED}"/>
-        <org.eventb.core.prPred name="p60" org.eventb.core.predicate="door=OPEN⇒¬order=floor"/>
         <org.eventb.core.prPred name="p52" org.eventb.core.predicate="desired_door∈DOOR"/>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="state=0⇔door=OPEN∧desired_door=OPEN∧destination=NONE"/>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="floor∈FLOOR∧door∈DOOR∧orders⊆FLOOR∧destination∈FLOOR∪{NONE}∧movement∈MOVEMENT∧floor_event∈EVENT_STATUS∧desired_door∈DOOR"/>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="movement=MOVING⇒door=CLOSED∧desired_door=CLOSED"/>
+        <org.eventb.core.prPred name="p60" org.eventb.core.predicate="desired_door=OPEN⇒¬order=floor"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="state=0⇔door=OPEN∧desired_door=OPEN∧destination=NONE"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="floor∈FLOOR∧door∈DOOR∧orders⊆FLOOR∧destination∈FLOOR∪{NONE}∧movement∈MOVEMENT∧floor_event∈EVENT_STATUS∧desired_door∈DOOR"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="movement=MOVING⇒door=CLOSED∧desired_door=CLOSED"/>
         <org.eventb.core.prPred name="p45" org.eventb.core.predicate="desired_door=CLOSED⇒¬orders=(∅ ⦂ ℙ(ℤ))"/>
-        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="desired_door=CLOSED⇒orders≠(∅ ⦂ ℙ(ℤ))"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="desired_door=CLOSED⇒orders≠(∅ ⦂ ℙ(ℤ))"/>
         <org.eventb.core.prPred name="p54" org.eventb.core.predicate="¬orders=(∅ ⦂ ℙ(ℤ))⇒(floor_event=HANDLED∧movement=MOVING∧(∃new_floor⦂ℤ·new_floor∈FLOOR∧(destination&gt;floor⇒new_floor=floor+1)∧(destination&lt;floor⇒new_floor=floor − 1)))∨(floor∈orders∧floor_event=PENDING)∨(¬floor∈orders∧floor_event=PENDING)∨(floor_event=HANDLED∧movement=MOVING∧floor=destination)∨(movement=STOPPED∧floor=destination)∨(door=OPEN∧desired_door=OPEN∧¬orders=(∅ ⦂ ℙ(ℤ))∧destination=NONE)∨(door=CLOSED∧desired_door=CLOSED∧destination=NONE∧¬orders=(∅ ⦂ ℙ(ℤ)))∨(desired_door=OPEN∧door=CLOSED)∨(desired_door=CLOSED∧door=OPEN)∨(¬destination=floor∧¬destination=NONE∧movement=STOPPED)"/>
         <org.eventb.core.prPred name="p56" org.eventb.core.predicate="state=2⇔door=CLOSED∧desired_door=CLOSED∧destination=NONE∧¬orders=(∅ ⦂ ℙ(ℤ))"/>
-        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="desired_door=OPEN⇒destination=NONE"/>
-        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="finite(DOOR)"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="desired_door=OPEN⇒destination=NONE"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="finite(DOOR)"/>
         <org.eventb.core.prPred name="p49" org.eventb.core.predicate="destination∈FLOOR∪{NONE}"/>
         <org.eventb.core.prPred name="p13" org.eventb.core.predicate="floor_event=PENDING⇒movement=MOVING"/>
         <org.eventb.core.prPred name="p15" org.eventb.core.predicate="OPEN≠CLOSED"/>
