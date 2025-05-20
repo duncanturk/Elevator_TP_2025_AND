@@ -48,7 +48,7 @@
         <org.eventb.core.guard name="." org.eventb.core.label="grd2" org.eventb.core.predicate="movement=MOVING"/>
         <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="floor=destination"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="evt6" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="OpenDoor">
+    <org.eventb.core.event name="evt6" org.eventb.core.comment="This implements FUN 9" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="OpenDoor">
         <org.eventb.core.action name="*" org.eventb.core.assignment="destination≔NONE" org.eventb.core.label="act1"/>
         <org.eventb.core.guard name="." org.eventb.core.label="grd1" org.eventb.core.predicate="movement=STOPPED"/>
         <org.eventb.core.action name="-" org.eventb.core.assignment="desired_door≔OPEN" org.eventb.core.label="act2"/>
@@ -57,7 +57,7 @@
     </org.eventb.core.event>
     <org.eventb.core.event name="evt8" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="CloseDoor">
         <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="door=OPEN ∧ desired_door=OPEN"/>
-        <org.eventb.core.guard name="*" org.eventb.core.comment="only close door if there is a order to serve" org.eventb.core.label="grd2" org.eventb.core.predicate="orders≠∅"/>
+        <org.eventb.core.guard name="*" org.eventb.core.comment="only close door if there is a order to serve (FUN 10)" org.eventb.core.label="grd2" org.eventb.core.predicate="orders≠∅"/>
         <org.eventb.core.action name="+" org.eventb.core.assignment="desired_door≔CLOSED" org.eventb.core.label="act1"/>
         <org.eventb.core.guard name=")" org.eventb.core.comment="sanity to not overwrite existing destination" org.eventb.core.label="grd3" org.eventb.core.predicate="destination=NONE" org.eventb.core.theorem="true"/>
     </org.eventb.core.event>
