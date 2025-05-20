@@ -286,13 +286,43 @@
 
 \begin{frame}{Reduce Direction Events} % Christopher
 	\begin{itemize}
-		\item With a helper function \Constant{cut(floor, orders, direction)} that returns the remaining orders in the direction of the current movement the
+		\item We can define a helper function \Constant{cut(floor, orders, direction)} that returns the remaining orders in the direction of the current movement
+		\item This functions has the axioms:
 		\begin{itemize}
-			\item events \Event{ChangeDirectionUp} and \Event{ChangeDirectionDown} can be unified
-			\item events \Event{ChooseNextUp} and \Event{ChooseNextDown} can be unified
+			\item \Inv{axm\_cut\_type}{cut$\in$(FLOOR$\times$$\mathbb{P}$(FLOOR)$\times$DIRECTION)$\implies$$\mathbb{P}$(FLOOR)}
+			\item \Inv{axm\_cut\_up}{\\
+				$\forall$floor,orders,direction$\cdot$\\
+			\hfill floor$\in$FLOOR$\land$orders$\subseteq$FLOOR$\land$direction$\in$DIRECTION$\land$direction=UP\\
+			\hfill$\implies$cut(floor$\mapsto$orders$\mapsto$direction)=\{x\vert x$\in$orders$\land$x>floor\}}
+			\item \Inv{axm\_cut\_down}{\\
+				$\forall$floor,orders,direction$\cdot$\\
+				\hfill floor$\in$FLOOR$\land$orders$\subseteq$FLOOR$\land$direction$\in$DIRECTION$\land$direction=DOWN\\
+				\hfill$\implies$cut(floor$\mapsto$orders$\mapsto$direction)=\{x\vert x$\in$orders$\land$x<floor\}}
 		\end{itemize}
-		\item \Constant{cut} would use the axioms
 	\end{itemize}
 \end{frame}
+	\begin{frame}{Reduce Direction Events (cont.)}
+		\begin{itemize}
+			\item This would lead to reduction in events and avoids copy-paste-errors:
+			\begin{itemize}
+				\item events \Event{ChangeDirectionUp} and \Event{ChangeDirectionDown} can be unified
+				\begin{itemize}
+					\item Common guards and actions stay
+					\item The guard \Guard{cut(floor$\mapsto$orders$\mapsto$direction)=$\emptyset$}
+					\item and the action \Action{direction:$\in$DIRECTION$\setminus$\{direction\}} are added
+				\end{itemize}
+				\item events \Event{ChooseNextUp} and \Event{ChooseNextDown} can be unified
+				\begin{itemize}
+					\item Common guards and actions stay
+					\item The guard \Guard{cut(floor$\mapsto$orders$\mapsto$direction)$\neq$$\emptyset$}
+					\item and the action \Action{direction:$\in$cut(floor$\mapsto$orders$\mapsto$direction)}
+					\item To choose deterministic \Constant{max} or \Constant{min} could be used but this is not necessary
+					\item Even a function like \Constant{next\_cut} that chooses the \Constant{max} or \Constant{min} of the \Constant{cut}-set depending on the \Constant{direction} is possible
+				\end{itemize}
+			\end{itemize}
+			\item We implemented this but a lot of proofs required repeated manual intervention as we made changes to the model
+			\item Using the separate events made the proof obligations discharge automatically which was a big help in the iterative development, so we chose the separate event approach
+		\end{itemize}
+	\end{frame}
 
 \end{document}
