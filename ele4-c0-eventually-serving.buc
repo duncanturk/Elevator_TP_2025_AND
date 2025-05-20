@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase" version="3">
-    <org.eventb.core.extendsContext name="'" org.eventb.core.target="ele4-c0"/>
-    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="(" org.eventb.core.identifier="add_one"/>
-    <org.eventb.core.axiom name="," org.eventb.core.comment="&#10;Workaround for Prom to run&#10;the simulation" org.eventb.core.label="axm3" org.eventb.core.predicate="add_one={0↦1, 1↦2, 2↦3, 3↦4, 4↦5, 5↦6, 6↦7, 7↦8, 8↦9, 9↦10, 10↦11,&#10; 11↦12, 12↦13, 13↦14, 14↦15, 15↦16, 16↦17, 17↦18, 18↦19, 19↦20}"/>
-    <org.eventb.core.axiom name="-" org.eventb.core.comment="also Prom Workaround" org.eventb.core.label="axm4" org.eventb.core.predicate="N_Levels=2"/>
-    <org.eventb.core.axiom name="." org.eventb.core.comment="normally we would use axm5 and 6, but Prom can't resolve them to&#10;complient constants so they are deactived using the &quot;or true&quot;" org.eventb.core.label="axm5" org.eventb.core.predicate="⊤ ∨ add_one∈ℕ→ℕ1  "/>
-    <org.eventb.core.axiom name="/" org.eventb.core.label="axm6" org.eventb.core.predicate="⊤∨ (∀n·n∈ℕ⇒add_one(n)=n+1)"/>
-</org.eventb.core.contextFile>

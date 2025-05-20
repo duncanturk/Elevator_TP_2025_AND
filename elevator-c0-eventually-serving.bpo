@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="1">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="1">
+        <org.eventb.core.poIdentifier name="MOVEMENT" org.eventb.core.type="ℙ(MOVEMENT)"/>
+        <org.eventb.core.poIdentifier name="DOOR" org.eventb.core.type="ℙ(DOOR)"/>
+        <org.eventb.core.poIdentifier name="DIRECTION" org.eventb.core.type="ℙ(DIRECTION)"/>
+        <org.eventb.core.poIdentifier name="EVENT_STATUS" org.eventb.core.type="ℙ(EVENT_STATUS)"/>
+        <org.eventb.core.poIdentifier name="FLOOR" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.poIdentifier name="UP" org.eventb.core.type="DIRECTION"/>
+        <org.eventb.core.poIdentifier name="MOVING" org.eventb.core.type="MOVEMENT"/>
+        <org.eventb.core.poIdentifier name="CLOSED" org.eventb.core.type="DOOR"/>
+        <org.eventb.core.poIdentifier name="DOWN" org.eventb.core.type="DIRECTION"/>
+        <org.eventb.core.poIdentifier name="N_Levels" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="OPEN" org.eventb.core.type="DOOR"/>
+        <org.eventb.core.poIdentifier name="HANDLED" org.eventb.core.type="EVENT_STATUS"/>
+        <org.eventb.core.poIdentifier name="NONE" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="PENDING" org.eventb.core.type="EVENT_STATUS"/>
+        <org.eventb.core.poIdentifier name="STOPPED" org.eventb.core.type="MOVEMENT"/>
+        <org.eventb.core.poPredicate name="EVENT_STATUT" org.eventb.core.predicate="FLOOR=0 ‥ N_Levels" org.eventb.core.source="/Elevator_TP_2025_AND/elevator-c0.buc|org.eventb.core.contextFile#elevator-c0|org.eventb.core.axiom#axm1"/>
+        <org.eventb.core.poPredicate name="EVENT_STATUU" org.eventb.core.predicate="N_Levels∈ℕ1" org.eventb.core.source="/Elevator_TP_2025_AND/elevator-c0.buc|org.eventb.core.contextFile#elevator-c0|org.eventb.core.axiom#axm10"/>
+        <org.eventb.core.poPredicate name="EVENT_STATUV" org.eventb.core.predicate="NONE∉FLOOR" org.eventb.core.source="/Elevator_TP_2025_AND/elevator-c0.buc|org.eventb.core.contextFile#elevator-c0|org.eventb.core.axiom#axm7"/>
+        <org.eventb.core.poPredicate name="EVENT_STATUW" org.eventb.core.predicate="finite(DOOR)" org.eventb.core.source="/Elevator_TP_2025_AND/elevator-c0.buc|org.eventb.core.contextFile#elevator-c0|org.eventb.core.axiom#cst15"/>
+        <org.eventb.core.poPredicate name="EVENT_STATUX" org.eventb.core.predicate="DOOR={OPEN,CLOSED}" org.eventb.core.source="/Elevator_TP_2025_AND/elevator-c0.buc|org.eventb.core.contextFile#elevator-c0|org.eventb.core.axiom#axm2"/>
+        <org.eventb.core.poPredicate name="EVENT_STATUY" org.eventb.core.predicate="OPEN≠CLOSED" org.eventb.core.source="/Elevator_TP_2025_AND/elevator-c0.buc|org.eventb.core.contextFile#elevator-c0|org.eventb.core.axiom#axm3"/>
+        <org.eventb.core.poPredicate name="EVENT_STATUZ" org.eventb.core.predicate="DIRECTION={UP,DOWN}" org.eventb.core.source="/Elevator_TP_2025_AND/elevator-c0.buc|org.eventb.core.contextFile#elevator-c0|org.eventb.core.axiom#axm8"/>
+        <org.eventb.core.poPredicate name="EVENT_STATU[" org.eventb.core.predicate="UP≠DOWN" org.eventb.core.source="/Elevator_TP_2025_AND/elevator-c0.buc|org.eventb.core.contextFile#elevator-c0|org.eventb.core.axiom#axm9"/>
+        <org.eventb.core.poPredicate name="EVENT_STATU\" org.eventb.core.predicate="MOVEMENT={MOVING,STOPPED}" org.eventb.core.source="/Elevator_TP_2025_AND/elevator-c0.buc|org.eventb.core.contextFile#elevator-c0|org.eventb.core.axiom#axm11"/>
+        <org.eventb.core.poPredicate name="EVENT_STATU]" org.eventb.core.predicate="MOVING≠STOPPED" org.eventb.core.source="/Elevator_TP_2025_AND/elevator-c0.buc|org.eventb.core.contextFile#elevator-c0|org.eventb.core.axiom#axm12"/>
+        <org.eventb.core.poPredicate name="EVENT_STATU^" org.eventb.core.predicate="EVENT_STATUS={PENDING,HANDLED}" org.eventb.core.source="/Elevator_TP_2025_AND/elevator-c0.buc|org.eventb.core.contextFile#elevator-c0|org.eventb.core.axiom#axm13"/>
+        <org.eventb.core.poPredicate name="EVENT_STATU_" org.eventb.core.predicate="PENDING≠HANDLED" org.eventb.core.source="/Elevator_TP_2025_AND/elevator-c0.buc|org.eventb.core.contextFile#elevator-c0|org.eventb.core.axiom#axm14"/>
+        <org.eventb.core.poIdentifier name="add_one" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Elevator_TP_2025_AND/elevator-c0-eventually-serving.bpo|org.eventb.core.poFile#elevator-c0-eventually-serving|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="1">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="add_one={0 ↦ 1,1 ↦ 2,2 ↦ 3,3 ↦ 4,4 ↦ 5,5 ↦ 6,6 ↦ 7,7 ↦ 8,8 ↦ 9,9 ↦ 10,10 ↦ 11,11 ↦ 12,12 ↦ 13,13 ↦ 14,14 ↦ 15,15 ↦ 16,16 ↦ 17,17 ↦ 18,18 ↦ 19,19 ↦ 20}" org.eventb.core.source="/Elevator_TP_2025_AND/elevator-c0-eventually-serving.buc|org.eventb.core.contextFile#elevator-c0-eventually-serving|org.eventb.core.axiom#,"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="N_Levels=5" org.eventb.core.source="/Elevator_TP_2025_AND/elevator-c0-eventually-serving.buc|org.eventb.core.contextFile#elevator-c0-eventually-serving|org.eventb.core.axiom#-"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="⊤∨add_one∈ℕ → ℕ1" org.eventb.core.source="/Elevator_TP_2025_AND/elevator-c0-eventually-serving.buc|org.eventb.core.contextFile#elevator-c0-eventually-serving|org.eventb.core.axiom#."/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="⊤∨(∀n⦂ℤ·n∈ℕ⇒add_one(n)=n+1)" org.eventb.core.source="/Elevator_TP_2025_AND/elevator-c0-eventually-serving.buc|org.eventb.core.contextFile#elevator-c0-eventually-serving|org.eventb.core.axiom#\/"/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>
