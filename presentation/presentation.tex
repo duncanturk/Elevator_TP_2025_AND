@@ -1,7 +1,7 @@
 \documentclass[
 	hyperref={pdfusetitle,hidelinks},
 	10pt,
-    %handout,
+    handout,
 ]{beamer}
 
 \usetheme{Boadilla}
@@ -35,71 +35,8 @@
 
 \section{Base Model: Machine 0}
 
-\subsection{Model Overview} % David
-\begin{frame}{Basic model diagram}
-	\begin{figure}
-		\centering
-		\includegraphics[width=\textwidth]{basic.png}
-		\caption{Simple diagram of the model}
-	\end{figure}
-\end{frame}
-\subsection{Modelling Environment} % Christopher
-
-\subsubsection{Reading from the Environment}
-
-\begin{frame}{Reading from the Environment}
-  \begin{itemize}
-    \item<+-> The controller is able to read the environment state directly
-	  \visible<+->{
-		  \begin{tabularx}{\linewidth}{|l|c|X|}
-			  \hline
-			  Variable & Value & Description \\ \hline
-			  \Variable{movement} & \Constant{MOVING}   & The elevator is (physically) moving\\ \cline{2-3}
-					& \Constant{STOPPED}   & The elevator is (physically) not moving\\ \hline
-			  \Variable{door}  & \Constant{OPEN} & The elevator door is (physically) open$^\dag$\\ \cline{2-3}
-				& \Constant{CLOSED} & The elevator door is (physically) closed$^\dag$\\ \hline
-			  \Variable{floor}  & \Constant{0..N\_Levels} & The floor the elevator is (physically) on$^\ddag$\\ \hline
-			  \multicolumn{3}{l}{$^\dag$ the value changes as soon as the door is fully open/closed}\\
-			  \multicolumn{3}{l}{$^\ddag$ the next possible floor to stop}\\
-		  \end{tabularx}
-		}
-	\item<+-> The controller can read and set the order button state
-	\begin{itemize}
-		\item<+-> We consider changes to this variable to be instantaneous
-	\end{itemize}
-	\item[]<+->\Req{FUN 12}{The status of the buttons can be accessed from the controller.}
-	\item[]<+->
-			\begin{tabularx}{\linewidth}{|l|c|X|}
-				\hline
-				Variable & Value & Description \\ \hline
-				\Variable{orders} & \Constant{$\subseteq$ floor} & The set of buttons where the state is \Constant{ON} \\ \hline
-			\end{tabularx}
-	\end{itemize}
-  \end{frame}
-
-\subsubsection{Controlling the Environment}
-\begin{frame}{Controlling the Environment}
-	\begin{itemize}
-    \item<+-> The controller can communicate with the environment by giving commands
-	\item[]<+->\Req{FUN 6}{The elevator can receive a signal to move to any level and will stop automatically when it is reached [\ldots].}
-	\item[]<+->\Req{FUN 7}{The elevator has doors that can be closed or opened from a controller.}
-	\visible<+->{
-        \begin{tabularx}{\linewidth}{|l|c|X|}
-            \hline
-            Variable & Value & Description \\ \hline
-            \Variable{destination} & $\in$\Constant{0..N\_Levels} & The elevator shall move to floor\\ \cline{2-3}
-            & \Constant{NONE}   & The elevator shall not move\\ \hline
-            \Variable{desired\_door}  & \Constant{OPEN} & The elevator shall open the door\\ \cline{2-3}
-            & \Constant{CLOSED} & The elevator shall close the door\\ \hline
-        \end{tabularx}
-	}
-	\item[]<.->
-	\item<+-> Stopping?
-  \end{itemize}
-\end{frame}
-
-\subsection{Detailed Model Diagram} % David
-\begin{frame}{Detailed Model Diagram}
+\subsection{Model Diagram} % David
+\begin{frame}{Model Diagram}
 	\begin{figure}
 		\centering
 		\includegraphics[width=\textwidth]{model1.png}
@@ -185,9 +122,9 @@
 	\end{figure}
 \end{frame}
 
-\subsection{Informal Argument for the Liveness of this Algorithm} % Antonio % TODO: is this a better name?
+\subsection{Informal Argument for the Liveness} % Antonio
 
-\begin{frame}{Informal Argument for the Liveness of this Algorithm}
+\begin{frame}{Informal Argument for the Liveness of the Algorithm}
 	\begin{itemize}
 		\item<+-> Properties this algorithm has:
 		\begin{itemize}
@@ -233,7 +170,7 @@
 	\end{itemize}
 \end{frame}
 
-\subsection{Deadlock Freedom (TODO with adjustments to just adding guards)} % Antonio
+\subsection{Deadlock Freedom} % Antonio
 
 \begin{frame}{Deadlock Freedom}
 	\begin{itemize}
@@ -269,6 +206,60 @@
 \end{frame}
 
 \section{Appendix}
+\subsection{Modelling Environment} % Christopher
+
+\subsubsection{Reading from the Environment}
+
+\begin{frame}{Reading from the Environment}
+	\begin{itemize}
+		\item<+-> The controller is able to read the environment state directly
+		\visible<+->{
+			\begin{tabularx}{\linewidth}{|l|c|X|}
+				\hline
+				Variable & Value & Description \\ \hline
+				\Variable{movement} & \Constant{MOVING}   & The elevator is (physically) moving\\ \cline{2-3}
+				& \Constant{STOPPED}   & The elevator is (physically) not moving\\ \hline
+				\Variable{door}  & \Constant{OPEN} & The elevator door is (physically) open$^\dag$\\ \cline{2-3}
+				& \Constant{CLOSED} & The elevator door is (physically) closed$^\dag$\\ \hline
+				\Variable{floor}  & \Constant{0..N\_Levels} & The floor the elevator is (physically) on$^\ddag$\\ \hline
+				\multicolumn{3}{l}{$^\dag$ the value changes as soon as the door is fully open/closed}\\
+				\multicolumn{3}{l}{$^\ddag$ the next possible floor to stop}\\
+			\end{tabularx}
+		}
+		\item<+-> The controller can read and set the order button state
+		\begin{itemize}
+			\item<+-> We consider changes to this variable to be instantaneous
+		\end{itemize}
+		\item[]<+->\Req{FUN 12}{The status of the buttons can be accessed from the controller.}
+		\item[]<+->
+		\begin{tabularx}{\linewidth}{|l|c|X|}
+			\hline
+			Variable & Value & Description \\ \hline
+			\Variable{orders} & \Constant{$\subseteq$ floor} & The set of buttons where the state is \Constant{ON} \\ \hline
+		\end{tabularx}
+	\end{itemize}
+\end{frame}
+
+\subsubsection{Controlling the Environment}
+\begin{frame}{Controlling the Environment}
+	\begin{itemize}
+		\item<+-> The controller can communicate with the environment by giving commands
+		\item[]<+->\Req{FUN 6}{The elevator can receive a signal to move to any level and will stop automatically when it is reached [\ldots].}
+		\item[]<+->\Req{FUN 7}{The elevator has doors that can be closed or opened from a controller.}
+		\visible<+->{
+			\begin{tabularx}{\linewidth}{|l|c|X|}
+				\hline
+				Variable & Value & Description \\ \hline
+				\Variable{destination} & $\in$\Constant{0..N\_Levels} & The elevator shall move to floor\\ \cline{2-3}
+				& \Constant{NONE}   & The elevator shall not move\\ \hline
+				\Variable{desired\_door}  & \Constant{OPEN} & The elevator shall open the door\\ \cline{2-3}
+				& \Constant{CLOSED} & The elevator shall close the door\\ \hline
+			\end{tabularx}
+		}
+		\item[]<.->
+		\item<+-> Stopping?
+	\end{itemize}
+\end{frame}
 \subsection{Possible Improvements} % Christopher
 \subsubsection{Door Modelling} % Christopher
 \begin{frame}{Door Modelling} % Christopher
