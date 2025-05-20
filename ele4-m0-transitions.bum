@@ -64,7 +64,7 @@
     <org.eventb.core.invariant name="elementG" org.eventb.core.label="inv3_with_destination_not_reached" org.eventb.core.predicate="state=3 ∧ destination≠floor ⇔ (destination≠floor ∧ destination≠NONE ∧ movement=STOPPED)"/>
     <org.eventb.core.invariant name="elementH" org.eventb.core.label="inv4" org.eventb.core.predicate="state=4 ⇔ (floor_event=HANDLED ∧ movement=MOVING ∧ (∃new_floor·new_floor∈FLOOR ∧ (destination&gt;floor ⇒ new_floor=floor+1) ∧ (destination&lt;floor ⇒ new_floor=floor−1)) ∧ destination≠floor)"/>
     <org.eventb.core.invariant name="elementI" org.eventb.core.label="inv5" org.eventb.core.predicate="state=5 ⇔ (&#10;&#9;(floor∉orders ∧ floor_event=PENDING) ∨&#10;&#9;(floor∈orders ∧ floor_event=PENDING)&#10;)"/>
-    <org.eventb.core.invariant name="elementJ" org.eventb.core.label="inv6" org.eventb.core.predicate="state=6 ⇒ (floor_event=HANDLED ∧ movement=MOVING ∧ floor=destination)"/>
+    <org.eventb.core.invariant name="elementJ" org.eventb.core.label="inv6" org.eventb.core.predicate="state=6 ⇔ (floor_event=HANDLED ∧ movement=MOVING ∧ floor=destination)"/>
     <org.eventb.core.invariant name="elementQ" org.eventb.core.label="inv7_or_3_with_destination_reached" org.eventb.core.predicate="(state=7 ∨ (state=3 ∧ destination=floor)) ⇔ (movement=STOPPED ∧ floor=destination)"/>
     <org.eventb.core.invariant name="elementP" org.eventb.core.label="inv8" org.eventb.core.predicate="state=8 ⇔ (desired_door=OPEN ∧ door=CLOSED)"/>
 </org.eventb.core.machineFile>

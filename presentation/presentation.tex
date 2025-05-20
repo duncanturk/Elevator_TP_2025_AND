@@ -187,7 +187,28 @@
 	\end{figure}
 \end{frame}
 
-\subsection{Why that works (TODO good section name)} % Antonio
+\subsection{Informal Argument for the Liveness of this Algorithm} % Antonio % TODO: is this a better name?
+
+\begin{frame}{Informal Argument for the Liveness of this Algorithm}
+	\begin{itemize}
+		\item<+-> Properties this algorithm has:
+		\begin{itemize}
+			\item<+-> The elevator moves/starts moving when there are any orders.
+			\item<+-> The elevator stops at every floor that has been ordered and that is in its immediate path.
+			\item<+-> If the elevator is going up/down, then it continues to do so as long as there are orders above/below.
+			\item<+-> When it runs out of orders above/below, but it still has orders the other way, it changes direction.
+		\end{itemize}
+		\item<+-> Then, for any floor that is ordered:
+		\begin{itemize}
+			\item<+-> The elevator may be at that floor already, so it is served. % TODO revise
+			\item<+-> The elevator is not currently at that floor. Then either:
+			\begin{itemize}
+				\item<+-> It's moving in the opposite direction, in which case it will eventually turn around.
+				\item<+-> It's moving in the correct direction, in which case it will eventually reach the ordered floor and serve it.
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
 
 \subsection{Realization in Rodin} % Christopher
 \begin{frame}{Realization in Rodin}
@@ -201,7 +222,7 @@
 			\\\hfill((waiting\_since;add\_one)$\eventBOverride$\{floor$\mapsto$0\})$\eventBOverride$((FLOOR$\setminus$orders)$\times$\{0\})}
 		\item<+-> Where \Constant{add\_one} is defined as a constant in the context with the axioms \\
 		\begin{itemize}
-			\item \Invariant{add\_one=$\mathbb{N}\to\mathbb{N}_1$}
+			\item \Invariant{add\_one$\in\mathbb{N}\to\mathbb{N}_1$}
 			\item \Invariant{$\forall$n$\cdot$n$\in\mathbb{N}\implies$add\_one(n)=n+1}
 		 \end{itemize}
 		\item<+->We were not able to proof this invariant in Rodin
@@ -214,7 +235,24 @@
 	\end{itemize}
 \end{frame}
 
-\subsection{Deadlock freedom (TODO with adjustments to just adding guards)} % Antonio
+\subsection{Deadlock Freedom (TODO with adjustments to just adding guards)} % Antonio
+
+\begin{frame}{Deadlock Freedom}
+	\begin{itemize}
+		\item<+-> When there are orders, we want to ensure there is always a possible event, that is not \Event{Order}.
+		\item<+-> \InvThm{inv\_no\_deadlock}{$\texttt{orders}\neq\varnothing \implies (\texttt{guards for \Event{EnvMove}}) \lor (\texttt{guards for \Event{ReachOrder}}) \lor (\texttt{guards for \Event{ReachNotOrder}}) \lor \hdots$}
+	\end{itemize}
+\end{frame}
+
+\subsection{State Transitions} % Antonio % TODO: where do we put this?
+
+\begin{frame}{State Transitions}
+	\begin{itemize}
+		\item<+-> The guards for the events are fairly complicated, so it's not obvious they follow each other like the arrows of the shown diagrams. For instance, does \Event{EnvStopMoving} always come after, and only after, \Event{ReachOrder}.
+		\item<+-> To prove this, we can make a refinement that doesn't change the behaviour of the base model, but adds a \Variable{state} variable that is set to a different value for every possible state in between events.
+		\item<+-> Only \Event{ReachOrder} sets \Variable{state} to 6, and \Inv{inv6}{$\texttt{state} = 6 \Leftrightarrow (\texttt{guards for \Event{EnvStopMoving}})$}.
+	\end{itemize}
+\end{frame}
 
 \section{Live Demo} % Christopher
 
