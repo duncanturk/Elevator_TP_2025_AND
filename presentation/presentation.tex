@@ -107,20 +107,20 @@
 	\end{figure}
 \end{frame}
 
-\subsection{Elevator Movement} %Christopher
-\begin{frame}{Elevator Movement}
-	\begin{itemize}
-		\item<+-> Physical movement modeled through \Event{EnvMove}
-			\begin{itemize}
-				\item<+-> Moving one step at a time \Guard{(new\_floor-floor) $\in\{-1,1\}$}
-				\item<+-> In the direction of the destination \Guard{new\_floor$\in$floor..destination}
-				\item<+-> So the \Variable{next\_floor} is one above \Variable{floor} if \Variable{destination} is above \Variable{floor} and one below otherwise
-			\end{itemize}
-		\item<+-> Handling of movement events by \Event{ReachOrder} or \Event{ReachNotOrder}
-		\item<+-> Ensuring the handling of every movement event through \Variable{floor\_event} $\in$ \Constant{\{PENDING, HANDLED\}} flag
-		\item<+-> TODO graphic of movement \Event{$test\in$}
-	\end{itemize}
-\end{frame}
+%\subsection{Elevator Movement} %Christopher
+%begin{frame}{Elevator Movement}
+%\begin{itemize}
+%	\item<+-> Physical movement modeled through \Event{EnvMove}
+%		\begin{itemize}
+%			\item<+-> Moving one step at a time \Guard{(new\_floor-floor) $\in\{-1,1\}$}
+%			\item<+-> In the direction of the destination \Guard{new\_floor$\in$floor..destination}
+%			\item<+-> So the \Variable{next\_floor} is one above \Variable{floor} if \Variable{destination} is above \Variable{floor} and one below otherwise
+%		\end{itemize}
+%	\item<+-> Handling of movement events by \Event{ReachOrder} or \Event{ReachNotOrder}
+%	\item<+-> Ensuring the handling of every movement event through \Variable{floor\_event} $\in$ \Constant{\{PENDING, HANDLED\}} flag
+%	\item<+-> TODO graphic of movement \Event{$test\in$}
+%\end{itemize}
+%end{frame}
 
 \begin{frame}{Elevator Movement}
 	\begin{itemize}
@@ -131,7 +131,7 @@
 		\item[]<.-> This follows directly from \Requirement{FUN 16} and the helper: \Inv{inv\_only\_move\_when\_destination}{movement=MOVING$\implies$destination$\neq$NONE}
 	\end{itemize}
 \end{frame}
-\subsection{Door Management} %Christopher
+\subsection{Invariants for Requirements} %Christopher
 
 \begin{frame}{Door Management}
 	\begin{itemize}
@@ -174,8 +174,6 @@
 		\end{tabularx}
 	\end{itemize}
 \end{frame}
-
-\subsection{The Algorithm (TODO get from task description)}%David
 
 \subsection{Model Diagram} %David
 
@@ -272,9 +270,10 @@
 
 \section{Appendix}
 \subsection{Possible Improvements} % Christopher
-\begin{frame}{Door Modeling} % Christopher
+\subsubsection{Door Modelling} % Christopher
+\begin{frame}{Door Modelling} % Christopher
 	\begin{itemize}
-		\item The modeling of the physical door state is not completely "clean"
+		\item The modelling of the physical door state is not completely "clean"
 		\begin{itemize}
 			\item E.g. the \Constant{door} can be \Constant{CLOSED} while the door is currently opening
 		\end{itemize}
@@ -304,6 +303,12 @@
 			\end{itemize}
 		\end{enumerate}
 	\end{itemize}
+\end{frame}
+
+
+\subsubsection{Reduce Direction Events} % Christopher
+
+\begin{frame}{Reduce Direction Events} % Christopher
 \end{frame}
 
 \end{document}
