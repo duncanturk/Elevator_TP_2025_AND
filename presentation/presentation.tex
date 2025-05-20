@@ -278,7 +278,7 @@
 		\begin{itemize}
 			\item E.g. the \Constant{door} can be \Constant{CLOSED} while the door is currently opening
 		\end{itemize}
-		\item Two options to fix this came to our minds but were rejected:
+		\item Options to fix this came to our minds:
 		\begin{enumerate}
 			\item Add additional physical states \Constant{OPENING} and \Constant{CLOSING}
 			\begin{itemize}
@@ -291,7 +291,7 @@
 				\item Usage would change for example the invariant \InvariantName{inv\_no\_orders\_door\_open} which was
 				\Invariant{orders=$\emptyset\implies$door=OPEN\,$\lor$\,desired\_door=OPEN}
 				\\to
-				\Invariant{orders=$\emptyset\implies$(pysical\_door\_state(door, desired\_door)$\in$\{OPEN, OPENING\})}
+				\Invariant{orders=$\emptyset\implies$(physical\_door\_state(door, desired\_door)$\in$\{OPEN, OPENING\})}
 				\item This can improve readability
 				\item But in increases proof complexity
 			\end{itemize}
