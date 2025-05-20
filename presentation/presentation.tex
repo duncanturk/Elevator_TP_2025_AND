@@ -44,8 +44,9 @@
 	\end{figure}
 \end{frame}
 
+\subsection{Invariants for Requirements} %Christopher
 
-\begin{frame}{Elevator Movement}
+\begin{frame}{Invariants for Requirements: Elevator Movement}
 	\begin{itemize}
 		\item<+-> \Req{FUN 16}{The elevator should not move in a direction where there are no pending requests to attend.}
 		\item[]<+-> \Inv{inv\_move\_to\_ordered}{destination$\neq$NONE$\implies$destination$\in$orders}
@@ -54,9 +55,8 @@
 		\item[]<.-> This follows directly from \Requirement{FUN 16} and the helper: \Inv{inv\_only\_move\_when\_destination}{movement=MOVING$\implies$destination$\neq$NONE}
 	\end{itemize}
 \end{frame}
-\subsection{Invariants for Requirements} %Christopher
 
-\begin{frame}{Door Management}
+\begin{frame}{Invariants for Requirements: Door Management}
 	\begin{itemize}
 		\item<+-> Necessary to ensure movement restrictions according to door status
 		\item[]<+-> \begin{tabularx}{\linewidth}{|l|c|X|}
@@ -78,10 +78,12 @@
 		\item[]<.-> \Inv{inv\_orders\_when\_closing\_door}{desired\_door=CLOSED$\implies$orders$\neq\emptyset$}
 	\end{itemize}
 \end{frame}
+
 \section{Refinements}%David
 
-\subsection{The Reason}%David
-\begin{frame}{Refinement: Deterministic Serving Order}
+\subsection{The Need for Refinements}%David
+
+\begin{frame}{The Need for Refinements: Deterministic Serving Order}
 	\begin{itemize}
 		\item<+-> So far: \Event{ChooseNext} selects \Action{destination:$\in$orders} randomly
 		\item[]<+-> \Req{FUN 13}{All pending requests should be eventually be served.}
@@ -99,8 +101,7 @@
 	\end{itemize}
 \end{frame}
 
-
-\subsection{Informal Argument for the Liveness} % Antonio
+\subsection{Informal Argument for the Liveness of the Algorithm} % Antonio
 
 \begin{frame}{Informal Argument for the Liveness of the Algorithm}
 	\begin{itemize}
@@ -123,7 +124,8 @@
 	\end{itemize}
 \end{frame}
 
-\subsection{Refinement Diagram}
+\subsection{Refinements Diagram}
+
 \begin{frame}{Refinements Diagram}
 	\begin{figure}
 		\centering
@@ -131,7 +133,9 @@
 		\caption{Refinements family tree}
 	\end{figure}
 \end{frame}
+
 \subsection{Realization in Rodin} % Christopher
+
 \begin{frame}{Realization in Rodin}
 	\begin{itemize}
 		\item<+-> Add a refinement to isolate everything cleanly
@@ -176,12 +180,12 @@
 	\end{itemize}
 \end{frame}
 
-\section{Live Demo} % Christopher
-\begin{frame}{}
-	\begin{center}
-		\Large Live Demo!
-	\end{center}
-\end{frame}
+% \section{Live Demo} % Christopher
+% \begin{frame}{}
+% 	\begin{center}
+% 		\Large Live Demo!
+% 	\end{center}
+% \end{frame}
 
 \begin{frame}{}
 	\begin{center}
@@ -190,7 +194,6 @@
 \end{frame}
 
 \section{Appendix}
-
 
 \subsection{Modelling Environment} % Christopher
 
@@ -227,6 +230,7 @@
 \end{frame}
 
 \subsubsection{Controlling the Environment}
+
 \begin{frame}{Controlling the Environment}
 	\begin{itemize}
 		\item<+-> The controller can communicate with the environment by giving commands
@@ -246,9 +250,12 @@
 		\item<+-> Stopping $\implies$ this is handled by \Constant{destination=floor}
 	\end{itemize}
 \end{frame}
+
 \subsection{Possible Improvements} % Christopher
+
 \subsubsection{Door Modelling} % Christopher
-\begin{frame}{Door Modelling} % Christopher
+
+\begin{frame}{Possible Improvements: Door Modelling} % Christopher
 	\begin{itemize}
 		\item The modelling of the physical door state is not completely "clean"
 		\begin{itemize}
@@ -282,7 +289,6 @@
 	\end{itemize}
 \end{frame}
 
-
 \subsubsection{Reduce Direction Events} % Christopher
 
 \begin{frame}{Reduce Direction Events} % Christopher
@@ -302,28 +308,29 @@
 		\end{itemize}
 	\end{itemize}
 \end{frame}
-	\begin{frame}{Reduce Direction Events (cont.)}
+
+\begin{frame}{Reduce Direction Events}
+	\begin{itemize}
+		\item This would lead to reduction in events and avoids copy-paste-errors:
 		\begin{itemize}
-			\item This would lead to reduction in events and avoids copy-paste-errors:
+			\item events \Event{ChangeDirectionUp} and \Event{ChangeDirectionDown} can be unified
 			\begin{itemize}
-				\item events \Event{ChangeDirectionUp} and \Event{ChangeDirectionDown} can be unified
-				\begin{itemize}
-					\item Common guards and actions stay
-					\item The guard \Guard{cut(floor$\mapsto$orders$\mapsto$direction)=$\emptyset$}
-					\item and the action \Action{direction:$\in$DIRECTION$\setminus$\{direction\}} are added
-				\end{itemize}
-				\item events \Event{ChooseNextUp} and \Event{ChooseNextDown} can be unified
-				\begin{itemize}
-					\item Common guards and actions stay
-					\item The guard \Guard{cut(floor$\mapsto$orders$\mapsto$direction)$\neq \emptyset$}
-					\item and the action \Action{direction:$\in$cut(floor$\mapsto$orders$\mapsto$direction)}
-					\item To choose deterministic \Constant{max} or \Constant{min} could be used but this is not necessary
-					\item Even a function like \Constant{next\_cut} that chooses the \Constant{max} or \Constant{min} of the \Constant{cut}-set depending on the \Constant{direction} is possible
-				\end{itemize}
+				\item Common guards and actions stay
+				\item The guard \Guard{cut(floor$\mapsto$orders$\mapsto$direction)=$\emptyset$}
+				\item and the action \Action{direction:$\in$DIRECTION$\setminus$\{direction\}} are added
 			\end{itemize}
-			\item We implemented this but a lot of proofs required repeated manual intervention as we made changes to the model
-			\item Using the separate events made the proof obligations discharge automatically which was a big help in the iterative development, so we chose the separate event approach
+			\item events \Event{ChooseNextUp} and \Event{ChooseNextDown} can be unified
+			\begin{itemize}
+				\item Common guards and actions stay
+				\item The guard \Guard{cut(floor$\mapsto$orders$\mapsto$direction)$\neq \emptyset$}
+				\item and the action \Action{direction:$\in$cut(floor$\mapsto$orders$\mapsto$direction)}
+				\item To choose deterministic \Constant{max} or \Constant{min} could be used but this is not necessary
+				\item Even a function like \Constant{next\_cut} that chooses the \Constant{max} or \Constant{min} of the \Constant{cut}-set depending on the \Constant{direction} is possible
+			\end{itemize}
 		\end{itemize}
-	\end{frame}
+		\item We implemented this but a lot of proofs required repeated manual intervention as we made changes to the model
+		\item Using the separate events made the proof obligations discharge automatically which was a big help in the iterative development, so we chose the separate event approach
+	\end{itemize}
+\end{frame}
 
 \end{document}
