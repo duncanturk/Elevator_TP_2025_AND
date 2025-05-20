@@ -290,15 +290,15 @@
 		\item We can define a helper function \Constant{cut(floor, orders, direction)} that returns the remaining orders in the direction of the current movement
 		\item This functions has the axioms:
 		\begin{itemize}
-			\item \Inv{axm\_cut\_type}{cut$\in$(FLOOR$\times$$\mathbb{P}$(FLOOR)$\times$DIRECTION)$\implies$$\mathbb{P}$(FLOOR)}
+			\item \Inv{axm\_cut\_type}{cut$\in$(FLOOR$\times \mathbb{P}$(FLOOR)$\times$DIRECTION)$\implies \mathbb{P}$(FLOOR)}
 			\item \Inv{axm\_cut\_up}{\\
 				$\forall$floor,orders,direction$\cdot$\\
 			\hfill floor$\in$FLOOR$\land$orders$\subseteq$FLOOR$\land$direction$\in$DIRECTION$\land$direction=UP\\
-			\hfill$\implies$cut(floor$\mapsto$orders$\mapsto$direction)=\{x\vert x$\in$orders$\land$x>floor\}}
+			\hfill$\implies$cut(floor$\mapsto$orders$\mapsto$direction)=\{x$\vert$ x$\in$orders$\land$x>floor\}}
 			\item \Inv{axm\_cut\_down}{\\
 				$\forall$floor,orders,direction$\cdot$\\
 				\hfill floor$\in$FLOOR$\land$orders$\subseteq$FLOOR$\land$direction$\in$DIRECTION$\land$direction=DOWN\\
-				\hfill$\implies$cut(floor$\mapsto$orders$\mapsto$direction)=\{x\vert x$\in$orders$\land$x<floor\}}
+				\hfill$\implies$cut(floor$\mapsto$orders$\mapsto$direction)=\{x$\vert$ x$\in$orders$\land$x<floor\}}
 		\end{itemize}
 	\end{itemize}
 \end{frame}
@@ -315,7 +315,7 @@
 				\item events \Event{ChooseNextUp} and \Event{ChooseNextDown} can be unified
 				\begin{itemize}
 					\item Common guards and actions stay
-					\item The guard \Guard{cut(floor$\mapsto$orders$\mapsto$direction)$\neq$$\emptyset$}
+					\item The guard \Guard{cut(floor$\mapsto$orders$\mapsto$direction)$\neq \emptyset$}
 					\item and the action \Action{direction:$\in$cut(floor$\mapsto$orders$\mapsto$direction)}
 					\item To choose deterministic \Constant{max} or \Constant{min} could be used but this is not necessary
 					\item Even a function like \Constant{next\_cut} that chooses the \Constant{max} or \Constant{min} of the \Constant{cut}-set depending on the \Constant{direction} is possible
