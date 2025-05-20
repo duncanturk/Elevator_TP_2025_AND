@@ -44,20 +44,6 @@
 	\end{figure}
 \end{frame}
 
-%\subsection{Elevator Movement} %Christopher
-%begin{frame}{Elevator Movement}
-%\begin{itemize}
-%	\item<+-> Physical movement modeled through \Event{EnvMove}
-%		\begin{itemize}
-%			\item<+-> Moving one step at a time \Guard{(new\_floor-floor) $\in\{-1,1\}$}
-%			\item<+-> In the direction of the destination \Guard{new\_floor$\in$floor..destination}
-%			\item<+-> So the \Variable{next\_floor} is one above \Variable{floor} if \Variable{destination} is above \Variable{floor} and one below otherwise
-%		\end{itemize}
-%	\item<+-> Handling of movement events by \Event{ReachOrder} or \Event{ReachNotOrder}
-%	\item<+-> Ensuring the handling of every movement event through \Variable{floor\_event} $\in$ \Constant{\{PENDING, HANDLED\}} flag
-%	\item<+-> TODO graphic of movement \Event{$test\in$}
-%\end{itemize}
-%end{frame}
 
 \begin{frame}{Elevator Movement}
 	\begin{itemize}
@@ -92,7 +78,16 @@
 		\item[]<.-> \Inv{inv\_orders\_when\_closing\_door}{desired\_door=CLOSED$\implies$orders$\neq\emptyset$}
 	\end{itemize}
 \end{frame}
-\section{Refinement: Machine 1}%David
+\section{Refinements}%David
+\subsection{Refinements Diagram}
+
+\begin{frame}{Refinements Diagram}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{refinements.png}
+		\caption{Refinements family tree}
+	\end{figure}
+\end{frame}
 \subsection{The Reason}%David
 \begin{frame}{Refinement: Deterministic Serving Order}
 	\begin{itemize}
@@ -112,15 +107,6 @@
 	\end{itemize}
 \end{frame}
 
-\subsection{Model Diagram} %David
-
-\begin{frame}{Refinement: Diagram}
-	\begin{figure}
-		\centering
-		\includegraphics[width=\linewidth]{model2.png}
-		\caption{Basic diagram of the refined model}
-	\end{figure}
-\end{frame}
 
 \subsection{Informal Argument for the Liveness} % Antonio
 
@@ -179,7 +165,7 @@
 	\end{itemize}
 \end{frame}
 
-\subsection{State Transitions} % Antonio % TODO: where do we put this?
+\subsection{State Transitions} % Antonio
 
 \begin{frame}{State Transitions}
 	\begin{itemize}
@@ -190,9 +176,6 @@
 \end{frame}
 
 \section{Live Demo} % Christopher
-
-\subsection{TODO}
-
 \begin{frame}{}
 	\begin{center}
 		\Large Live Demo!
@@ -207,15 +190,6 @@
 
 \section{Appendix}
 
-\subsection{Refinements Diagram}
-
-\begin{frame}{Refinements Diagram}
-	\begin{figure}
-		\centering
-		\includegraphics[width=\linewidth]{refinements.png}
-		\caption{Refinements family tree}
-	\end{figure}
-\end{frame}
 
 \subsection{Modelling Environment} % Christopher
 
@@ -268,7 +242,7 @@
 			\end{tabularx}
 		}
 		\item[]<.->
-		\item<+-> Stopping?
+		\item<+-> Stopping $\immplies$ this is handled by \Constant{destination=floor}
 	\end{itemize}
 \end{frame}
 \subsection{Possible Improvements} % Christopher
@@ -311,6 +285,14 @@
 \subsubsection{Reduce Direction Events} % Christopher
 
 \begin{frame}{Reduce Direction Events} % Christopher
+	\begin{itemize}
+		\item With a helper function \Constant{cut(floor, orders, direction)} that returns the remaining orders in the direction of the current movement the
+		\begin{itemize}
+			\item events \Event{ChangeDirectionUp} and \Event{ChangeDirectionDown} can be unified
+			\item events \Event{ChooseNextUp} and \Event{ChooseNextDown} can be unified
+		\end{itemize}
+		\item \Constant{cut} would use the axioms
+	\end{itemize}
 \end{frame}
 
 \end{document}
